@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{17DE07FF-5002-4691-AA1E-5B2E8614B1BE}" SchemaVersion="89">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{17DE07FF-5002-4691-AA1E-5B2E8614B1BE}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_SMG_Shot" ID="{F0E61BA3-32CB-409E-A9C2-FD41B7E058F1}">
+					<ChildrenList>
+						<Action Name="" ID="{19D22E9A-2F79-4ACB-9CC6-9DBD5556582F}" ShortID="752051462">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Futuristic SMG Single Shot" ID="{7E1B6E67-73F9-4908-B1B2-B8D88AAD6EBB}" WorkUnitID="{E577DB93-9F02-405B-B04E-D9563FA98641}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{2A1A5295-EBA9-4BE2-963E-D9E56BC348DE}" ShortID="414766157">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Futuristic Shotgun Single Shot" ID="{282F7E11-6CBD-4938-ACDC-DB522496FD7B}" WorkUnitID="{E577DB93-9F02-405B-B04E-D9563FA98641}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

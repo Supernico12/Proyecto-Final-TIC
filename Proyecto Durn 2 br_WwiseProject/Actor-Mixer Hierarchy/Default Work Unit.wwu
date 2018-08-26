@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{E577DB93-9F02-405B-B04E-D9563FA98641}" SchemaVersion="89">
+	<AudioObjects>
+		<WorkUnit Name="Default Work Unit" ID="{E577DB93-9F02-405B-B04E-D9563FA98641}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="Futuristic SMG Single Shot" ID="{7E1B6E67-73F9-4908-B1B2-B8D88AAD6EBB}" ShortID="717486350">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-5</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DEBC4C5D-98AF-4D60-8A21-BFCAB0F2F5F2}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F556D1E3-5FD2-4F82-ABE8-E2C5631EA0BF}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Futuristic SMG Single Shot" ID="{BBD98762-638E-44C9-9682-FABA93BFC3B9}" ShortID="556654679">
+							<Language>SFX</Language>
+							<AudioFile>Futuristic SMG Single Shot.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Futuristic SMG Single Shot" ID="{BBD98762-638E-44C9-9682-FABA93BFC3B9}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Futuristic Shotgun Single Shot" ID="{282F7E11-6CBD-4938-ACDC-DB522496FD7B}" ShortID="312468026">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DEBC4C5D-98AF-4D60-8A21-BFCAB0F2F5F2}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F556D1E3-5FD2-4F82-ABE8-E2C5631EA0BF}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Futuristic Shotgun Single Shot" ID="{374EFF20-BE94-4701-A5FF-036016371712}" ShortID="273483040">
+							<Language>SFX</Language>
+							<AudioFile>Futuristic Shotgun Single Shot.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Futuristic Shotgun Single Shot" ID="{374EFF20-BE94-4701-A5FF-036016371712}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{A35F93F2-A664-45B8-AA6C-B586EDDB5BC4}" SchemaVersion="89">
+	<SoundBanks>
+		<WorkUnit Name="Default Work Unit" ID="{A35F93F2-A664-45B8-AA6C-B586EDDB5BC4}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="Main" ID="{E86FC019-1621-43BA-8229-F58FDCB2318A}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_SMG_Shot" ID="{F0E61BA3-32CB-409E-A9C2-FD41B7E058F1}" WorkUnitID="{17DE07FF-5002-4691-AA1E-5B2E8614B1BE}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

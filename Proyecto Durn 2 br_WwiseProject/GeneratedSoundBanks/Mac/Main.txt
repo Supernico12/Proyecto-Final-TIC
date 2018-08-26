@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3023686481	Play_SMG			\Default Work Unit\Play_SMG	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	556654679	Futuristic SMG Single Shot	D:\_Programacion\Proyecto Durn 2 br\Proyecto Durn 2 br_WwiseProject\.cache\Mac\SFX\Futuristic SMG Single Shot_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Futuristic SMG Single Shot		14040
+

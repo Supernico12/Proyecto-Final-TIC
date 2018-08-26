@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="132">
+	<RootPaths>
+		<ProjectRoot>D:\_Programacion\Proyecto Durn 2 br\Proyecto Durn 2 br_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>D:\_Programacion\Proyecto Durn 2 br\Proyecto Durn 2 br_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>D:\_Programacion\Proyecto Durn 2 br\Proyecto Durn 2 br_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>D:\_Programacion\Proyecto Durn 2 br\Proyecto Durn 2 br_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3161908922" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
+			<ShortName>Main</ShortName>
+			<Path>Main.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2017072316" Name="Play_SMG_Shot" ObjectPath="\Events\Default Work Unit\Play_SMG_Shot"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="556654679" Language="SFX">
+					<ShortName>Futuristic SMG Single Shot.wav</ShortName>
+					<Path>SFX\Futuristic SMG Single Shot_56D34C19.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>
