@@ -1,0 +1,100 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10dea8952a6121a4085b90fa81875236, type: 3}
+  m_Name: AkWwiseProjectData
+  m_EditorClassIdentifier: 
+  autoPopulateEnabled: 1
+  CurrentPluginConfig: 
+  m_lastPopulateTimePart2: 0
+  m_lastPopulateTimePsrt1: 0
+  AcousticTextureWwu:
+  - Guid: '{0A05BA29-7899-458A-BA24-E26189A96DDE}'
+    m_lastTimePart2: -1999241210
+    m_lastTimePsrt1: -1476199245
+    ParentPhysicalPath: 
+    PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
+    List: []
+  AuxBusWwu:
+  - Guid: '{F556D1E3-5FD2-4F82-ABE8-E2C5631EA0BF}'
+    m_lastTimePart2: -1999241210
+    m_lastTimePsrt1: -1476288955
+    ParentPhysicalPath: 
+    PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+    List: []
+  BankWwu:
+  - Guid: '{A35F93F2-A664-45B8-AA6C-B586EDDB5BC4}'
+    m_lastTimePart2: -1999241065
+    m_lastTimePsrt1: 522560767
+    ParentPhysicalPath: 
+    PhysicalPath: SoundBanks\Default Work Unit.wwu
+    List:
+    - Guid: 19c06fe82116ba438229f58fdcb2318a
+      ID: -1133058374
+      Name: Main
+      Path: Default Work Unit\Main
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Main
+        ObjectType: 7
+  EventWwu:
+  - Guid: '{17DE07FF-5002-4691-AA1E-5B2E8614B1BE}'
+    m_lastTimePart2: -1999241065
+    m_lastTimePsrt1: 522595831
+    ParentPhysicalPath: 
+    PhysicalPath: Events\Default Work Unit.wwu
+    List:
+    - Guid: a31be6f0cb329e40a9c2fd41b7e058f1
+      ID: 2017072316
+      Name: Play_SMG_Shot
+      Path: Default Work Unit\Play_SMG_Shot
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_SMG_Shot
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+  ExpandedItems:
+  - /Proyecto Durn 2 br_WwiseProject
+  - /Proyecto Durn 2 br_WwiseProject/Events
+  - /Proyecto Durn 2 br_WwiseProject/Events/Default Work Unit
+  - /Proyecto Durn 2 br_WwiseProject/SoundBanks
+  - /Proyecto Durn 2 br_WwiseProject/SoundBanks/Default Work Unit
+  RtpcWwu:
+  - Guid: '{9FD66CEE-4FE9-4982-8FC2-64A9E94D8C50}'
+    m_lastTimePart2: -1999241210
+    m_lastTimePsrt1: -1476308941
+    ParentPhysicalPath: 
+    PhysicalPath: Game Parameters\Default Work Unit.wwu
+    List: []
+  StateWwu:
+  - Guid: '{70C3C1D1-FC7F-4FBA-8171-10D3B99FC712}'
+    m_lastTimePart2: -1999241210
+    m_lastTimePsrt1: -1476119116
+    ParentPhysicalPath: 
+    PhysicalPath: States\Default Work Unit.wwu
+    List: []
+  SwitchWwu:
+  - Guid: '{07CA2427-8D14-4BA7-BF5D-8EA74817CAE5}'
+    m_lastTimePart2: -1999241210
+    m_lastTimePsrt1: -1476109485
+    ParentPhysicalPath: 
+    PhysicalPath: Switches\Default Work Unit.wwu
+    List: []
+  TriggerWwu:
+  - Guid: '{CFEDB4FC-3643-4A72-8771-7B9F7DF92665}'
+    m_lastTimePart2: -1999241210
+    m_lastTimePsrt1: -1476179288
+    ParentPhysicalPath: 
+    PhysicalPath: Triggers\Default Work Unit.wwu
+    List: []

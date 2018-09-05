@@ -67,7 +67,7 @@ public class PlayerMotor : MonoBehaviour {
                 }
 
                 // Shoot Sound place 
-				//AkSoundEngine.PostEvent("Play_SMG_Shot", gameObject);
+				AkSoundEngine.PostEvent("Play_SMG_Shot", gameObject);
                 RaycastHit hit;
 				
                 //recoil.OnShoot();
