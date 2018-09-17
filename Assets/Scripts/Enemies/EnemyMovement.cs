@@ -24,7 +24,7 @@ public class EnemyMovement : MonoBehaviour {
         distance = character.transform.position;
         if (Vector3.Distance(this.gameObject.transform.position, distance) < range)
         {
-            Debug.Log("In");
+            // Debug.Log("In");
             Vector3.MoveTowards(this.gameObject.transform.position, distance, speed);
         }
        

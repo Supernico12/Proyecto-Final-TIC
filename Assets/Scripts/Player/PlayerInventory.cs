@@ -45,7 +45,7 @@ public class PlayerInventory : MonoBehaviour {
 	void Update()
 	{
 
-		for (int i = 0; i < NumberKeys.Length; i++)
+		for (int i = 0; i < weapons.Count; i++)
 		{
 			if (Input.GetKeyDown(NumberKeys[i]))
 			{

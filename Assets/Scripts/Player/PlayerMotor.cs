@@ -67,7 +67,7 @@ public class PlayerMotor : MonoBehaviour {
                 }
 
                 // Shoot Sound place 
-				AkSoundEngine.PostEvent("Play_SMG_Shot", gameObject);
+				//AkSoundEngine.PostEvent("Play_SMG_Shot", gameObject);
                 RaycastHit hit;
 				
                 //recoil.OnShoot();
@@ -87,10 +87,7 @@ public class PlayerMotor : MonoBehaviour {
         }
 
     }
-	void Main()
-	{
-
-	}
+	
     IEnumerator Reload()
     {
 		// Despues Reemplazar con Envento En Recarga
@@ -141,7 +138,8 @@ public class PlayerMotor : MonoBehaviour {
     {
         //  Debug.Log(hit.transform.name);
         if(weapon.hitParticle != null){
-            Instantiate(weapon.hitParticle, hit.point, Quaternion.LookRotation(hit.normal));
+            Instantiate(weapon.hitParticle, hit.point, Quaternion.LookRotation(hit.normal),hit.transform);
+			
         }
         
     }
