@@ -8,13 +8,13 @@ public class UiController : MonoBehaviour {
     Transform reloadParent;
 
    
-    PlayerMotor motor;
+    PlayerFighting motor;
     Text ammoText;
 	// Use this for initialization
 	void Start () {
         
         ammoText = reloadParent.GetComponentInChildren<Text>();
-        motor = PlayerManager.instance.player.GetComponent<PlayerMotor>();
+        motor = PlayerManager.instance.player.GetComponent<PlayerFighting>();
 	}
 	
 	// Update is called once per frame

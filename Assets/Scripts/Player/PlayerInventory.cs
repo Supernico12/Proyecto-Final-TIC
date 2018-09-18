@@ -6,7 +6,7 @@ public class PlayerInventory : MonoBehaviour {
 	[SerializeField]
 	List<WeaponStats> weapons = new List <WeaponStats>();
 
-	PlayerMotor motor;
+	PlayerFighting motor;
 
 
 	private KeyCode[] NumberKeys = {
@@ -22,7 +22,7 @@ public class PlayerInventory : MonoBehaviour {
 	 };
 	void Start()
 	{
-		motor = PlayerManager.instance.player.GetComponent<PlayerMotor>();
+		motor = PlayerManager.instance.player.GetComponent<PlayerFighting>();
 
 	}
 
