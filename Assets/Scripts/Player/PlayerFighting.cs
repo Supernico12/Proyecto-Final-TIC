@@ -12,10 +12,14 @@ public class PlayerFighting : MonoBehaviour {
 	[SerializeField]
 	Transform weaponsParent;
 	float lastShot;
-
+    PlayerAnimatorController playerAnimator;
 	GameObject[] weaponMeshes; 
     int currentAmmo;
 	bool isReloading;
+
+    public event  System.Action OnReload;
+    public event  System.Action OnShoot;
+    
     //  public delegate void OnWeaponChanged()
 
       //  public del
@@ -25,9 +29,9 @@ public class PlayerFighting : MonoBehaviour {
         cam = Camera.main;
 
 		//Testing
-		int numberofWeaponsMeshes = System.Enum.GetNames(typeof(WeaponMesh)).Length;
+		int numberofWeaponsMeshes = System.Enum.GetNames(typeof(WeaponType)).Length;
 		weaponMeshes = new GameObject[numberofWeaponsMeshes];
-		
+		playerAnimator = GetComponent<PlayerAnimatorController>();
 		
 
 
@@ -97,6 +101,7 @@ public class PlayerFighting : MonoBehaviour {
 			yield return new WaitForSeconds(weapon.reloadDelay);
 			currentAmmo = weapon.maxAmmo;
 			isReloading = false;
+            OnReload.Invoke();
 		}
     }
    
@@ -111,7 +116,7 @@ public class PlayerFighting : MonoBehaviour {
 		
        
         muzzle =Instantiate(newWeapon.shootMuzzle, weaponMeshes[index].transform);
-        currentAmmo = newWeapon.maxAmmo;
+        currentAmmo = newWeapon.maxAmmo; // Change to save last ammo usage
        
 
         foreach(Transform child in weaponMeshes[index].GetComponentsInChildren<Transform>())
@@ -126,6 +131,7 @@ public class PlayerFighting : MonoBehaviour {
 		weaponMeshes[(int)newWeapon.weaponMesh].SetActive(true);
 
 		weapon = newWeapon;
+        playerAnimator.SetAnimations(newWeapon.animations);
 
 	}
 

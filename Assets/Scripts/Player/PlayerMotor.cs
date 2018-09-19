@@ -19,7 +19,7 @@ public class PlayerMotor : MonoBehaviour {
 		cam = Camera.main;	
 		rb = GetComponent<Rigidbody>();
 		characterController = GetComponent<CharacterController>();
-		
+		 Cursor.lockState = CursorLockMode.Locked;
 		
 
 	}
@@ -40,7 +40,7 @@ public class PlayerMotor : MonoBehaviour {
 	// Update is called once per frame
 	void Jump(){
 		if(Input.GetButton("Jump")){
-			movement.y = jumpSpeed * -gravity;
+			movement.y = jumpSpeed ;
 			Debug.Log("Jumping");
 		}
 	}

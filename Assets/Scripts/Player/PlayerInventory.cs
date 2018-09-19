@@ -3,8 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerInventory : MonoBehaviour {
+
+	#region Singleton
+		public static PlayerInventory instance;
+		void Awake(){
+			instance = this;
+		}
+	#endregion
+
 	[SerializeField]
 	List<WeaponStats> weapons = new List <WeaponStats>();
+	[SerializeField]
+	int[] ammo;
 
 	PlayerFighting motor;
 
@@ -23,10 +33,13 @@ public class PlayerInventory : MonoBehaviour {
 	void Start()
 	{
 		motor = PlayerManager.instance.player.GetComponent<PlayerFighting>();
+		ammo = new int[System.Enum.GetNames(typeof(AmmoTypes)).Length];
 
 	}
 
-
+	public void AddAmmo(int quantity, int i){
+		ammo[i] += quantity;
+	}
 	public void AddWeapon(WeaponStats newWeapon)
 	{
 		weapons.Add(newWeapon); 
@@ -55,5 +68,9 @@ public class PlayerInventory : MonoBehaviour {
 			}
 		}
 	}
+
+
+
+	
 
 }

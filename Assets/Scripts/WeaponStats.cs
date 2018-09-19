@@ -19,9 +19,10 @@ public class WeaponStats : ScriptableObject {
 	public int maxAmmo;
 	public int reloadDelay;
 	[SerializeField]
-	public WeaponMesh weaponMesh;
+	public WeaponType weaponMesh;
     [SerializeField]
     public AnimationClip[] animations;
+	public AmmoScript ammo;
     // 1 Shoot  2 Reload 3 Enter 4 Leave 
 	// Use this for initialization
 	void Start() {
@@ -36,4 +37,4 @@ public class WeaponStats : ScriptableObject {
 	 
 	
 }
-public enum WeaponMesh { Pistol, Rifle, Heavy, Sniper };
+public enum WeaponType { Pistol, Rifle, Heavy, Sniper };
