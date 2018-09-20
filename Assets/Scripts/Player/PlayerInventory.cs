@@ -7,7 +7,14 @@ public class PlayerInventory : MonoBehaviour {
 	#region Singleton
 		public static PlayerInventory instance;
 		void Awake(){
-			instance = this;
+			
+			if(instance != null){
+				Debug.LogWarning("Trying To Instansiate More Than One Inventory");
+			
+			}else {
+					instance = this;
+			}
+		
 		}
 	#endregion
 

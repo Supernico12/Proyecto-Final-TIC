@@ -45,7 +45,7 @@ public class ItemGround : MonoBehaviour
     void Pull()
     {
         transform.Translate((player.position -new Vector3(0,0.8f,0) - transform.position) * Time.deltaTime * speed);
-        Debug.Log("asd");
+       
     }
 
 	void OnDrawGizmosSelected(){
@@ -56,7 +56,7 @@ public class ItemGround : MonoBehaviour
 	}
     void Interact(){
 
-        //inventory.AddAmmo(ammo.quantity,(int)ammo.type);
+        inventory.AddAmmo(ammo.quantity,(int)ammo.type);
         Destroy(gameObject);
     }
 }
