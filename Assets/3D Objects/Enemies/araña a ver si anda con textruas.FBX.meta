@@ -1,0 +1,229 @@
+fileFormatVersion: 2
+guid: b03ec3ea3aba428469d1cab17ff084e0
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: "Ara\xF1a"
+    100002: //RootNode
+    100004: Body_Base
+    100006: Dummy001
+    100008: Dummy002
+    100010: Dummy003
+    100012: Dummy004
+    100014: Dummy005
+    100016: Dummy006
+    100018: Gear_LP001
+    100020: Gear_LP002
+    100022: Gear_LP003
+    100024: Head_LP
+    100026: IK Chain001
+    100028: IK Chain002
+    100030: IK Chain003
+    100032: IK Chain004
+    100034: IK Chain005
+    100036: IK Chain006
+    100038: Patas
+    100040: Rectangle001
+    100042: Rectangle002
+    100044: Rectangle003
+    100046: Rectangle004
+    100048: Rectangle005
+    100050: Rectangle006
+    100052: Rectangle007
+    100054: Spider
+    100056: SpiderHub
+    100058: SpiderHub001
+    100060: SpiderLLeg11
+    100062: SpiderLLeg12
+    100064: SpiderLLeg13
+    100066: SpiderLLeg14
+    100068: SpiderLLeg1Platform
+    100070: SpiderLLeg21
+    100072: SpiderLLeg22
+    100074: SpiderLLeg23
+    100076: SpiderLLeg2Platform
+    100078: SpiderLLeg41
+    100080: SpiderLLeg42
+    100082: SpiderLLeg43
+    100084: SpiderLLeg4Platform
+    100086: SpiderRLeg11
+    100088: SpiderRLeg12
+    100090: SpiderRLeg13
+    100092: SpiderRLeg14
+    100094: SpiderRLeg1Platform
+    100096: SpiderRLeg21
+    100098: SpiderRLeg22
+    100100: SpiderRLeg23
+    100102: SpiderRLeg2Platform
+    100104: SpiderRLeg31
+    100106: SpiderRLeg32
+    100108: SpiderRLeg33
+    100110: SpiderRLeg3Platform
+    100112: SpiderSpine1
+    100114: SpiderSpine2
+    100116: SpiderSpine3
+    100118: SpiderSpine4
+    100120: SpiderSpine5
+    400000: "Ara\xF1a"
+    400002: //RootNode
+    400004: Body_Base
+    400006: Dummy001
+    400008: Dummy002
+    400010: Dummy003
+    400012: Dummy004
+    400014: Dummy005
+    400016: Dummy006
+    400018: Gear_LP001
+    400020: Gear_LP002
+    400022: Gear_LP003
+    400024: Head_LP
+    400026: IK Chain001
+    400028: IK Chain002
+    400030: IK Chain003
+    400032: IK Chain004
+    400034: IK Chain005
+    400036: IK Chain006
+    400038: Patas
+    400040: Rectangle001
+    400042: Rectangle002
+    400044: Rectangle003
+    400046: Rectangle004
+    400048: Rectangle005
+    400050: Rectangle006
+    400052: Rectangle007
+    400054: Spider
+    400056: SpiderHub
+    400058: SpiderHub001
+    400060: SpiderLLeg11
+    400062: SpiderLLeg12
+    400064: SpiderLLeg13
+    400066: SpiderLLeg14
+    400068: SpiderLLeg1Platform
+    400070: SpiderLLeg21
+    400072: SpiderLLeg22
+    400074: SpiderLLeg23
+    400076: SpiderLLeg2Platform
+    400078: SpiderLLeg41
+    400080: SpiderLLeg42
+    400082: SpiderLLeg43
+    400084: SpiderLLeg4Platform
+    400086: SpiderRLeg11
+    400088: SpiderRLeg12
+    400090: SpiderRLeg13
+    400092: SpiderRLeg14
+    400094: SpiderRLeg1Platform
+    400096: SpiderRLeg21
+    400098: SpiderRLeg22
+    400100: SpiderRLeg23
+    400102: SpiderRLeg2Platform
+    400104: SpiderRLeg31
+    400106: SpiderRLeg32
+    400108: SpiderRLeg33
+    400110: SpiderRLeg3Platform
+    400112: SpiderSpine1
+    400114: SpiderSpine2
+    400116: SpiderSpine3
+    400118: SpiderSpine4
+    400120: SpiderSpine5
+    2100000: Body
+    2100002: Head
+    2100004: EyeLight
+    2100006: Leg
+    2300000: Gear_LP001
+    2300002: Gear_LP002
+    2300004: Gear_LP003
+    3300000: Gear_LP001
+    3300002: Gear_LP002
+    3300004: Gear_LP003
+    4300000: Body_Base
+    4300002: Head_LP
+    4300004: Gear_LP001
+    4300006: Gear_LP002
+    4300008: Gear_LP003
+    4300010: Patas
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Body_Base
+    13700002: Head_LP
+    13700004: Patas
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
