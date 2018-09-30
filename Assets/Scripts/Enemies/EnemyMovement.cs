@@ -21,7 +21,7 @@ public class EnemyMovement : MonoBehaviour {
     public float speed;
     public NavMeshAgent agent;
     Vector3 destination;
-
+    public bool canMove = true;
 
     // Use this for initialization
     void Start()
@@ -37,14 +37,13 @@ public class EnemyMovement : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-
-        //  if  (Vector3.Distance(transform.position,player.position) < range)
-        //  {
-        agent.SetDestination(new Vector3(10f,10f,10f));
-       // destination = new Vector3(10f,10f,10f);
-       // FollowPlayer(destination);
-      //  }
-
+    
+         if  (Vector3.Distance(transform.position,player.position) < range)
+         {
+                destination = new Vector3(player.position.x, transform.position.y, player.position.z);
+                FollowPlayer(destination);
+         }
+      
 
 
     }
@@ -52,10 +51,9 @@ public class EnemyMovement : MonoBehaviour {
     public void FollowPlayer (Vector3 target)
     {
         agent.SetDestination(target);
+        
     }
-
     
-
     void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
