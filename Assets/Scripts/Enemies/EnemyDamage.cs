@@ -15,16 +15,23 @@ public class EnemyDamage : MonoBehaviour {
     public float maxRange;
     private bool onCooldown = false;
     public NavMeshAgent agent;
-
+    public GameObject laser;
+    public GameObject attack;
 
     Rigidbody rb;
+
     EnemyMovement movement;
+
+    
     // Use this for initialization
     void Start () {
 
         player =  PlayerManager.instance.playertransform;
         rb = GetComponentInParent<Rigidbody>();
         movement = FindObjectOfType<EnemyMovement>();
+        laser.SetActive(false);
+        attack.SetActive(false);
+
     }
 	
 	// Update is called once per frame
@@ -34,9 +41,12 @@ public class EnemyDamage : MonoBehaviour {
         if (distance < maxRange)
         {
             agent.enabled = false;
-            //AlertLaser
-            //CastAttack
-            //WaitCd
+            laser.SetActive(true);
+            StartCoroutine(Delay(2));
+            attack.SetActive(true);
+            
+            Attack();
+            StartCoroutine(Delay(6));
 
             
             if (onCooldown == false)
@@ -50,10 +60,12 @@ public class EnemyDamage : MonoBehaviour {
         else
         {
             agent.enabled = true;
+            laser.SetActive(false);
+            attack.SetActive(false);
         }
         if (onCooldown)
         {
-            StartCoroutine(Delay(50f));
+            StartCoroutine(Delay(5));
             onCooldown = false;
         }
 
@@ -62,10 +74,10 @@ public class EnemyDamage : MonoBehaviour {
 
 
 
-        IEnumerator Delay(float time)
+        IEnumerator Delay(int time)
     {
         
-        yield return new WaitForSeconds(time);
+        yield return new WaitForSecondsRealtime(time);
         
     }
 
@@ -73,7 +85,7 @@ public class EnemyDamage : MonoBehaviour {
 
     public void Attack()
     {
-        doDamage();
+        attack.SetActive(true);        
     }
     public void doDamage()
     {
