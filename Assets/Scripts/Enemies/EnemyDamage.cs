@@ -20,7 +20,7 @@ public class EnemyDamage : MonoBehaviour {
 
     EnemyMovement movement;
 
-   
+    public LineRenderer line;
 
     RaycastHit hit;
     // Use this for initialization
@@ -40,9 +40,10 @@ public class EnemyDamage : MonoBehaviour {
         {
             Debug.Log(player.position);
             agent.enabled = false;
-            
-            
-            laser.SetActive(true);
+
+
+            line.SetPosition(0, transform.position);
+            line.SetPosition(1, player.position);
             Physics.Raycast(transform.position, player.position, out hit);
             Debug.DrawRay(transform.position, player.position);
             if (hit.collider.tag == "Player") {
@@ -82,7 +83,7 @@ public class EnemyDamage : MonoBehaviour {
 
     public void Attack()
     {
-       attack.SetActive(true);
+        attack.SetActive(true);
         doDamage(enemyDamage);
     }
     public void doDamage(float damage)
