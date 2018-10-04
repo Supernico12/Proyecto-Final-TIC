@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-
+//Script Para el ataque de la Araña unicamente
 public class EnemyDamage : MonoBehaviour {
 
     private float distance;
@@ -18,16 +18,15 @@ public class EnemyDamage : MonoBehaviour {
     public GameObject laser;
     public GameObject attack;
 
-    Rigidbody rb;
-
     EnemyMovement movement;
 
-    
+    public LineRenderer line;
+
+    RaycastHit hit;
     // Use this for initialization
     void Start () {
 
         player =  PlayerManager.instance.playertransform;
-        rb = GetComponentInParent<Rigidbody>();
         movement = FindObjectOfType<EnemyMovement>();
         laser.SetActive(false);
         attack.SetActive(false);
@@ -36,26 +35,25 @@ public class EnemyDamage : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
         distance = Vector3.Distance(transform.position, player.position);
         if (distance < maxRange)
         {
+            Debug.Log(player.position);
             agent.enabled = false;
-            laser.SetActive(true);
-            StartCoroutine(Delay(2));
-            attack.SetActive(true);
-            
-            Attack();
-            StartCoroutine(Delay(6));
 
-            
-            if (onCooldown == false)
-            {
-                
+
+            line.SetPosition(0, transform.position);
+            line.SetPosition(1, player.position);
+            Physics.Raycast(transform.position, player.position, out hit);
+            Debug.DrawRay(transform.position, player.position);
+            if (hit.collider.tag == "Player") {
+                Debug.Log("Disparing Player");
                 Attack();
-                 
-                onCooldown = true;
-            }
+
+             }
+
+           // StartCoroutine(Delay(6));
+             
         }
         else
         {
@@ -85,12 +83,13 @@ public class EnemyDamage : MonoBehaviour {
 
     public void Attack()
     {
-        attack.SetActive(true);        
+        attack.SetActive(true);
+        doDamage(enemyDamage);
     }
-    public void doDamage()
+    public void doDamage(float damage)
     {
         Debug.Log("Damage");
-        //playerHealth.TakeDamage(enemyDamage);
+        playerHealth.TakeDamage(damage);
         
     }
 }

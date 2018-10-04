@@ -1309,6 +1309,11 @@ Prefab:
       propertyPath: maxRotations.y
       value: 80
       objectReference: {fileID: 0}
+    - target: {fileID: 114417840586299244, guid: 28450b84179b9c44eaf1ae2542ac4441,
+        type: 2}
+      propertyPath: speed
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28450b84179b9c44eaf1ae2542ac4441, type: 2}
   m_IsPrefabAsset: 0
