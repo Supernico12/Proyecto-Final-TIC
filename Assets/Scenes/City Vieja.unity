@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -465,6 +465,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: eda4b89ce84e9f04c96258a52be89c94, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eda4b89ce84e9f04c96258a52be89c94, type: 3}
   m_IsPrefabAsset: 0
@@ -835,6 +839,10 @@ Prefab:
     - target: {fileID: 195573742401290938, guid: 99b7f4bc0eee83541b21867983127028,
         type: 2}
       propertyPath: m_AgentTypeID
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1761935896776262, guid: 99b7f4bc0eee83541b21867983127028, type: 2}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2704,6 +2712,36 @@ Prefab:
         type: 2}
       propertyPath: speed
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4534926538719156, guid: 28450b84179b9c44eaf1ae2542ac4441, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4534926538719156, guid: 28450b84179b9c44eaf1ae2542ac4441, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4534926538719156, guid: 28450b84179b9c44eaf1ae2542ac4441, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4534926538719156, guid: 28450b84179b9c44eaf1ae2542ac4441, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4534926538719156, guid: 28450b84179b9c44eaf1ae2542ac4441, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114417840586299244, guid: 28450b84179b9c44eaf1ae2542ac4441,
+        type: 2}
+      propertyPath: maxRotations.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 114417840586299244, guid: 28450b84179b9c44eaf1ae2542ac4441,
+        type: 2}
+      propertyPath: maxRotations.y
+      value: -90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28450b84179b9c44eaf1ae2542ac4441, type: 2}
@@ -16251,6 +16289,36 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1764873820056684, guid: 8531354aae28a794e9a50633d33f9cef,
     type: 2}
   m_PrefabInternal: {fileID: 1516246884}
+--- !u!114 &1365712858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1365712857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93d9788f8f26ae346b577a3fbf667522, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+--- !u!114 &1365712859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1365712857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da1da7cf14231ae4584b8c64afb745e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 50
+  player: {fileID: 0}
+  enemyDamage: 10
+  maxRange: 20
+  agent: {fileID: 1365712860}
+  laser: {fileID: 838389933}
+  attack: {fileID: 1142100073}
 --- !u!195 &1365712860 stripped
 NavMeshAgent:
   m_CorrespondingSourceObject: {fileID: 195409278750510810, guid: 8531354aae28a794e9a50633d33f9cef,
@@ -18232,7 +18300,9 @@ Prefab:
       propertyPath: attack
       value: 
       objectReference: {fileID: 1142100073}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114921344048139410, guid: 8531354aae28a794e9a50633d33f9cef, type: 2}
+    - {fileID: 114071832774793560, guid: 8531354aae28a794e9a50633d33f9cef, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 8531354aae28a794e9a50633d33f9cef, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &1530320929 stripped

@@ -13,6 +13,7 @@ public class PlayerMotor : MonoBehaviour {
 	[SerializeField] Vector2 maxRotations;
 	[SerializeField] float sensibility;
 
+	Vector3 cameraRotation; 
 	Vector3 movement;
 	
 	void Start () {
@@ -51,12 +52,20 @@ public class PlayerMotor : MonoBehaviour {
 	void RotateCamera(){
 
         Vector2 rot = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y")  );
-		//rot.y = Mathf.Clamp( rot.y , maxRotations.x , maxRotations.y);
+		
+	
+		 cameraRotation += new Vector3 (-rot.y ,rot.x  ,0)* sensibility;
+		cameraRotation.x = Mathf.Clamp(cameraRotation.x,maxRotations.x,maxRotations.y);
 
-		cam.transform.eulerAngles += new Vector3 (-rot.y ,rot.x  ,0)* sensibility;
+		cam.transform.eulerAngles = cameraRotation; 
+		
+
+		 
+		
+			//Debug.Log(cam.transform.rotation.eulerAngles.y);
 
 	}
-	void Update(){
+	void LateUpdate(){
 		RotateCamera();
 	}
 	void FixedUpdate () {

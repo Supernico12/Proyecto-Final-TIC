@@ -40,6 +40,7 @@ namespace UnityEngine.AI
         void OnDisable()
         {
             s_NavMeshModifiers.Remove(this);
+            
         }
 
         public bool AffectsAgentType(int agentTypeID)
