@@ -33,6 +33,7 @@ public class EnemyDamage : MonoBehaviour {
     RaycastHit hit;
     #region Timer
     int time1;
+    int time2;
     public int Cooldown;
 
     #endregion
@@ -75,6 +76,7 @@ public class EnemyDamage : MonoBehaviour {
         agent.enabled = false;
         if (!attacking)
         {
+            time2++;
             lastPos = player;
             line.SetPosition(0, firePoint.position);
             line.SetPosition(1, player.position);
@@ -91,6 +93,7 @@ public class EnemyDamage : MonoBehaviour {
 
     public void CastRay()
     {
+     
         attack.SetPosition(0, firePoint.position);
         attack.SetPosition(1, lastPos.position);
         if (attack.GetPosition(1) == lastPos.position)
@@ -103,11 +106,12 @@ public class EnemyDamage : MonoBehaviour {
         {
             Debug.Log("Attack Missed");
         }
-        if (time1 > Cooldown - 25)
+        if (time2 > Cooldown - 25)
         {
             attacking = false;
             attack.SetPosition(0, new Vector3(0f, 0f, 0f));
             attack.SetPosition(1, new Vector3(0f, 0f, 0f));
+            time1 = 0;
         }
     }
 }
