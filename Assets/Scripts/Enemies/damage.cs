@@ -5,7 +5,7 @@ using UnityEngine;
 public class damage : MonoBehaviour {
 
     EnemyDamage attack;
-    void OnCollisionEnter (Collider col)
+    void OnTriggerEnter (Collider col)
     {
         if (col.tag == "Player")
         {
