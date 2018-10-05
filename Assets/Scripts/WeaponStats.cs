@@ -23,6 +23,7 @@ public class WeaponStats : ScriptableObject {
     [SerializeField]
     public AnimationClip[] animations;
 	public AmmoScript ammo;
+	public WeaponType type;
     // 1 Shoot  2 Reload 3 Enter 4 Leave 
 	// Use this for initialization
 	void Start() {

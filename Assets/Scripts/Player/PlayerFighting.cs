@@ -2,140 +2,165 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerFighting : MonoBehaviour {
+public class PlayerFighting : MonoBehaviour
+{
 
     [SerializeField]
     WeaponStats weapon;
     ParticleSystem muzzle;
     Camera cam;
-   
-	[SerializeField]
-	Transform weaponsParent;
-	float lastShot;
-    PlayerAnimatorController playerAnimator;
-	GameObject[] weaponMeshes; 
-    int currentAmmo;
-	bool isReloading;
 
-    public event  System.Action OnReload;
-    public event  System.Action OnShoot;
-    
+    [SerializeField]
+    Transform weaponsParent;
+    float lastShot;
+    PlayerAnimatorController playerAnimator;
+    GameObject[] weaponMeshes;
+    int currentAmmo;
+    bool isReloading;
+    PlayerInventory inventory;
+
+    public event System.Action OnReload;
+    public event System.Action OnShoot;
+
     //  public delegate void OnWeaponChanged()
 
-      //  public del
+    //  public del
 
     private void Start()
     {
         cam = Camera.main;
 
-		//Testing
-		int numberofWeaponsMeshes = System.Enum.GetNames(typeof(WeaponType)).Length;
-		weaponMeshes = new GameObject[numberofWeaponsMeshes];
-		playerAnimator = GetComponent<PlayerAnimatorController>();
-		
+        //Testing
+        int numberofWeaponsMeshes = System.Enum.GetNames(typeof(WeaponType)).Length;
+        weaponMeshes = new GameObject[numberofWeaponsMeshes];
+        playerAnimator = GetComponent<PlayerAnimatorController>();
+        inventory = PlayerInventory.instance;
 
 
 
 
-		int i = 0;
-		foreach (Transform weapons in weaponsParent.GetComponentsInChildren<Transform>(true))
-		{
-			
-			if (weapons.gameObject.tag == "Weapon")
-			{
-				
-				weaponMeshes[i] = weapons.gameObject;
-				Debug.Log(weapons.name);
-				i++;
-			}
-			
-		}
+        int i = 0;
+        foreach (Transform weapons in weaponsParent.GetComponentsInChildren<Transform>(true))
+        {
 
-		OnWeaponChange(weapon);
+            if (weapons.gameObject.tag == "Weapon")
+            {
+
+                weaponMeshes[i] = weapons.gameObject;
+                Debug.Log(weapons.name);
+                i++;
+            }
+
+        }
+
+        OnWeaponChange(weapon);
 
 
-	}
-	public void Shoot()
+    }
+    public void Shoot()
     {
         if (lastShot < Time.time)
         {
-            if (currentAmmo > 0)
+            if (!isReloading)
             {
-                lastShot = Time.time + 1 / weapon.attackSpeed;
-                Debug.Log("Shooting");
-
-                currentAmmo--;
-                if (muzzle != null)
+                if (currentAmmo > 0)
                 {
-                    muzzle.Play();
-                }
+                    lastShot = Time.time + 1 / weapon.attackSpeed;
+                    Debug.Log("Shooting");
 
-                // Shoot Sound place 
-				//AkSoundEngine.PostEvent("Play_SMG_Shot", gameObject);
-                RaycastHit hit;
-				
-                //recoil.OnShoot();
-                if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, weapon.range))
-                {
-                    ShotEffect(hit);
-                    CharacterStats stats = hit.transform.GetComponent<CharacterStats>();
-                    if (stats != null)
+                    currentAmmo--;
+                    if (muzzle != null)
                     {
-                        Attack(stats);
+                        muzzle.Play();
+                    }
+
+                    // Shoot Sound place 
+                    //AkSoundEngine.PostEvent("Play_SMG_Shot", gameObject);
+                    RaycastHit hit;
+
+                    //recoil.OnShoot();
+                    if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, weapon.range))
+                    {
+                        ShotEffect(hit);
+                        CharacterStats stats = hit.transform.GetComponent<CharacterStats>();
+                        if (stats != null)
+                        {
+                            Attack(stats);
+                        }
                     }
                 }
-            }else
-            {
-                StartCoroutine(Reload());
+                else
+                {
+                    StartCoroutine(Reload());
+                }
             }
         }
 
     }
-	
+
     IEnumerator Reload()
     {
-		// Despues Reemplazar con Envento En Recarga
-		if (isReloading == false)
-		{
-			isReloading = true;
-			yield return new WaitForSeconds(weapon.reloadDelay);
-			currentAmmo = weapon.maxAmmo;
-			isReloading = false;
-            OnReload.Invoke();
-		}
+        // Despues Reemplazar con Envento En Recarga
+        int index = (int)weapon.type;
+        if (isReloading == false)
+        {
+            
+            if (currentAmmo != weapon.maxAmmo)
+            {
+                 
+                if (inventory.GetAmmo(index) > 0)
+                {
+                     Debug.Log("Paso 3");
+                    isReloading = true;
+                    yield return new WaitForSeconds(weapon.reloadDelay);
+                    //currentAmmo = weapon.maxAmmo;
+
+                    int lastAmmo = currentAmmo;
+                    currentAmmo += Mathf.Clamp(inventory.GetAmmo(index), 0, weapon.maxAmmo - currentAmmo);
+                    inventory.AddAmmo(-currentAmmo + lastAmmo, index);
+                    Debug.Log(-currentAmmo + lastAmmo);
+                    Debug.Log(lastAmmo);
+                    //Debug.Log(currentAmmo);
+                    isReloading = false;
+                    //OnReload.Invoke();
+                }
+            }
+        }
     }
-   
+
     void Attack(CharacterStats enemyStats)
     {
         enemyStats.TakeDamage(weapon.damage);
     }
-    public void OnWeaponChange(WeaponStats newWeapon )
+    public void OnWeaponChange(WeaponStats newWeapon)
     {
 
-		int index = (int)newWeapon.weaponMesh;
-		
-       
-        muzzle =Instantiate(newWeapon.shootMuzzle, weaponMeshes[index].transform);
-        currentAmmo = newWeapon.maxAmmo; // Change to save last ammo usage
-       
+        int index = (int)newWeapon.weaponMesh;
 
-        foreach(Transform child in weaponMeshes[index].GetComponentsInChildren<Transform>())
+
+        muzzle = Instantiate(newWeapon.shootMuzzle, weaponMeshes[index].transform);
+        // currentAmmo = newWeapon.maxAmmo; // Change to save last ammo usage
+        inventory.AddLastAmmo(currentAmmo,weapon);
+        currentAmmo = inventory.GetLastAmmo(newWeapon);
+        
+
+        foreach (Transform child in weaponMeshes[index].GetComponentsInChildren<Transform>())
         {
             if (child.name == "SpawnMuzzle")
             {
                 muzzle.transform.position = child.transform.position;
-            } 
-			
-        }
-		weaponMeshes[(int)weapon.weaponMesh].SetActive(false);
-		weaponMeshes[(int)newWeapon.weaponMesh].SetActive(true);
+            }
 
-		weapon = newWeapon;
+        }
+        weaponMeshes[(int)weapon.weaponMesh].SetActive(false);
+        weaponMeshes[(int)newWeapon.weaponMesh].SetActive(true);
+
+        weapon = newWeapon;
         playerAnimator.SetAnimations(newWeapon.animations);
 
-	}
+    }
 
-    public int  GetCurrentAmmo
+    public int GetCurrentAmmo
     {
         get { return currentAmmo; }
     }
@@ -143,39 +168,42 @@ public class PlayerFighting : MonoBehaviour {
     void ShotEffect(RaycastHit hit)
     {
         //  Debug.Log(hit.transform.name);
-        if(weapon.hitParticle != null){
-            Instantiate(weapon.hitParticle, hit.point, Quaternion.LookRotation(hit.normal),hit.transform);
-			
+        if (weapon.hitParticle != null)
+        {
+            Instantiate(weapon.hitParticle, hit.point, Quaternion.LookRotation(hit.normal), hit.transform);
+
         }
-        
+
     }
 
-    public WeaponStats GetCurrentWeapon {
+    public WeaponStats GetCurrentWeapon
+    {
 
         get { return weapon; }
     }
-    void Update () {
+    void Update()
+    {
 
-        if (Input.GetButton("Reload"))
-		{
-			currentAmmo = 0;
-			StartCoroutine(Reload());
-		}
-            if (weapon.isAutomatic)
+        if (Input.GetButtonDown("Reload"))
+        {
+            //currentAmmo = 0;
+            StartCoroutine(Reload());
+        }
+        if (weapon.isAutomatic)
+        {
+            if (Input.GetButton("Fire1"))
             {
-                if (Input.GetButton("Fire1"))
-                {
-                    Shoot();
-                }
-            }
-            else
-            {
-                if (Input.GetButtonDown("Fire1"))
-                {
-                    Shoot();
-                }
+                Shoot();
             }
         }
-        
-	
+        else
+        {
+            if (Input.GetButtonDown("Fire1"))
+            {
+                Shoot();
+            }
+        }
+    }
+
+
 }
