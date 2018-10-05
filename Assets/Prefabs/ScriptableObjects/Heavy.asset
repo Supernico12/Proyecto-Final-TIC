@@ -23,3 +23,5 @@ MonoBehaviour:
   maxAmmo: 50
   reloadDelay: 1
   weaponMesh: 2
+  animations: []
+  type: 2

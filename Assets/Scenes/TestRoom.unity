@@ -1314,6 +1314,11 @@ Prefab:
       propertyPath: speed
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 114247044472234176, guid: 28450b84179b9c44eaf1ae2542ac4441,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28450b84179b9c44eaf1ae2542ac4441, type: 2}
   m_IsPrefabAsset: 0
