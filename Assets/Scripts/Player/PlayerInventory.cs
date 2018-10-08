@@ -28,6 +28,8 @@ public class PlayerInventory : MonoBehaviour
     [SerializeField]
     int[] ammo;
     int[] lastAmmo;
+    [SerializeField]
+    int[] maxAmmo;
 
     PlayerFighting motor;
 
@@ -49,11 +51,19 @@ public class PlayerInventory : MonoBehaviour
         ammo = new int[System.Enum.GetNames(typeof(AmmoTypes)).Length];
         lastAmmo = new int[weapons.Count];
 
+        for(int i = 0 ; i < ammo.Length; i++){
+            AddAmmo(weapons[i].maxAmmo , i);
+        }
+
     }
 
     public void AddAmmo(int quantity, int i)
     {
+        
         ammo[i] += quantity;
+        if(ammo[i] > maxAmmo[i]){
+            ammo[i] = maxAmmo[i];
+        }
     }
     public void AddWeapon(WeaponStats newWeapon)
     {

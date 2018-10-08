@@ -12,7 +12,7 @@ public class ItemGround : MonoBehaviour
 
    
     
-    Transform player;
+    public Transform player;
     
   
     void Start()
@@ -26,7 +26,7 @@ public class ItemGround : MonoBehaviour
     void Update()
     {
         float distance = Vector3.Distance(transform.position, player.position);
-
+       
         if (distance <= pullRange)
         {
             Pull();

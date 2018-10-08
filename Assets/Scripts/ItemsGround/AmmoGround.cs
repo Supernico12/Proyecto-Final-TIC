@@ -25,8 +25,8 @@ public class AmmoGround : ItemGround
     void GetRandomAmmoType()
     {
 
-        int type = Random.Range(0, ammoTypesQuantity);
-        ammoType = type;
+        //int type = Random.Range(0, ammoTypesQuantity);
+        //ammoType = type;
 		float  currenttotalWeight = 0;
 		for(int i = 0; i < weights.Length ; i++){
 			
@@ -40,22 +40,44 @@ public class AmmoGround : ItemGround
 
 			
 		}
+		totalWeight = currenttotalWeight;
 		for(int i = 0; i < weights.Length ; i++){
 			weights[i].probability = ( weights[i].weight/ totalWeight ) * 100;
-		}
+			Debug.Log(weights[i].probability);
 
+		}
+		float pickNumber = Random.Range(0,totalWeight);
+
+		for(int i = 0 ; i < weights.Length ; i++){
+			if(pickNumber > weights[i].fromweight && pickNumber < weights[i].toweight){
+				ammoType = i;
+			}
+		}
 
     }
     // Use this for initialization
     void Start()
     {
-		GetRandomAmmoType();
+		player = PlayerManager.instance.player.transform;
         ammoTypesQuantity = System.Enum.GetNames(typeof(AmmoTypes)).Length;
         inventory = PlayerInventory.instance;
         mesh = GetComponent<MeshFilter>();
+		weights = new ammoWeight[4];
+		weights[0].weight = 1;
+		weights[1].weight = 80;
+		weights[2].weight = 1;
+		weights[3].weight = 1;
 		
-		mesh.mesh = ammoMeshes[ammoType];
+			GetRandomAmmoType();
+			mesh.mesh = ammoMeshes[ammoType];
+
     }
+
+	void SetWeights(){
+		for(int i = 0;  i  < ammoTypesQuantity ; i++){
+			
+		}
+	} 
 
 	public struct ammoWeight{
 		public float weight;

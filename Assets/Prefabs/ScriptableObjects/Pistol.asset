@@ -20,6 +20,8 @@ MonoBehaviour:
     type: 2}
   hitParticle: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b,
     type: 2}
-  maxAmmo: 15
+  maxAmmo: 99999
   reloadDelay: 2
   weaponMesh: 0
+  animations: []
+  type: 0
