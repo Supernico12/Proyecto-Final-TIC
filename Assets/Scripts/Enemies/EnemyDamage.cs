@@ -12,7 +12,7 @@ public class EnemyDamage : MonoBehaviour {
     public Transform player;
     public float enemyDamage;
 
-
+    Animator anim;
     CharacterStats playerHealth;
 
     public float maxRange;
@@ -29,23 +29,31 @@ public class EnemyDamage : MonoBehaviour {
     #region Line
     public LineRenderer line;
     public LineRenderer attack;
+    public float speed = 60f;
+    public bool casted = false;
+
+    float distanceToHit;
     #endregion 
     RaycastHit hit;
     #region Timer
     int time1;
     int time2;
     public int Cooldown;
-
+    Vector3 hitPoint;
+    public GameObject linePrefab;
+    public GameObject rayPrefab;
     #endregion
 
 
+    GameObject head;
+
     // Use this for initialization
     void Start () {
-
+        anim = GetComponent<Animator>();
         firePoint = GameObject.Find("FirePoint").transform;
         player =  PlayerManager.instance.playertransform;
-       
-      
+
+        head = GameObject.Find("Craneo");
 
     }
 	
@@ -54,64 +62,75 @@ public class EnemyDamage : MonoBehaviour {
 
         
         distance = Vector3.Distance(firePoint.position, player.position);
-        
+        //head.transform.localRotation.x 
             if (distance < maxRange)
             {
                 Attack();
-               
             }
             else
             {
                 agent.enabled = true;
+                anim.enabled = true;
+                line.SetPosition(0, Vector3.zero);
+                line.SetPosition(1, Vector3.zero);
+                attack.SetPosition(0, Vector3.zero);
+                attack.SetPosition(1, Vector3.zero);
+
+            casted = false;
                 
-                line.SetPosition(0, new Vector3(0f, 0f, 0f));
-                line.SetPosition(1, new Vector3(0f, 0f, 0f));
-            
         }
     }
 
     public void Attack()
     {
         time1++;
+        hitPoint += (player.position - hitPoint) * speed * Time.deltaTime;
+
         agent.enabled = false;
+        anim.enabled = false;
+      
+        
         if (!attacking)
         {
-            time2++;
-            lastPos = player;
-            line.SetPosition(0, firePoint.position);
-            line.SetPosition(1, player.position);
-            if(time1 > Cooldown)
+            //Instantiate(linePrefab,firePoint.position,Quaternion.identity);
+            if (!casted)
+            {
+                line.SetPosition(0, firePoint.position);
+                line.SetPosition(1, hitPoint);
+             
+            }
+            distanceToHit = Vector3.Distance(line.GetPosition(1), player.position);
+            Debug.Log(distanceToHit);
+            if (distanceToHit < .5f)
             {
                 attacking = true;
                 CastRay();
-                time1 = 0;
             }
 
         }
-       
     }
 
     public void CastRay()
     {
-     
+       
+        //Instantiate(rayPrefab, firePoint.position, Quaternion.identity);
         attack.SetPosition(0, firePoint.position);
-        attack.SetPosition(1, lastPos.position);
+        attack.SetPosition(1, hitPoint);
+
+        line.SetPosition(0, Vector3.zero);
+        line.SetPosition(1, Vector3.zero);
+        casted = true;
+        time1 = 0;
+        attacking = false;
         if (attack.GetPosition(1) == lastPos.position)
         {
-
+            
             Debug.Log("Disparing Player");
             playerHealth.TakeDamage(enemyDamage);
 
         } else
         {
             Debug.Log("Attack Missed");
-        }
-        if (time2 > Cooldown - 25)
-        {
-            attacking = false;
-            attack.SetPosition(0, new Vector3(0f, 0f, 0f));
-            attack.SetPosition(1, new Vector3(0f, 0f, 0f));
-            time1 = 0;
         }
     }
 }

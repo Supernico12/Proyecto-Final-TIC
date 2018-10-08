@@ -20,7 +20,7 @@ public class EnemyMovement : MonoBehaviour {
     int distance;
     public float speed;
     public NavMeshAgent agent;
-    Vector3 destination;
+    public Transform destination;
     public bool canMove = true;
 
     // Use this for initialization
@@ -37,12 +37,14 @@ public class EnemyMovement : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-    
-         if  (Vector3.Distance(transform.position,player.position) < range)
-         {
-                destination = new Vector3(player.position.x, transform.position.y, player.position.z);
-                FollowPlayer(destination);
-         }
+        if (canMove)
+        {
+            if (Vector3.Distance(transform.position, player.position) < range)
+            {
+                destination = player;
+                FollowPlayer(destination.position);
+            }
+        }
       
 
 
