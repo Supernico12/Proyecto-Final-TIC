@@ -7,26 +7,20 @@ public class ItemGround : MonoBehaviour
     [SerializeField] float pullRange;
     [SerializeField] float interactRange;
     [SerializeField] float speed;
-    [SerializeField] int maxAmmo;
-    [SerializeField] Mesh[] ammoMeshes;
+   
+    
 
-
-    AmmoScript ammo;
-    PlayerInventory inventory;
+   
+    
     Transform player;
-    MeshFilter mesh;
-    int ammoTypesQuantity;
+    
+  
     void Start()
     {
-        ammoTypesQuantity =System.Enum.GetNames(typeof(AmmoTypes)).Length;
+      
         player = PlayerManager.instance.player.transform;
-        inventory = PlayerInventory.instance;
-        mesh = GetComponent<MeshFilter>();
-        ammo = new AmmoScript(
-            (AmmoTypes)Random.Range(0f ,ammoTypesQuantity )
-            ,10);
-        
-       mesh.mesh = ammoMeshes[(int)ammo.type];
+       
+       
     }
 
     void Update()
@@ -54,9 +48,9 @@ public class ItemGround : MonoBehaviour
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position,pullRange);
 	}
-    void Interact(){
+   public virtual void Interact(){
 
-        inventory.AddAmmo(ammo.quantity,(int)ammo.type);
+        //inventory.AddAmmo(ammo.quantity,(int)ammo.type);
         Destroy(gameObject);
     }
 }
