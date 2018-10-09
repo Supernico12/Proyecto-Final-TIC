@@ -23,6 +23,8 @@ public class EnemyMovement : MonoBehaviour {
     public Transform destination;
     public bool canMove = true;
 
+
+    
     // Use this for initialization
     void Start()
     {
@@ -37,25 +39,22 @@ public class EnemyMovement : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if (canMove)
+        
+        if (Vector3.Distance(transform.position, player.position) < range)
         {
-            if (Vector3.Distance(transform.position, player.position) < range)
-            {
+            if (canMove)
+        {
                 destination = player;
-                FollowPlayer(destination.position);
+                agent.SetDestination(destination.position);
             }
         }
-      
-
-
+       
     }
 
-    public void FollowPlayer (Vector3 target)
-    {
-        agent.SetDestination(target);
-        
-    }
     
+    
+
+  
     void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
