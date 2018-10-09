@@ -19,7 +19,7 @@ public class EnemyDamage : MonoBehaviour {
     private bool attacking = false;
 
     public NavMeshAgent agent;
-    
+
     Transform firePoint;
     Transform lastPos;
 
@@ -44,49 +44,57 @@ public class EnemyDamage : MonoBehaviour {
     public GameObject rayPrefab;
     #endregion
 
-
+    public float stoppingDistance;
     GameObject head;
 
     // Use this for initialization
-    void Start () {
+    void Start() {
         anim = GetComponent<Animator>();
         firePoint = GameObject.Find("FirePoint").transform;
-        player =  PlayerManager.instance.playertransform;
-
+        player = PlayerManager.instance.playertransform;
+        movement = GetComponent<EnemyMovement>();
         head = GameObject.Find("Craneo");
-
+        agent.stoppingDistance = stoppingDistance;
     }
-	
-	// Update is called once per frame
-	void Update () {
 
-        
+    // Update is called once per frame
+    void Update() {
+
+
         distance = Vector3.Distance(firePoint.position, player.position);
         //head.transform.localRotation.x 
-            if (distance < maxRange)
-            {
-                Attack();
-            }
-            else
-            {
-                agent.enabled = true;
-                anim.enabled = true;
-                line.SetPosition(0, Vector3.zero);
-                line.SetPosition(1, Vector3.zero);
-                attack.SetPosition(0, Vector3.zero);
-                attack.SetPosition(1, Vector3.zero);
+        if (distance <= agent.stoppingDistance)
+        {
+            Attack();
+            LookAt();
+        }
+        else
+        {
+            movement.canMove = true;
+            anim.enabled = true;
+            line.SetPosition(0, Vector3.zero);
+            line.SetPosition(1, Vector3.zero);
+            attack.SetPosition(0, Vector3.zero);
+            attack.SetPosition(1, Vector3.zero);
 
             casted = false;
-                
+
         }
     }
 
+    public void LookAt()
+    {
+        Vector3 direction = (player.position - transform.position).normalized;
+        Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
+    }
     public void Attack()
     {
         time1++;
         hitPoint += (player.position - hitPoint) * speed * Time.deltaTime;
 
-        agent.enabled = false;
+        movement.canMove = true;
+        Debug.Log("Movement.StopMoving");
         anim.enabled = false;
       
         
