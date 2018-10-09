@@ -19,6 +19,7 @@ public class AmmoGround : ItemGround
 
         inventory.AddAmmo(10, ammoType);
         base.Interact();
+		SetWeights();
     }
 
 
@@ -43,7 +44,7 @@ public class AmmoGround : ItemGround
 		totalWeight = currenttotalWeight;
 		for(int i = 0; i < weights.Length ; i++){
 			weights[i].probability = ( weights[i].weight/ totalWeight ) * 100;
-			Debug.Log(weights[i].probability);
+			//Debug.Log(weights[i].probability);
 
 		}
 		float pickNumber = Random.Range(0,totalWeight);
@@ -63,20 +64,24 @@ public class AmmoGround : ItemGround
         inventory = PlayerInventory.instance;
         mesh = GetComponent<MeshFilter>();
 		weights = new ammoWeight[4];
+		
 		weights[0].weight = 1;
 		weights[1].weight = 80;
 		weights[2].weight = 1;
 		weights[3].weight = 1;
 		
 			GetRandomAmmoType();
+			
 			mesh.mesh = ammoMeshes[ammoType];
 
     }
 
-	void SetWeights(){
-		for(int i = 0;  i  < ammoTypesQuantity ; i++){
+	public void SetWeights(){
+		//for(int i = 0;  i  < ammoTypesQuantity ; i++){
 			
-		}
+			float porcentage = inventory.GetWeights(1);
+			Debug.Log(porcentage);
+		//}
 	} 
 
 	public struct ammoWeight{

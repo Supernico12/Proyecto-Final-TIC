@@ -51,17 +51,19 @@ public class PlayerInventory : MonoBehaviour
         ammo = new int[System.Enum.GetNames(typeof(AmmoTypes)).Length];
         lastAmmo = new int[weapons.Count];
 
-        for(int i = 0 ; i < ammo.Length; i++){
-            AddAmmo(weapons[i].maxAmmo , i);
+        for (int i = 0; i < ammo.Length; i++)
+        {
+            lastAmmo[i] = weapons[i].maxAmmo;
         }
 
     }
 
     public void AddAmmo(int quantity, int i)
     {
-        
+
         ammo[i] += quantity;
-        if(ammo[i] > maxAmmo[i]){
+        if (ammo[i] > maxAmmo[i])
+        {
             ammo[i] = maxAmmo[i];
         }
     }
@@ -78,20 +80,23 @@ public class PlayerInventory : MonoBehaviour
 
     public void AddLastAmmo(int quantity, WeaponStats weapon)
     {
-		int index = GetWeaponIndex(weapon);
-		if(index > -1){
-			lastAmmo[index] = quantity;
+        int index = GetWeaponIndex(weapon);
+        if (index > -1)
+        {
+            lastAmmo[index] = quantity;
 
-		}
+        }
     }
 
-	public int GetLastAmmo(WeaponStats weapon){
-		int index = GetWeaponIndex(weapon);
-		if(index > -1){
-			return lastAmmo[index];
-		}
-		return -1;
-	}
+    public int GetLastAmmo(WeaponStats weapon)
+    {
+        int index = GetWeaponIndex(weapon);
+        if (index > -1)
+        {
+            return lastAmmo[index];
+        }
+        return -1;
+    }
     public void ChangeWeapon(int index)
     {
         if (weapons[index] != null)
@@ -125,7 +130,16 @@ public class PlayerInventory : MonoBehaviour
         }
     }
 
+    public float GetWeights(int i)
+    {
+        float porcentage = (ammo[i] /maxAmmo[i] ) * 100;
+        Debug.Log(porcentage);
+        Debug.Log(30/40);
+        porcentage = Mathf.Clamp(porcentage,1f,100);
+        porcentage = 100/porcentage;
 
+        return porcentage;
+    }
 
 
 
