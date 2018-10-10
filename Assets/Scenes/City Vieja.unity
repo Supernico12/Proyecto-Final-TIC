@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5998,7 +5998,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 50
-  player: {fileID: 0}
+  player: {fileID: 2071141115}
   enemyDamage: 10
   maxRange: 20
   agent: {fileID: 537517214}
@@ -6009,6 +6009,7 @@ MonoBehaviour:
   Cooldown: 40
   linePrefab: {fileID: 1736885618651624, guid: 8a234a211a094d14face7764892f54cb, type: 2}
   rayPrefab: {fileID: 1785518714751780, guid: 95d9c895f85d61f408de3d3982862422, type: 2}
+  stoppingDistance: 20
 --- !u!114 &537517209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16189,6 +16190,7 @@ MonoBehaviour:
   Cooldown: 0
   linePrefab: {fileID: 0}
   rayPrefab: {fileID: 0}
+  stoppingDistance: 0
 --- !u!195 &1365712860 stripped
 NavMeshAgent:
   m_CorrespondingSourceObject: {fileID: 195409278750510810, guid: 8531354aae28a794e9a50633d33f9cef,
