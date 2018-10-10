@@ -66,7 +66,7 @@ public class PlayerFighting : MonoBehaviour
                 if (currentAmmo > 0)
                 {
                     lastShot = Time.time + 1 / weapon.attackSpeed;
-                    Debug.Log("Shooting");
+                   
 
                     currentAmmo--;
                     if (muzzle != null)
@@ -110,7 +110,7 @@ public class PlayerFighting : MonoBehaviour
                  
                 if (inventory.GetAmmo(index) > 0)
                 {
-                     Debug.Log("Paso 3");
+                    
                     isReloading = true;
                     yield return new WaitForSeconds(weapon.reloadDelay);
                     //currentAmmo = weapon.maxAmmo;
@@ -118,8 +118,7 @@ public class PlayerFighting : MonoBehaviour
                     int lastAmmo = currentAmmo;
                     currentAmmo += Mathf.Clamp(inventory.GetAmmo(index), 0, weapon.maxAmmo - currentAmmo);
                     inventory.AddAmmo(-currentAmmo + lastAmmo, index);
-                    Debug.Log(-currentAmmo + lastAmmo);
-                    Debug.Log(lastAmmo);
+                  
                     //Debug.Log(currentAmmo);
                     isReloading = false;
                     //OnReload.Invoke();

@@ -12,14 +12,17 @@ public class AmmoGround : ItemGround
     int ammoType;
 
 	float totalWeight;
+	
 	[SerializeField]
 	ammoWeight[]  weights; 
+	
+	
     public override void Interact()
     {
-
-        inventory.AddAmmo(10, ammoType);
+	
+        inventory.AddAmmo(inventory.GetWeapon(ammoType).maxAmmo,ammoType);
         base.Interact();
-		SetWeights();
+		
     }
 
 
@@ -63,27 +66,23 @@ public class AmmoGround : ItemGround
         ammoTypesQuantity = System.Enum.GetNames(typeof(AmmoTypes)).Length;
         inventory = PlayerInventory.instance;
         mesh = GetComponent<MeshFilter>();
-		weights = new ammoWeight[4];
-		
-		weights[0].weight = 1;
-		weights[1].weight = 80;
-		weights[2].weight = 1;
-		weights[3].weight = 1;
-		
-			GetRandomAmmoType();
+		SetWeights();
+		GetRandomAmmoType();
 			
 			mesh.mesh = ammoMeshes[ammoType];
 
     }
 
 	public void SetWeights(){
-		//for(int i = 0;  i  < ammoTypesQuantity ; i++){
+		weights = new ammoWeight[ammoTypesQuantity];
+		for(int i = 0;  i  < ammoTypesQuantity ; i++){
 			
-			float porcentage = inventory.GetWeights(1);
-			Debug.Log(porcentage);
-		//}
+			 weights[i].weight = inventory.GetWeights(i);
+			 Debug.Log( i + " : " + weights[i].weight  );
+			
+		}
 	} 
-
+[System.Serializable]
 	public struct ammoWeight{
 		public float weight;
 		public float fromweight;

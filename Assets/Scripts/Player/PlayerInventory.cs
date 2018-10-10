@@ -47,8 +47,9 @@ public class PlayerInventory : MonoBehaviour
      };
     void Start()
     {
+        ammo = new int[System.Enum.GetNames(typeof(AmmoTypes)).Length] ;
         motor = PlayerManager.instance.player.GetComponent<PlayerFighting>();
-        ammo = new int[System.Enum.GetNames(typeof(AmmoTypes)).Length];
+       
         lastAmmo = new int[weapons.Count];
 
         for (int i = 0; i < ammo.Length; i++)
@@ -105,6 +106,9 @@ public class PlayerInventory : MonoBehaviour
         }
 
     }
+    public WeaponStats GetWeapon(int i = 0){
+        return weapons[i];
+    }
     int GetWeaponIndex(WeaponStats weapon)
     {
         for (int i = 0; i < weapons.Count; i++)
@@ -132,11 +136,13 @@ public class PlayerInventory : MonoBehaviour
 
     public float GetWeights(int i)
     {
-        float porcentage = (ammo[i] /maxAmmo[i] ) * 100;
-        Debug.Log(porcentage);
-        Debug.Log(30/40);
-        porcentage = Mathf.Clamp(porcentage,1f,100);
-        porcentage = 100/porcentage;
+        
+        float porcentage = ammo[i] * 100 /maxAmmo[i]  ;
+        //Debug.Log(ammo[i] + "  " + maxAmmo[i]);
+        
+        porcentage = Mathf.Clamp(porcentage,10f,50);
+       
+        porcentage = 100/porcentage ;
 
         return porcentage;
     }

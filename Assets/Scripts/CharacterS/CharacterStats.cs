@@ -11,6 +11,7 @@ public class CharacterStats : MonoBehaviour
 
 
 	float currenthealth;
+	[SerializeField] GameObject ammoDrop;
 
 
 	
@@ -30,6 +31,8 @@ public class CharacterStats : MonoBehaviour
 
 	public virtual void Die()
 	{
+		
+		Instantiate(ammoDrop,transform.position,Quaternion.identity);
 		Destroy(gameObject);
 	}
 

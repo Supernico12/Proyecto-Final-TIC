@@ -1058,7 +1058,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1466315773892726}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 30.8, z: -46.507}
+  m_LocalPosition: {x: 0, y: 5.93, z: -46.507}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4397154888887672}
@@ -3171,13 +3171,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  ammoDrop: {fileID: 1143177794371528, guid: b99b0bd6a390e4946a20aca76c08fdaf, type: 2}
 --- !u!114 &114247044472234176
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1466315773892726}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6e8ad98d6971add4c9ef9828f4ebf7c1, type: 3}
   m_Name: 
@@ -3194,10 +3195,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 20880195109335804}
-  speed: 10
+  speed: 30
   gravity: -1
   jumpSpeed: 0.5
-  maxRotations: {x: 0, y: 0}
+  maxRotations: {x: -80, y: 80}
   sensibility: 3
 --- !u!114 &114479612920789764
 MonoBehaviour:

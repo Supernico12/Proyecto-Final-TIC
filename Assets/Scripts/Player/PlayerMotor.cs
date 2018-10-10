@@ -46,7 +46,7 @@ public class PlayerMotor : MonoBehaviour {
 	void Jump(){
 		if(Input.GetButton("Jump")){
 			movement.y = jumpSpeed ;
-			Debug.Log("Jumping");
+			//Debug.Log("Jumping");
 		}
 	}
 	void RotateCamera(){

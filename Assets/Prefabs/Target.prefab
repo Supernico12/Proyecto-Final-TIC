@@ -36,9 +36,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1857123104443782}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.463434, y: 4.406, z: 0.1}
+  m_LocalRotation: {x: -0.0006570224, y: 0.9930348, z: 0.11768998, w: -0.005543769}
+  m_LocalPosition: {x: -4.8500004, y: -0.029999971, z: 0}
+  m_LocalScale: {x: 2.4634378, y: 4.405999, z: 0.10000012}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -109,3 +109,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  ammoDrop: {fileID: 1143177794371528, guid: b99b0bd6a390e4946a20aca76c08fdaf, type: 2}
