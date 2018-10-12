@@ -22,8 +22,9 @@ public class PlayerInventory : MonoBehaviour
 
     }
     #endregion
-
     [SerializeField]
+    Transform weaponsParent;
+   
     List<WeaponStats> weapons = new List<WeaponStats>();
     [SerializeField]
     int[] ammo;
@@ -47,6 +48,11 @@ public class PlayerInventory : MonoBehaviour
      };
     void Start()
     {
+        WeaponStats[] wp = weaponsParent.GetComponentsInChildren<WeaponStats>(true);
+        foreach ( WeaponStats weap in wp){
+            weapons.Add(weap);
+        }
+
         ammo = new int[System.Enum.GetNames(typeof(AmmoTypes)).Length] ;
         motor = PlayerManager.instance.player.GetComponent<PlayerFighting>();
        
@@ -113,7 +119,7 @@ public class PlayerInventory : MonoBehaviour
     {
         for (int i = 0; i < weapons.Count; i++)
         {
-            if (weapon.name == weapons[i].name)
+            if (weapon.Gunname == weapons[i].Gunname)
             {
                 return i;
             }

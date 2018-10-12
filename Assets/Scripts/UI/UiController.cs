@@ -9,15 +9,19 @@ public class UiController : MonoBehaviour {
     Transform reloadParent;
     
    
-   
-    TextMeshPro textMaxAmmo;
+    PlayerInventory inventory;
+    TextMeshProUGUI textMaxAmmo;
     PlayerFighting motor;
-    Text ammoText;
+    TextMeshProUGUI ammoText;
 	// Use this for initialization
 	void Start () {
         
-        ammoText = reloadParent.GetComponentInChildren<Text>();
+       
         motor = PlayerManager.instance.player.GetComponent<PlayerFighting>();
+        TextMeshProUGUI[] texts  = reloadParent.GetComponentsInChildren<TextMeshProUGUI>();
+        ammoText = texts[0];
+        textMaxAmmo = texts[1]; 
+        inventory = PlayerInventory.instance;
 	}
 	
 	// Update is called once per frame
@@ -28,7 +32,8 @@ public class UiController : MonoBehaviour {
 
     void UpdateAmmo()
     {
-
-        ammoText.text = motor.GetCurrentAmmo.ToString() + " / " + motor.GetCurrentWeapon.maxAmmo.ToString()  ;
+        int weaponIndex = (int)motor.GetCurrentWeapon.type;
+        ammoText.text = motor.GetCurrentAmmo.ToString() + " / " + motor.GetCurrentWeapon.maxAmmo.ToString();
+        textMaxAmmo.text = inventory.GetAmmo(weaponIndex).ToString();
     } 
 }
