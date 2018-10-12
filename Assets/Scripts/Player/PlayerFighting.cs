@@ -7,7 +7,7 @@ public class PlayerFighting : MonoBehaviour
 
     [SerializeField]
     WeaponStats weapon;
-    ParticleSystem muzzle;
+    
     Camera cam;
 
     [SerializeField]
@@ -66,12 +66,12 @@ public class PlayerFighting : MonoBehaviour
                 if (currentAmmo > 0)
                 {
                     lastShot = Time.time + 1 / weapon.attackSpeed;
-                   
+
 
                     currentAmmo--;
-                    if (muzzle != null)
+                    if (weapon.shootMuzzle != null)
                     {
-                        muzzle.Play();
+                        weapon.shootMuzzle.Play();
                     }
 
                     // Shoot Sound place 
@@ -104,13 +104,13 @@ public class PlayerFighting : MonoBehaviour
         int index = (int)weapon.type;
         if (isReloading == false)
         {
-            
+
             if (currentAmmo != weapon.maxAmmo)
             {
-                 
+
                 if (inventory.GetAmmo(index) > 0)
                 {
-                    
+
                     isReloading = true;
                     yield return new WaitForSeconds(weapon.reloadDelay);
                     //currentAmmo = weapon.maxAmmo;
@@ -118,7 +118,7 @@ public class PlayerFighting : MonoBehaviour
                     int lastAmmo = currentAmmo;
                     currentAmmo += Mathf.Clamp(inventory.GetAmmo(index), 0, weapon.maxAmmo - currentAmmo);
                     inventory.AddAmmo(-currentAmmo + lastAmmo, index);
-                  
+
                     //Debug.Log(currentAmmo);
                     isReloading = false;
                     //OnReload.Invoke();
@@ -131,26 +131,30 @@ public class PlayerFighting : MonoBehaviour
     {
         enemyStats.TakeDamage(weapon.damage);
     }
+
+
     public void OnWeaponChange(WeaponStats newWeapon)
     {
 
         int index = (int)newWeapon.weaponMesh;
 
 
-        muzzle = Instantiate(newWeapon.shootMuzzle, weaponMeshes[index].transform);
+
+        //muzzle = Instantiate(newWeapon.shootMuzzle, weaponMeshes[index].transform);
         // currentAmmo = newWeapon.maxAmmo; // Change to save last ammo usage
-        inventory.AddLastAmmo(currentAmmo,weapon);
+        inventory.AddLastAmmo(currentAmmo, weapon);
         currentAmmo = inventory.GetLastAmmo(newWeapon);
-        
 
-        foreach (Transform child in weaponMeshes[index].GetComponentsInChildren<Transform>())
-        {
-            if (child.name == "SpawnMuzzle")
-            {
-                muzzle.transform.position = child.transform.position;
-            }
+        /*
+                foreach (Transform child in weaponMeshes[index].GetComponentsInChildren<Transform>())
+                {
+                    if (child.name == "SpawnMuzzle")
+                    {
+                        muzzle.transform.position = child.transform.position;
+                    }
 
-        }
+                }
+          */
         weaponMeshes[(int)weapon.weaponMesh].SetActive(false);
         weaponMeshes[(int)newWeapon.weaponMesh].SetActive(true);
 

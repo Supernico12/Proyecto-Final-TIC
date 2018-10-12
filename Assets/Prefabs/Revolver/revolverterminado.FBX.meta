@@ -1,0 +1,135 @@
+fileFormatVersion: 2
+guid: 4007cb961900ba94db50fde4c5858dce
+timeCreated: 1539348450
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: "Ca\xF1on"
+    100002: Cylinder024
+    100004: Cylinder025
+    100006: gatilloArriba
+    100008: Mango
+    100010: Mira
+    100012: Plane007
+    100014: //RootNode
+    100016: ruleta
+    100018: SeccionTrigger
+    100020: Sphere001
+    100022: Sphere002
+    100024: Trigger
+    400000: "Ca\xF1on"
+    400002: Cylinder024
+    400004: Cylinder025
+    400006: gatilloArriba
+    400008: Mango
+    400010: Mira
+    400012: Plane007
+    400014: //RootNode
+    400016: ruleta
+    400018: SeccionTrigger
+    400020: Sphere001
+    400022: Sphere002
+    400024: Trigger
+    2300000: "Ca\xF1on"
+    2300002: Cylinder024
+    2300004: Cylinder025
+    2300006: gatilloArriba
+    2300008: Mango
+    2300010: Mira
+    2300012: Plane007
+    2300014: ruleta
+    2300016: SeccionTrigger
+    2300018: Sphere001
+    2300020: Sphere002
+    2300022: Trigger
+    3300000: "Ca\xF1on"
+    3300002: Cylinder024
+    3300004: Cylinder025
+    3300006: gatilloArriba
+    3300008: Mango
+    3300010: Mira
+    3300012: Plane007
+    3300014: ruleta
+    3300016: SeccionTrigger
+    3300018: Sphere001
+    3300020: Sphere002
+    3300022: Trigger
+    4300000: "Ca\xF1on"
+    4300002: Cylinder024
+    4300004: Cylinder025
+    4300006: Mira
+    4300008: Plane007
+    4300010: gatilloArriba
+    4300012: ruleta
+    4300014: SeccionTrigger
+    4300016: Sphere002
+    4300018: Sphere001
+    4300020: Trigger
+    4300022: Mango
+    7400000: Take 001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

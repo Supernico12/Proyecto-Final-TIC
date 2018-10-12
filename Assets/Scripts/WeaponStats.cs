@@ -4,8 +4,8 @@ using UnityEngine;
 
 
 
-[CreateAssetMenu(fileName = "New Weapons", menuName = "Inventory/Weapons")]
-public class WeaponStats : ScriptableObject {
+
+public class WeaponStats  : MonoBehaviour {
 
 
 
@@ -26,14 +26,7 @@ public class WeaponStats : ScriptableObject {
 	public WeaponType type;
     // 1 Shoot  2 Reload 3 Enter 4 Leave 
 	// Use this for initialization
-	void Start() {
-
-	}
-
-	// Update is called once per frame
-	void Update() {
-
-	}
+	
 
 	 
 	
