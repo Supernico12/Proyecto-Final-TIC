@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d53ee7d427fc0ec41befbd153b9247c2
+guid: 36d7c60ce0044774e8afbcf1f6eb7b89
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -11,8 +11,8 @@ ModelImporter:
     100010: AlienSpine3
     100012: AlienSpine4
     100014: AlienSpine5
-    100016: 'Hiena '
-    100018: //RootNode
+    100016: //RootNode
+    100018: 'Hiena '
     400000: Alien
     400002: AlienPelvis
     400004: AlienRibcage
@@ -21,8 +21,8 @@ ModelImporter:
     400010: AlienSpine3
     400012: AlienSpine4
     400014: AlienSpine5
-    400016: 'Hiena '
-    400018: //RootNode
+    400016: //RootNode
+    400018: 'Hiena '
     2100000: 'Material #254'
     2100002: Gris
     2100004: Blanco
