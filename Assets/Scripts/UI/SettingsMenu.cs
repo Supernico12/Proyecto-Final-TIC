@@ -8,6 +8,7 @@ public class SettingsMenu : MonoBehaviour {
 
     public Dropdown resolutionsDropdwon;
     Resolution[] resolutions;
+    int currentResolutionIndex = 0;
     void Start()
     {
         resolutions = Screen.resolutions;
@@ -18,8 +19,20 @@ public class SettingsMenu : MonoBehaviour {
         {
             string option = resolutions[i].width + "x" + resolutions[i].height;
             options.Add(option);
+
+            if(resolutions[i].width == Screen.currentResolution.width && resolutions[i].height == Screen.currentResolution.height)
+            {
+                currentResolutionIndex = i;
+            }
         }
         resolutionsDropdwon.AddOptions(options);
+        resolutionsDropdwon.value = currentResolutionIndex;
+        resolutionsDropdwon.RefreshShownValue();
+    }
+    public void setResolution(int screenResolutionIndex)
+    {
+        Resolution resolution = resolutions[screenResolutionIndex];
+        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
     }
 	public void SetVolume(float volume)
     {
