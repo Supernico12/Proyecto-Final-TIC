@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class UiController : MonoBehaviour {
     [SerializeField]
     Transform reloadParent;
-
+    
    
+   
+    TextMeshPro textMaxAmmo;
     PlayerFighting motor;
     Text ammoText;
 	// Use this for initialization
