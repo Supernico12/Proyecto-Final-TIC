@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657892, g: 0.49641132, b: 0.5748176, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657856, g: 0.49641085, b: 0.57481706, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -807,6 +807,11 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 219.46948, y: 63.788548, z: 4.000001}
   m_Center: {x: 0, y: 0, z: 2.0000005}
+--- !u!4 &363477613 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400004, guid: 36d7c60ce0044774e8afbcf1f6eb7b89,
+    type: 3}
+  m_PrefabInternal: {fileID: 1745011864}
 --- !u!1001 &386237979
 Prefab:
   m_ObjectHideFlags: 0
@@ -1354,6 +1359,27 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 537948638}
   m_Mesh: {fileID: 4300026, guid: b666be2401c471d4eb56a16abeeadc01, type: 3}
+--- !u!1 &564376200 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100016, guid: 36d7c60ce0044774e8afbcf1f6eb7b89,
+    type: 3}
+  m_PrefabInternal: {fileID: 1745011864}
+--- !u!114 &564376203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 564376200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04163dba744381e48a7b30a34bb7f16b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rocket: {fileID: 1856868319178790, guid: 982771cebe5c8cb42a99dfc58f245810, type: 2}
+  firePoint1: {fileID: 1282140522}
+  firePoint2: {fileID: 845877316}
+  firePoint3: {fileID: 1727135085}
+  cooldown: 200
 --- !u!1001 &572207702
 Prefab:
   m_ObjectHideFlags: 0
@@ -1451,6 +1477,34 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 219.46948, y: 63.788548, z: 4.000001}
   m_Center: {x: 0, y: 0, z: 2.0000005}
+--- !u!1 &845877316
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 845877317}
+  m_Layer: 0
+  m_Name: FirePoint2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &845877317
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 845877316}
+  m_LocalRotation: {x: -0.38306788, y: 0.6104765, z: -0.36846566, w: -0.58720577}
+  m_LocalPosition: {x: -0.13080034, y: 0.0034646401, z: -0.066078775}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 363477613}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &989346668
 Prefab:
   m_ObjectHideFlags: 0
@@ -2176,6 +2230,34 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bda09548520d3f84ab5fa0bd07852d37, type: 3}
   m_IsPrefabAsset: 0
+--- !u!1 &1282140522
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1282140523}
+  m_Layer: 0
+  m_Name: FirePoint1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1282140523
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1282140522}
+  m_LocalRotation: {x: -0.38306788, y: 0.6104765, z: -0.36846566, w: -0.58720577}
+  m_LocalPosition: {x: -0.1314256, y: 0.0021705006, z: -0.02910666}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 363477613}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1311546801 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: bda09548520d3f84ab5fa0bd07852d37,
@@ -3264,6 +3346,34 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 219.46948, y: 63.788548, z: 4.000001}
   m_Center: {x: 0, y: 0, z: 2.0000005}
+--- !u!1 &1727135085
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1727135086}
+  m_Layer: 0
+  m_Name: FirePoint3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1727135086
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1727135085}
+  m_LocalRotation: {x: -0.38306788, y: 0.6104765, z: -0.36846566, w: -0.58720577}
+  m_LocalPosition: {x: -0.1302595, y: 0.004583779, z: -0.09805459}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 363477613}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1738354355
 GameObject:
   m_ObjectHideFlags: 0
