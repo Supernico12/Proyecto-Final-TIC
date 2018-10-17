@@ -11,7 +11,7 @@ public class EnemyMovement : MonoBehaviour {
 
 
 
-    
+    Animator anim;
 
     public Transform player;
     GameObject enemy;
@@ -28,6 +28,7 @@ public class EnemyMovement : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
+        
         Debug.Log(player);
        player = PlayerManager.instance.playertransform;
        agent = GetComponent<NavMeshAgent>();
