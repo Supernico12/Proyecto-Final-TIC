@@ -6,40 +6,41 @@ public class CharacterStats : MonoBehaviour
 {
 
 
-	[SerializeField]
-	float health;
+    [SerializeField]
+    float health;
 
 
-	float currenthealth;
-	[SerializeField] GameObject ammoDrop;
-
-
-	
+    float currenthealth;
+    [SerializeField] GameObject ammoDrop;
 
 
 
 
-	public void TakeDamage(float damage)
-	{
-		currenthealth -= damage;
-		if (currenthealth <= 0)
-		{
-			Die();
-		}
-	}
 
 
-	public virtual void Die()
-	{
-		
-		Instantiate(ammoDrop,transform.position,Quaternion.identity);
-		Destroy(gameObject);
-	}
 
-	void Start()
-	{
-		currenthealth = health;
+    public void TakeDamage(float damage)
+    {
+        currenthealth -= damage;
+        Debug.Log(currenthealth);
+        if (currenthealth <= 0)
+        {
+            Die();
+        }
+    }
 
-	}
+
+    public virtual void Die()
+    {
+
+        Instantiate(ammoDrop, transform.position, Quaternion.identity);
+        Destroy(gameObject);
+    }
+
+    void Start()
+    {
+        currenthealth = health;
+
+    }
 
 }
