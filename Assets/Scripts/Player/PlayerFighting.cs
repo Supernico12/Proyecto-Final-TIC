@@ -7,9 +7,9 @@ public class PlayerFighting : MonoBehaviour
 
     [SerializeField]
     WeaponStats weapon;
-    
-    Camera cam;
 
+    Camera cam;
+    PlayerMelee melee;
     [SerializeField]
     Transform weaponsParent;
     float lastShot;
@@ -22,6 +22,9 @@ public class PlayerFighting : MonoBehaviour
     public event System.Action OnReload;
     public event System.Action OnShoot;
 
+    bool isEquiped;
+    bool isScoped;
+    float camerDefaultFieldOfView;
     //  public delegate void OnWeaponChanged()
 
     //  public del
@@ -29,13 +32,13 @@ public class PlayerFighting : MonoBehaviour
     private void Start()
     {
         cam = Camera.main;
-
+        camerDefaultFieldOfView = cam.fieldOfView;
         //Testing
         int numberofWeaponsMeshes = System.Enum.GetNames(typeof(WeaponType)).Length;
         weaponMeshes = new GameObject[numberofWeaponsMeshes];
-        playerAnimator = GetComponent<PlayerAnimatorController>();
-        inventory = PlayerInventory.instance;
 
+        inventory = PlayerInventory.instance;
+        melee = GetComponent<PlayerMelee>();
 
 
 
@@ -53,7 +56,7 @@ public class PlayerFighting : MonoBehaviour
 
         }
 
-        OnWeaponChange(weapon);
+
 
 
     }
@@ -75,10 +78,12 @@ public class PlayerFighting : MonoBehaviour
                     }
 
                     // Shoot Sound place 
+                    //Debug.Log("Disparar" + (int)weapon.type);
+
                     //AkSoundEngine.PostEvent("Play_SMG_Shot", gameObject);
                     RaycastHit hit;
 
-                    //recoil.OnShoot();
+                    OnShoot.Invoke();
                     if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, weapon.range))
                     {
                         ShotEffect(hit);
@@ -121,7 +126,7 @@ public class PlayerFighting : MonoBehaviour
 
                     //Debug.Log(currentAmmo);
                     isReloading = false;
-                    //OnReload.Invoke();
+                    OnReload.Invoke();
                 }
             }
         }
@@ -144,7 +149,10 @@ public class PlayerFighting : MonoBehaviour
         // currentAmmo = newWeapon.maxAmmo; // Change to save last ammo usage
         inventory.AddLastAmmo(currentAmmo, weapon);
         currentAmmo = inventory.GetLastAmmo(newWeapon);
-
+        cam.fieldOfView = camerDefaultFieldOfView;
+        isScoped = false;
+        isEquiped = true;
+        melee.DisEquip();
         /*
                 foreach (Transform child in weaponMeshes[index].GetComponentsInChildren<Transform>())
                 {
@@ -159,10 +167,16 @@ public class PlayerFighting : MonoBehaviour
         weaponMeshes[(int)newWeapon.weaponMesh].SetActive(true);
 
         weapon = newWeapon;
-        playerAnimator.SetAnimations(newWeapon.animations);
+        playerAnimator = weapon.GetComponent<PlayerAnimatorController>();
+        if (playerAnimator != null)
+            playerAnimator.SetAnimations(newWeapon.animations);
 
     }
-
+    public void DisEquip()
+    {
+        isEquiped = false;
+        weaponMeshes[(int)weapon.weaponMesh].SetActive(false);
+    }
     public int GetCurrentAmmo
     {
         get { return currentAmmo; }
@@ -178,6 +192,23 @@ public class PlayerFighting : MonoBehaviour
         }
 
     }
+    void Scope()
+    {
+
+        isScoped = !isScoped;
+
+        if (isScoped)
+        {
+
+            cam.fieldOfView = weapon.scopeFieldOfView;
+
+        }
+        else
+        {
+            cam.fieldOfView = camerDefaultFieldOfView;
+        }
+
+    }
 
     public WeaponStats GetCurrentWeapon
     {
@@ -186,24 +217,35 @@ public class PlayerFighting : MonoBehaviour
     }
     void Update()
     {
-
-        if (Input.GetButtonDown("Reload"))
+        if (isEquiped)
         {
-            //currentAmmo = 0;
-            StartCoroutine(Reload());
-        }
-        if (weapon.isAutomatic)
-        {
-            if (Input.GetButton("Fire1"))
+            if (Input.GetButtonDown("Reload"))
             {
-                Shoot();
+                //currentAmmo = 0;
+                StartCoroutine(Reload());
             }
-        }
-        else
-        {
-            if (Input.GetButtonDown("Fire1"))
+            if (weapon.isAutomatic)
             {
-                Shoot();
+                if (Input.GetButton("Fire1"))
+                {
+                    Shoot();
+                }
+            }
+            else
+            {
+                if (Input.GetButtonDown("Fire1"))
+                {
+                    Shoot();
+                }
+            }
+
+            if (Input.GetButtonDown("Fire2"))
+            {
+                if (weapon.hasScope)
+                {
+                    Scope();
+                }
+
             }
         }
     }
