@@ -8,13 +8,15 @@ public class CharacterStats : MonoBehaviour
 
 	[SerializeField]
 	float health;
+    
 
 
 	float currenthealth;
 	[SerializeField] GameObject ammoDrop;
 
     Animator anim;
-	
+
+    
 
 
 
@@ -24,6 +26,7 @@ public class CharacterStats : MonoBehaviour
 		currenthealth -= damage;
 		if (currenthealth <= 0)
 		{
+            
             if (anim != null)
                 Debug.Log("Die" + anim.GetBool("Die"));
                 anim.SetBool("Die", true);
@@ -41,6 +44,7 @@ public class CharacterStats : MonoBehaviour
 
 	void Start()
 	{
+         
         anim = GetComponent<Animator>();
 		currenthealth = health;
 

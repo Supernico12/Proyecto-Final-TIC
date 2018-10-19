@@ -23,7 +23,7 @@ public class EnemyDamage : MonoBehaviour {
     Transform firePoint;
     Transform lastPos;
 
-
+    GameObject playerGO;
     EnemyMovement movement;
 
     #region Line
@@ -31,6 +31,7 @@ public class EnemyDamage : MonoBehaviour {
     public LineRenderer attack;
     public float speed = 60f;
     public bool casted = false;
+    public ParticleSystem effect;
 
     float distanceToHit;
     #endregion 
@@ -55,9 +56,11 @@ public class EnemyDamage : MonoBehaviour {
         anim = GetComponent<Animator>();
         firePoint = GameObject.Find("FirePoint").transform;
         player = PlayerManager.instance.playertransform;
+        playerGO = PlayerManager.instance.player;
         movement = GetComponent<EnemyMovement>();
         head = GameObject.Find("Craneo");
         agent.stoppingDistance = stoppingDistance;
+        playerHealth = playerGO.GetComponent<CharacterStats>();
     }
 
     // Update is called once per frame
@@ -65,7 +68,7 @@ public class EnemyDamage : MonoBehaviour {
 
 
 
-        Debug.Log(Vector3.Distance(player.position, attack.GetPosition(1)));
+        
         if (Vector3.Distance(player.position, attack.GetPosition(1)) <= .5f)
         {
             
@@ -136,6 +139,7 @@ public class EnemyDamage : MonoBehaviour {
                 hitPoint += (player.position - hitPoint) * speed * Time.deltaTime;
                 line.SetPosition(0, firePoint.position);
                 line.SetPosition(1, hitPoint);  
+                
             }
             distanceToHit = Vector3.Distance(line.GetPosition(1), player.position);
            
@@ -156,6 +160,7 @@ public class EnemyDamage : MonoBehaviour {
        
         attack.SetPosition(0, firePoint.position);
         attack.SetPosition(1, hitPoint);
+        Instantiate(effect, attack.GetPosition(1), Quaternion.identity);
         
         line.SetPosition(0, Vector3.zero);
         line.SetPosition(1, Vector3.zero);
@@ -165,11 +170,7 @@ public class EnemyDamage : MonoBehaviour {
         canAttack = false;
 
 
-      /*  if (attack.GetPosition(1) == player.position)
-        {
-            Debug.Log("DOING DAMAGE");
-            playerHealth.TakeDamage(enemyDamage);
-        }
+     }
 
-    */}
+    
 }

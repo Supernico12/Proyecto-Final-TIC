@@ -53,7 +53,11 @@ public class EnemyMovement : MonoBehaviour {
     }
 
     
-    
+    public void Suicide()
+    {
+        GetComponent<EnemyDamage>().enabled = false;
+        GetComponent<EnemyMovement>().enabled = false;
+    }
 
   
     void OnDrawGizmos()
