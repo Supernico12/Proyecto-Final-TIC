@@ -6,16 +6,27 @@ public class CharacterStats : MonoBehaviour
 {
 
 
+<<<<<<< HEAD
+    [SerializeField]
+    float health;
+=======
 	[SerializeField]
 	float health;
     
+>>>>>>> 2b16ca68d2adda29811d496a53c094b3bed07da9
 
 
-	float currenthealth;
-	[SerializeField] GameObject ammoDrop;
+    float currenthealth;
+    [SerializeField] GameObject ammoDrop;
 
     Animator anim;
 
+<<<<<<< HEAD
+
+
+
+
+=======
     
 
 
@@ -32,8 +43,23 @@ public class CharacterStats : MonoBehaviour
                 anim.SetBool("Die", true);
         }
 	}
+>>>>>>> 2b16ca68d2adda29811d496a53c094b3bed07da9
 
+    public void TakeDamage(float damage)
+    {
+        currenthealth -= damage;
+        Debug.Log(currenthealth);
+        if (currenthealth <= 0)
+        {
+            Die();
+        }
+    }
 
+<<<<<<< HEAD
+
+    public virtual void Die()
+    {
+=======
 	public virtual void Die()
 	{
         
@@ -47,7 +73,16 @@ public class CharacterStats : MonoBehaviour
          
         anim = GetComponent<Animator>();
 		currenthealth = health;
+>>>>>>> 2b16ca68d2adda29811d496a53c094b3bed07da9
 
-	}
+        Instantiate(ammoDrop, transform.position, Quaternion.identity);
+        Destroy(gameObject);
+    }
+
+    void Start()
+    {
+        currenthealth = health;
+
+    }
 
 }

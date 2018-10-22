@@ -24,19 +24,21 @@ public class PlayerInventory : MonoBehaviour
     #endregion
     [SerializeField]
     Transform weaponsParent;
-   
+
     List<WeaponStats> weapons = new List<WeaponStats>();
     [SerializeField]
     int[] ammo;
     int[] lastAmmo;
     [SerializeField]
     int[] maxAmmo;
+    int index;
 
     PlayerFighting motor;
+    PlayerMelee melee;
 
 
     private KeyCode[] NumberKeys = {
-         KeyCode.Alpha1,
+        // KeyCode.Alpha1,
          KeyCode.Alpha2,
          KeyCode.Alpha3,
          KeyCode.Alpha4,
@@ -49,13 +51,15 @@ public class PlayerInventory : MonoBehaviour
     void Start()
     {
         WeaponStats[] wp = weaponsParent.GetComponentsInChildren<WeaponStats>(true);
-        foreach ( WeaponStats weap in wp){
+        foreach (WeaponStats weap in wp)
+        {
             weapons.Add(weap);
         }
 
-        ammo = new int[System.Enum.GetNames(typeof(AmmoTypes)).Length] ;
+        melee = PlayerManager.instance.player.GetComponent<PlayerMelee>();
+        ammo = new int[System.Enum.GetNames(typeof(AmmoTypes)).Length];
         motor = PlayerManager.instance.player.GetComponent<PlayerFighting>();
-       
+
         lastAmmo = new int[weapons.Count];
 
         for (int i = 0; i < ammo.Length; i++)
@@ -112,7 +116,8 @@ public class PlayerInventory : MonoBehaviour
         }
 
     }
-    public WeaponStats GetWeapon(int i = 0){
+    public WeaponStats GetWeapon(int i = 0)
+    {
         return weapons[i];
     }
     int GetWeaponIndex(WeaponStats weapon)
@@ -133,22 +138,38 @@ public class PlayerInventory : MonoBehaviour
         {
             if (Input.GetKeyDown(NumberKeys[i]))
             {
-                int numberPressed = i + 1;
+                int numberPressed = i;
                 ChangeWeapon(i);
-
+                index = i;
             }
         }
+        float mouseScroll = (Input.GetAxis("Mouse ScrollWheel"));
+        if (mouseScroll != 0)
+        {
+            index += (int)Mathf.Clamp(mouseScroll, -1, 1);
+            if (index < 0)
+            {
+                melee.OnEquip();
+            }
+            else
+            {
+                index = Mathf.Clamp(index, 0, weapons.Count - 1);
+                ChangeWeapon(index);
+            }
+        }
+
+        //Debug.Log(index);
     }
 
     public float GetWeights(int i)
     {
-        
-        float porcentage = ammo[i] * 100 /maxAmmo[i]  ;
+
+        float porcentage = ammo[i] * 100 / maxAmmo[i];
         //Debug.Log(ammo[i] + "  " + maxAmmo[i]);
-        
-        porcentage = Mathf.Clamp(porcentage,10f,50);
-       
-        porcentage = 100/porcentage ;
+
+        porcentage = Mathf.Clamp(porcentage, 10f, 50);
+
+        porcentage = 100 / porcentage;
 
         return porcentage;
     }
