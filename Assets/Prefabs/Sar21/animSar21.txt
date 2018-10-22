@@ -1,0 +1,7 @@
+0 - 22 SaleCartucho
+24 - 45 EntraCartucho
+
+55 - 74 SaleArma
+81 - 100 EntraArma
+
+110 - 112 DisparoRafaga

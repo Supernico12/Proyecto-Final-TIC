@@ -1,0 +1,4 @@
+0 - 16 Disparo
+
+21 - 36 CambiaArma/Recarga
+40 - 55 VuelveArma/RecargaVuelve
