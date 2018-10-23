@@ -4586,6 +4586,75 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 78691a7260754804884993565d9bedfc, type: 3}
+<<<<<<< HEAD
+--- !u!1 &330466529
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1871961435138460, guid: 28450b84179b9c44eaf1ae2542ac4441,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 330466530}
+  - component: {fileID: 330466531}
+  m_Layer: 0
+  m_Name: Pistol
+  m_TagString: Weapon
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &330466530
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4333872905067306, guid: 28450b84179b9c44eaf1ae2542ac4441,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 330466529}
+  m_LocalRotation: {x: -0, y: -0.04952299, z: -0, w: 0.998773}
+  m_LocalPosition: {x: 0.596, y: -0.37199995, z: 1.1240005}
+  m_LocalScale: {x: 8.900002, y: 8.9, z: 8.900002}
+  m_Children:
+  - {fileID: 1168219462}
+  - {fileID: 2101564841}
+  - {fileID: 1588603677}
+  - {fileID: 1306748117}
+  - {fileID: 984632649}
+  - {fileID: 1941577032}
+  - {fileID: 804751075}
+  - {fileID: 1676843729}
+  - {fileID: 745321958}
+  m_Father: {fileID: 1283827009}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: -5.677, z: 0}
+--- !u!114 &330466531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 330466529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ed51d90550c8694794682d85e77b785, type: 3}
+  m_Name: Pistol
+  m_EditorClassIdentifier: 
+  Gunname: Pistol
+  attackSpeed: 4
+  damage: 7
+  isAutomatic: 0
+  range: 100
+  shootMuzzle: {fileID: 1263852193}
+  hitParticle: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b,
+    type: 2}
+  maxAmmo: 99999
+  reloadDelay: 2
+  weaponMesh: 0
+  animations: []
+  type: 0
+  hasScope: 0
+  scopeFieldOfView: 0
+=======
+>>>>>>> 3432a3a2b291b935617229450ee0a44eeda93337
 --- !u!4 &334983378 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 96c6685b90b2b154b9cce8607f87450f,
@@ -8987,6 +9056,79 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 624165430}
   m_CullTransparentMesh: 0
+<<<<<<< HEAD
+--- !u!1 &628043732
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1646606815273344, guid: 28450b84179b9c44eaf1ae2542ac4441,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 628043733}
+  - component: {fileID: 628043734}
+  m_Layer: 0
+  m_Name: Rifle
+  m_TagString: Weapon
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &628043733
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4946593350911568, guid: 28450b84179b9c44eaf1ae2542ac4441,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 628043732}
+  m_LocalRotation: {x: -0, y: -0.04952299, z: -0, w: 0.998773}
+  m_LocalPosition: {x: 0.513, y: -0.37199995, z: 1.1240005}
+  m_LocalScale: {x: 8.900002, y: 8.9, z: 8.900002}
+  m_Children:
+  - {fileID: 1673912710}
+  - {fileID: 340489044}
+  - {fileID: 2066633865}
+  - {fileID: 106432152}
+  - {fileID: 1437882807}
+  - {fileID: 958059021}
+  - {fileID: 1610854670}
+  - {fileID: 866910846}
+  - {fileID: 1265956568}
+  m_Father: {fileID: 1283827009}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: -5.677, z: 0}
+--- !u!114 &628043734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 628043732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ed51d90550c8694794682d85e77b785, type: 3}
+  m_Name: Rifle
+  m_EditorClassIdentifier: 
+  Gunname: Rifle
+  attackSpeed: 7
+  damage: 6
+  isAutomatic: 1
+  range: 100
+  shootMuzzle: {fileID: 1677873755}
+  hitParticle: {fileID: 1000010355441670, guid: 02a509a7fa70ed740ba4197e20c5d32d,
+    type: 2}
+  maxAmmo: 30
+  reloadDelay: 2
+  weaponMesh: 1
+  animations:
+  - {fileID: 7400000, guid: 3fb3ece19a6e7c948afbf119bf2a6ae7, type: 2}
+  - {fileID: 7400000, guid: ba73ea6a57cfb2b4c98b3b4007fd8503, type: 2}
+  - {fileID: 7400000, guid: ca54e42cdb61fb64084028270a690cf9, type: 2}
+  - {fileID: 7400000, guid: 4174339c71df7fd428251b1c745d8903, type: 2}
+  type: 1
+  hasScope: 0
+  scopeFieldOfView: 0
+=======
+>>>>>>> 3432a3a2b291b935617229450ee0a44eeda93337
 --- !u!1001 &634303873
 Prefab:
   m_ObjectHideFlags: 0
@@ -11009,7 +11151,29 @@ Transform:
 --- !u!64 &732201200
 MeshCollider:
   m_ObjectHideFlags: 0
+<<<<<<< HEAD
+  m_CorrespondingSourceObject: {fileID: 4435682787896178, guid: 28450b84179b9c44eaf1ae2542ac4441,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 730613613}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 78.78, y: 30.06, z: -69.18}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1791008816}
+  - {fileID: 480688505}
+  - {fileID: 478586737}
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &730613615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114024298326419292, guid: 28450b84179b9c44eaf1ae2542ac4441,
+    type: 2}
+=======
   m_CorrespondingSourceObject: {fileID: 0}
+>>>>>>> 3432a3a2b291b935617229450ee0a44eeda93337
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 732201198}
   m_Material: {fileID: 0}
@@ -12384,6 +12548,111 @@ RectTransform:
   m_AnchoredPosition: {x: -7.5, y: -0.5}
   m_SizeDelta: {x: -35, y: -13}
   m_Pivot: {x: 0.5, y: 0.5}
+<<<<<<< HEAD
+--- !u!1001 &788751492
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1283827009}
+    m_Modifications:
+    - target: {fileID: 400150, guid: 8fbac1ff11f0ddc4fa9043bd0d965cac, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 400150, guid: 8fbac1ff11f0ddc4fa9043bd0d965cac, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 400150, guid: 8fbac1ff11f0ddc4fa9043bd0d965cac, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.1240005
+      objectReference: {fileID: 0}
+    - target: {fileID: 400150, guid: 8fbac1ff11f0ddc4fa9043bd0d965cac, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400150, guid: 8fbac1ff11f0ddc4fa9043bd0d965cac, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.04952299
+      objectReference: {fileID: 0}
+    - target: {fileID: 400150, guid: 8fbac1ff11f0ddc4fa9043bd0d965cac, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400150, guid: 8fbac1ff11f0ddc4fa9043bd0d965cac, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.998773
+      objectReference: {fileID: 0}
+    - target: {fileID: 400150, guid: 8fbac1ff11f0ddc4fa9043bd0d965cac, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400150, guid: 8fbac1ff11f0ddc4fa9043bd0d965cac, type: 3}
+      propertyPath: m_LocalScale.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400150, guid: 8fbac1ff11f0ddc4fa9043bd0d965cac, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400150, guid: 8fbac1ff11f0ddc4fa9043bd0d965cac, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400150, guid: 8fbac1ff11f0ddc4fa9043bd0d965cac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -5.677
+      objectReference: {fileID: 0}
+    - target: {fileID: 100150, guid: 8fbac1ff11f0ddc4fa9043bd0d965cac, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100150, guid: 8fbac1ff11f0ddc4fa9043bd0d965cac, type: 3}
+      propertyPath: m_TagString
+      value: Weapon
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8fbac1ff11f0ddc4fa9043bd0d965cac, type: 3}
+  m_IsPrefabAsset: 0
+--- !u!4 &788751493 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400150, guid: 8fbac1ff11f0ddc4fa9043bd0d965cac,
+    type: 3}
+  m_PrefabInternal: {fileID: 788751492}
+--- !u!1 &788751494 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100150, guid: 8fbac1ff11f0ddc4fa9043bd0d965cac,
+    type: 3}
+  m_PrefabInternal: {fileID: 788751492}
+--- !u!114 &788751495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 788751494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ed51d90550c8694794682d85e77b785, type: 3}
+  m_Name: Heavy
+  m_EditorClassIdentifier: 
+  Gunname: sar
+  attackSpeed: 10
+  damage: 5
+  isAutomatic: 1
+  range: 50
+  shootMuzzle: {fileID: 1119102679}
+  hitParticle: {fileID: 1000010355441670, guid: 02a509a7fa70ed740ba4197e20c5d32d,
+    type: 2}
+  maxAmmo: 50
+  reloadDelay: 1
+  weaponMesh: 2
+  animations: []
+  type: 2
+  hasScope: 0
+  scopeFieldOfView: 0
+=======
+>>>>>>> 3432a3a2b291b935617229450ee0a44eeda93337
 --- !u!1001 &788826579
 Prefab:
   m_ObjectHideFlags: 0
@@ -17088,6 +17357,78 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400004, guid: 305b3fedef1efb747b8a86eb3e053bd5,
     type: 3}
   m_PrefabInternal: {fileID: 16919651}
+<<<<<<< HEAD
+--- !u!1 &1177725388
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1643649582525626, guid: 28450b84179b9c44eaf1ae2542ac4441,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1177725389}
+  - component: {fileID: 1177725390}
+  m_Layer: 0
+  m_Name: Sniper
+  m_TagString: Weapon
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1177725389
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4562479575334406, guid: 28450b84179b9c44eaf1ae2542ac4441,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1177725388}
+  m_LocalRotation: {x: -0, y: -0.04952299, z: -0, w: 0.998773}
+  m_LocalPosition: {x: 0.304, y: -0.26500008, z: 1.2599983}
+  m_LocalScale: {x: 8.900002, y: 8.9, z: 8.900002}
+  m_Children:
+  - {fileID: 1007191306}
+  - {fileID: 1346702993}
+  - {fileID: 224335009}
+  - {fileID: 316474304}
+  - {fileID: 1776334882}
+  - {fileID: 1390539992}
+  - {fileID: 1683974221}
+  - {fileID: 1480876115}
+  - {fileID: 1566362839}
+  - {fileID: 1950898185}
+  - {fileID: 159822899}
+  - {fileID: 1837957638}
+  m_Father: {fileID: 1283827009}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: -5.677, z: 0}
+--- !u!114 &1177725390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1177725388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ed51d90550c8694794682d85e77b785, type: 3}
+  m_Name: Sniper
+  m_EditorClassIdentifier: 
+  Gunname: Sniper
+  attackSpeed: 3
+  damage: 30
+  isAutomatic: 0
+  range: 100
+  shootMuzzle: {fileID: 181712301}
+  hitParticle: {fileID: 1000011128802252, guid: 96730f8640590934eacb6f860058e7f9,
+    type: 2}
+  maxAmmo: 10
+  reloadDelay: 2
+  weaponMesh: 3
+  animations: []
+  type: 3
+  hasScope: 0
+  scopeFieldOfView: 0
+=======
+>>>>>>> 3432a3a2b291b935617229450ee0a44eeda93337
 --- !u!1001 &1178448640
 Prefab:
   m_ObjectHideFlags: 0
