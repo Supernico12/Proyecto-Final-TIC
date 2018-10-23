@@ -19,6 +19,7 @@ public class Rocket : MonoBehaviour {
 
     void Start()
     {
+<<<<<<< HEAD
         player = PlayerManager.instance.player;
 
         character = player.GetComponent<CharacterStats>();
@@ -50,6 +51,24 @@ public class Rocket : MonoBehaviour {
             Destroy(gameObject);
         }
 
+=======
+        rb = gameObject.GetComponent<Rigidbody>();
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+        
+        targeteano = player.transform.position - transform.position;
+    }
+    void FixedUpdate()
+    {
+        
+        rb.velocity = targeteano.normalized * BulletSpeed * Time.deltaTime;
+        
+
+
+    }
+    void Update()
+    {
+        
+>>>>>>> 3432a3a2b291b935617229450ee0a44eeda93337
         time++;
         if (time > timebeforedestroy)
         {
