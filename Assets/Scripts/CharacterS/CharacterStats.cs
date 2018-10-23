@@ -11,6 +11,9 @@ public class CharacterStats : MonoBehaviour
 <<<<<<< HEAD
 =======
     
+<<<<<<< HEAD
+>>>>>>> parent of fd76056... Merge branch 'master' of https://github.com/Supernico12/Proyecto-Final-TIC
+=======
 >>>>>>> parent of fd76056... Merge branch 'master' of https://github.com/Supernico12/Proyecto-Final-TIC
 
 
@@ -19,12 +22,15 @@ public class CharacterStats : MonoBehaviour
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	
 
 
 
 
 =======
+=======
+>>>>>>> parent of fd76056... Merge branch 'master' of https://github.com/Supernico12/Proyecto-Final-TIC
     
 
 

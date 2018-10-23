@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 m_EditorVersion: 2018.2.2f1
+=======
+m_EditorVersion: 2018.2.1f1
+>>>>>>> parent of fd76056... Merge branch 'master' of https://github.com/Supernico12/Proyecto-Final-TIC
 =======
 m_EditorVersion: 2018.2.1f1
 >>>>>>> parent of fd76056... Merge branch 'master' of https://github.com/Supernico12/Proyecto-Final-TIC
