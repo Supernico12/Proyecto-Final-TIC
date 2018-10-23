@@ -6,36 +6,49 @@ public class Rocket : MonoBehaviour {
     public float BulletSpeed;
 
     Vector3 targeteano;
-    Transform player;
+    public GameObject player;
     Rigidbody rb;
     public int timebeforedestroy;
     int time;
-    
+
+    public float damage;
+
+    public ParticleSystem explosion;
+
+    CharacterStats character;
 
     void Start()
     {
-        rb = gameObject.GetComponent<Rigidbody>();
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        player = PlayerManager.instance.player;
+
+        character = player.GetComponent<CharacterStats>();
         
-        targeteano = player.transform.position - transform.position;
+        
 
-
+        
 
     }
     void FixedUpdate()
     {
 
 
-
         transform.LookAt(player.transform.position);
 
-
-
+        Debug.Log("Distance" + Vector3.Distance(transform.position, player.transform.position));
+       
     }
     void Update()
     {
 
         transform.position += transform.forward * BulletSpeed * Time.deltaTime;
+
+        if (Vector3.Distance(transform.position, player.transform.position) <= 4f)
+        {
+            Debug.Log("Destroying");
+            //character.TakeDamage(damage);
+            Instantiate(explosion, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+        }
 
         time++;
         if (time > timebeforedestroy)
