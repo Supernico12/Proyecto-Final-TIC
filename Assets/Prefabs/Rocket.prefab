@@ -89,7 +89,7 @@ Transform:
   m_GameObject: {fileID: 1278568042825274}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4658850837603136}
   m_RootOrder: 2
@@ -102,7 +102,7 @@ Transform:
   m_GameObject: {fileID: 1856868319178790}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: -1742.6298, y: 505.1552, z: 902.63}
-  m_LocalScale: {x: 180, y: 180, z: 180}
+  m_LocalScale: {x: 90.00002, y: 90, z: 90.00002}
   m_Children:
   - {fileID: 4966302326709722}
   - {fileID: 4776493446234276}
@@ -162,8 +162,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52ae9bc027f22e845871d0a4e8389815, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BulletSpeed: 0.005
-  timebeforedestroy: 10000
+  BulletSpeed: 10
+  timebeforedestroy: 100
 --- !u!198 &198514853240038892
 ParticleSystem:
   m_ObjectHideFlags: 1

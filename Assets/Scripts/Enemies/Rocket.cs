@@ -18,25 +18,18 @@ public class Rocket : MonoBehaviour {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         
         targeteano = player.transform.position - transform.position;
-
-
-
     }
     void FixedUpdate()
     {
-
-
-
-        transform.LookAt(player.transform.position);
-
+        
+        rb.velocity = targeteano.normalized * BulletSpeed * Time.deltaTime;
+        
 
 
     }
     void Update()
     {
-
-        transform.position += transform.forward * BulletSpeed * Time.deltaTime;
-
+        
         time++;
         if (time > timebeforedestroy)
         {
