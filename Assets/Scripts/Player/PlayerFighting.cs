@@ -82,8 +82,8 @@ public class PlayerFighting : MonoBehaviour
 
                     //AkSoundEngine.PostEvent("Play_SMG_Shot", gameObject);
                     RaycastHit hit;
-
-                    OnShoot.Invoke();
+                    if (OnShoot != null)
+                        OnShoot.Invoke();
                     if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, weapon.range))
                     {
                         ShotEffect(hit);
@@ -126,7 +126,8 @@ public class PlayerFighting : MonoBehaviour
 
                     //Debug.Log(currentAmmo);
                     isReloading = false;
-                    OnReload.Invoke();
+                    if (OnReload != null)
+                        OnReload.Invoke();
                 }
             }
         }
