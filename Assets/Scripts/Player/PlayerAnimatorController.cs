@@ -19,7 +19,7 @@ public class PlayerAnimatorController : MonoBehaviour
         animator = GetComponent<Animator>();
         overrideanimator = new AnimatorOverrideController(animator.runtimeAnimatorController);
         animator.runtimeAnimatorController = overrideanimator;
-        playerFighting = GetComponent<PlayerFighting>();
+        playerFighting = PlayerManager.instance.player.GetComponent<PlayerFighting>();
         playerFighting.OnReload += OnReload;
         playerFighting.OnShoot += OnAttack;
 
@@ -32,7 +32,7 @@ public class PlayerAnimatorController : MonoBehaviour
         overrideanimator["Shoot"] = animationsClips[1];
 
 
-    
+
 
     }
 
