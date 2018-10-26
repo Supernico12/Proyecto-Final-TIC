@@ -12,6 +12,7 @@ public class PlayerMelee : MonoBehaviour
     [SerializeField] float damage = 10;
     [SerializeField] GameObject mesh;
     [SerializeField] GameObject uiAmmo;
+    [SerializeField] float fieldOfView;
     float currentAttack;
     bool isEquiped;
     PlayerFighting fighting;
@@ -24,6 +25,9 @@ public class PlayerMelee : MonoBehaviour
     {
         cam = Camera.main;
         fighting = GetComponent<PlayerFighting>();
+        //OnEquip();
+        cam.fieldOfView = fieldOfView;
+        isEquiped = true;
     }
     public void DisEquip()
     {
@@ -70,10 +74,12 @@ public class PlayerMelee : MonoBehaviour
     }
     public void OnEquip()
     {
-        fighting.DisEquip();
+
         isEquiped = true;
         mesh.SetActive(true);
         uiAmmo.SetActive(false);
+        cam.fieldOfView = fieldOfView;
+        fighting.DisEquip();
     }
     void OnDrawGizmosSelected()
     {
