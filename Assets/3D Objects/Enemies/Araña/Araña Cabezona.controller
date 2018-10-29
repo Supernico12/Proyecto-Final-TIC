@@ -7,6 +7,7 @@ AnimatorController:
   m_PrefabInternal: {fileID: 0}
   m_Name: "Ara\xF1a Cabezona"
   serializedVersion: 5
+<<<<<<< HEAD
   m_AnimatorParameters:
   - m_Name: Walk
     m_Type: 4
@@ -20,6 +21,9 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
+=======
+  m_AnimatorParameters: []
+>>>>>>> fe6112479e7823e5a073fe96d65f34a52691b3f8
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -39,6 +43,7 @@ AnimatorStateTransition:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: 
+<<<<<<< HEAD
   m_Conditions:
   - m_ConditionMode: 1
     m_ConditionEvent: Die
@@ -91,6 +96,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: Walk
     m_EventTreshold: 0
+=======
+  m_Conditions: []
+>>>>>>> fe6112479e7823e5a073fe96d65f34a52691b3f8
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102966510670758684}
   m_Solo: 0
@@ -99,6 +107,7 @@ AnimatorStateTransition:
   serializedVersion: 3
   m_TransitionDuration: 0.25
   m_TransitionOffset: 0
+<<<<<<< HEAD
   m_ExitTime: 0.953125
   m_HasExitTime: 0
   m_HasFixedDuration: 1
@@ -123,8 +132,10 @@ AnimatorStateTransition:
   serializedVersion: 3
   m_TransitionDuration: 0.25
   m_TransitionOffset: 0
+=======
+>>>>>>> fe6112479e7823e5a073fe96d65f34a52691b3f8
   m_ExitTime: 0.9464286
-  m_HasExitTime: 0
+  m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
