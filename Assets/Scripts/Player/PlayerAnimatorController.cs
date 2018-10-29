@@ -41,6 +41,7 @@ public class PlayerAnimatorController : MonoBehaviour
 
         animator.SetTrigger("Reload");
         overrideanimator["Reload"] = animationsClips[2];
+        Debug.Log("Reloading");
 
     }
 
@@ -49,6 +50,11 @@ public class PlayerAnimatorController : MonoBehaviour
     public void SetAnimations(AnimationClip[] newClips)
     {
         animationsClips = newClips;
+    }
+
+    void LateUpdate()
+    {
+        gameObject.transform.localScale = new Vector3(1, 1, -1);
     }
 
 

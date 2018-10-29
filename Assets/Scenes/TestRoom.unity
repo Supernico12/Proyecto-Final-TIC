@@ -5412,11 +5412,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400150, guid: 8fbac1ff11f0ddc4fa9043bd0d965cac, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.21
+      value: -0.20999996
       objectReference: {fileID: 0}
     - target: {fileID: 400150, guid: 8fbac1ff11f0ddc4fa9043bd0d965cac, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.1240005
+      value: 1.1239994
       objectReference: {fileID: 0}
     - target: {fileID: 400150, guid: 8fbac1ff11f0ddc4fa9043bd0d965cac, type: 3}
       propertyPath: m_LocalRotation.x
@@ -5452,11 +5452,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400150, guid: 8fbac1ff11f0ddc4fa9043bd0d965cac, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -5.677
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100150, guid: 8fbac1ff11f0ddc4fa9043bd0d965cac, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 100150, guid: 8fbac1ff11f0ddc4fa9043bd0d965cac, type: 3}
       propertyPath: m_TagString
@@ -5466,6 +5466,10 @@ Prefab:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: e905d271ae68d734192c09d390d875a1, type: 2}
+    - target: {fileID: 9500000, guid: 8fbac1ff11f0ddc4fa9043bd0d965cac, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8fbac1ff11f0ddc4fa9043bd0d965cac, type: 3}
   m_IsPrefabAsset: 0
@@ -5502,13 +5506,13 @@ MonoBehaviour:
   reloadDelay: 1
   weaponMesh: 2
   animations:
-  - {fileID: 7400006, guid: 283271a16825144449f926d4b87b7c12, type: 3}
-  - {fileID: 7400000, guid: 283271a16825144449f926d4b87b7c12, type: 3}
+  - {fileID: 7400000, guid: 00f1cfb3c8bf1914da5ec91e6ebeef9b, type: 2}
+  - {fileID: 7400000, guid: 00f1cfb3c8bf1914da5ec91e6ebeef9b, type: 2}
   - {fileID: 7400004, guid: 283271a16825144449f926d4b87b7c12, type: 3}
   - {fileID: 7400002, guid: 283271a16825144449f926d4b87b7c12, type: 3}
   type: 2
-  hasScope: 0
-  scopeFieldOfView: 0
+  hasScope: 1
+  scopeFieldOfView: 50
 --- !u!114 &1347543289
 MonoBehaviour:
   m_ObjectHideFlags: 0
