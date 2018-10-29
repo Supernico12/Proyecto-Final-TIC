@@ -24,10 +24,6 @@ public class PlayerMotor : MonoBehaviour {
 		
 
 	}
-    public void SetSensibility(float newSensibility)
-    {
-        sensibility = newSensibility;
-    }
 
     void Move()
     {

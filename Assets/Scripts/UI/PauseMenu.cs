@@ -6,14 +6,9 @@ public class PauseMenu : MonoBehaviour {
 
     public static bool isPaused;
     public GameObject pauseMenuUI;
-    PlayerMotor motor;
-    GameObject instance;
-    float sensibility;
-    public GameObject OptionsMenuUI;
 	// Use this for initialization
 	void Start () {
-        instance = PlayerManager.instance.player;
-        motor = instance.GetComponent<PlayerMotor>();
+        
 	}
 	
 	// Update is called once per frame
@@ -24,13 +19,11 @@ public class PauseMenu : MonoBehaviour {
             {
                 Resume();
                 Cursor.lockState = CursorLockMode.Locked;
-                
             }
             else
             {
                 Pause();
                 Cursor.lockState = CursorLockMode.None;
-                motor.SetSensibility(0f);
             }
 
         }
@@ -40,8 +33,6 @@ public class PauseMenu : MonoBehaviour {
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
-        motor.SetSensibility(sensibility);
-        OptionsMenuUI.SetActive(false);
     }
     void Pause()
     {
@@ -62,11 +53,4 @@ public class PauseMenu : MonoBehaviour {
         Debug.Log("QUIT");
         isPaused = false;
     }
-    
-    public void Sensitivity(float newSens)
-    {
-        Debug.Log(sensibility);
-        sensibility = newSens;
-    }
-
 }
