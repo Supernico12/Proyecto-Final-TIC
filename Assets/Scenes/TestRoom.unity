@@ -633,8 +633,8 @@ MonoBehaviour:
   weaponMesh: 3
   animations: []
   type: 3
-  hasScope: 1
-  scopeFieldOfView: 30
+  hasScope: 0
+  scopeFieldOfView: 0
 --- !u!1001 &210625046
 Prefab:
   m_ObjectHideFlags: 0
@@ -2141,7 +2141,6 @@ MonoBehaviour:
   damage: 30
   mesh: {fileID: 1596412539}
   uiAmmo: {fileID: 1630071061}
-  fieldOfView: 80
 --- !u!54 &533999501
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5462,10 +5461,6 @@ Prefab:
       propertyPath: m_TagString
       value: Weapon
       objectReference: {fileID: 0}
-    - target: {fileID: 9500000, guid: 8fbac1ff11f0ddc4fa9043bd0d965cac, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: e905d271ae68d734192c09d390d875a1, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8fbac1ff11f0ddc4fa9043bd0d965cac, type: 3}
   m_IsPrefabAsset: 0
@@ -5501,25 +5496,10 @@ MonoBehaviour:
   maxAmmo: 50
   reloadDelay: 1
   weaponMesh: 2
-  animations:
-  - {fileID: 7400006, guid: 283271a16825144449f926d4b87b7c12, type: 3}
-  - {fileID: 7400000, guid: 283271a16825144449f926d4b87b7c12, type: 3}
-  - {fileID: 7400004, guid: 283271a16825144449f926d4b87b7c12, type: 3}
-  - {fileID: 7400002, guid: 283271a16825144449f926d4b87b7c12, type: 3}
+  animations: []
   type: 2
   hasScope: 0
   scopeFieldOfView: 0
---- !u!114 &1347543289
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1347543286}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e8ad98d6971add4c9ef9828f4ebf7c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1375821707
 GameObject:
   m_ObjectHideFlags: 0
@@ -6122,7 +6102,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1630071062
 RectTransform:
   m_ObjectHideFlags: 0

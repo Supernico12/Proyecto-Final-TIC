@@ -13,9 +13,12 @@ public class PlayerMelee : MonoBehaviour
     [SerializeField] GameObject mesh;
     [SerializeField] GameObject uiAmmo;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     [SerializeField] float fieldOfView;
 >>>>>>> fe6112479e7823e5a073fe96d65f34a52691b3f8
+=======
+>>>>>>> parent of fe61124... asd
     float currentAttack;
     bool isEquiped;
     PlayerFighting fighting;
@@ -29,11 +32,14 @@ public class PlayerMelee : MonoBehaviour
         cam = Camera.main;
         fighting = GetComponent<PlayerFighting>();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         //OnEquip();
         cam.fieldOfView = fieldOfView;
         isEquiped = true;
 >>>>>>> fe6112479e7823e5a073fe96d65f34a52691b3f8
+=======
+>>>>>>> parent of fe61124... asd
     }
     public void DisEquip()
     {
@@ -81,6 +87,7 @@ public class PlayerMelee : MonoBehaviour
     public void OnEquip()
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         fighting.DisEquip();
         isEquiped = true;
         mesh.SetActive(true);
@@ -93,6 +100,12 @@ public class PlayerMelee : MonoBehaviour
         cam.fieldOfView = fieldOfView;
         fighting.DisEquip();
 >>>>>>> fe6112479e7823e5a073fe96d65f34a52691b3f8
+=======
+        fighting.DisEquip();
+        isEquiped = true;
+        mesh.SetActive(true);
+        uiAmmo.SetActive(false);
+>>>>>>> parent of fe61124... asd
     }
     void OnDrawGizmosSelected()
     {
