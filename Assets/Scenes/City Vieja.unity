@@ -2157,6 +2157,11 @@ Prefab:
       propertyPath: m_Positions.Array.data[1].z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 120807030829299970, guid: 95d9c895f85d61f408de3d3982862422,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d80e2a2e61efe9a4ea03b25006407b41, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95d9c895f85d61f408de3d3982862422, type: 2}
   m_IsPrefabAsset: 0
@@ -7409,6 +7414,7 @@ MonoBehaviour:
   attack: {fileID: 2048540464}
   speed: 5
   casted: 0
+  effect: {fileID: 0}
   Cooldown: 20
   linePrefab: {fileID: 1736885618651624, guid: 8a234a211a094d14face7764892f54cb, type: 2}
   rayPrefab: {fileID: 1785518714751780, guid: 95d9c895f85d61f408de3d3982862422, type: 2}
@@ -7425,7 +7431,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  ammoDrop: {fileID: 0}
+  ammoDrop: {fileID: 1143177794371528, guid: b99b0bd6a390e4946a20aca76c08fdaf, type: 2}
 --- !u!65 &537517210
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19674,6 +19680,7 @@ MonoBehaviour:
   attack: {fileID: 0}
   speed: 60
   casted: 0
+  effect: {fileID: 0}
   Cooldown: 0
   linePrefab: {fileID: 0}
   rayPrefab: {fileID: 0}

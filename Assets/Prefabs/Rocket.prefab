@@ -162,8 +162,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52ae9bc027f22e845871d0a4e8389815, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
+  BulletSpeed: 25
+  player: {fileID: 0}
+  timebeforedestroy: 10000
+  damage: 0
+  explosion: {fileID: 198000012942003240, guid: ecdd96beb7f93494880c052dfccf9dc1,
+    type: 2}
+=======
   BulletSpeed: 10
   timebeforedestroy: 100
+<<<<<<< HEAD
+>>>>>>> fe6112479e7823e5a073fe96d65f34a52691b3f8
+=======
+>>>>>>> 3432a3a2b291b935617229450ee0a44eeda93337
+>>>>>>> parent of 5eda9bd... SADASD
 --- !u!198 &198514853240038892
 ParticleSystem:
   m_ObjectHideFlags: 1
