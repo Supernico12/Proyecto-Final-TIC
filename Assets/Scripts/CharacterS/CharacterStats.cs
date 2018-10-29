@@ -5,7 +5,7 @@ using UnityEngine;
 public class CharacterStats : MonoBehaviour
 {
 
-
+    public LevelManager level;
     [SerializeField]
     float health;
 
@@ -22,7 +22,7 @@ public class CharacterStats : MonoBehaviour
     public void TakeDamage(float damage)
     {
         currenthealth -= damage;
-        Debug.Log(currenthealth);
+        
         if (currenthealth <= 0)
         {
             Die();
@@ -32,7 +32,7 @@ public class CharacterStats : MonoBehaviour
 
     public virtual void Die()
     {
-
+        level.RemoveEnemy(0);
         Instantiate(ammoDrop, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
@@ -40,7 +40,22 @@ public class CharacterStats : MonoBehaviour
     void Start()
     {
         currenthealth = health;
-
+        level.AddEnemy(1);
     }
 
+    public float GetHealth
+    {
+        get {
+            return currenthealth;
+           
+        }
+    }
+public float GetMaxHealth
+{
+    get
+    {
+        return health;
+
+    }
+}
 }

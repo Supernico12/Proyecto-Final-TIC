@@ -22,7 +22,7 @@ public class EnemyMovement : MonoBehaviour {
     public NavMeshAgent agent;
     public Transform destination;
     public bool canMove = true;
-
+    
 
     
     // Use this for initialization

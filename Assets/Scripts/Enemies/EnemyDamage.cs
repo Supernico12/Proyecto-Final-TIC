@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.AI;
 
 //Script Para el ataque de la Araña unicamente
-public class EnemyDamage : MonoBehaviour {
+public class EnemyDamage : MonoBehaviour
+{
 
     private float distance;
 
@@ -23,7 +24,7 @@ public class EnemyDamage : MonoBehaviour {
     Transform firePoint;
     Transform lastPos;
 
-    GameObject playerGO;
+
     EnemyMovement movement;
 
     #region Line
@@ -31,7 +32,6 @@ public class EnemyDamage : MonoBehaviour {
     public LineRenderer attack;
     public float speed = 60f;
     public bool casted = false;
-    public ParticleSystem effect;
 
     float distanceToHit;
     #endregion 
@@ -43,42 +43,33 @@ public class EnemyDamage : MonoBehaviour {
     Vector3 hitPoint;
     public GameObject linePrefab;
     public GameObject rayPrefab;
-    bool canAttack;
     #endregion
 
-    Vector3 distanceBetween;
+
+    public ParticleSystem effect;
 
     public float stoppingDistance;
     GameObject head;
 
     // Use this for initialization
-    void Start() {
+    void Start()
+    {
         anim = GetComponent<Animator>();
         firePoint = GameObject.Find("FirePoint").transform;
         player = PlayerManager.instance.playertransform;
-        playerGO = PlayerManager.instance.player;
         movement = GetComponent<EnemyMovement>();
         head = GameObject.Find("Craneo");
         agent.stoppingDistance = stoppingDistance;
-        playerHealth = playerGO.GetComponent<CharacterStats>();
     }
 
     // Update is called once per frame
-    void Update() {
-
-
-
-        
-        if (Vector3.Distance(player.position, attack.GetPosition(1)) <= .5f)
-        {
-            
-            playerHealth.TakeDamage(enemyDamage * Time.deltaTime);
-        }
+    void Update()
+    {
 
 
         distance = Vector3.Distance(firePoint.position, player.position);
-        //head.transform.localRotation.x 
-        if (distance <= agent.stoppingDistance )
+        
+        if (distance <= agent.stoppingDistance)
         {
             Attack();
             LookAt();
@@ -86,7 +77,7 @@ public class EnemyDamage : MonoBehaviour {
         else
         {
             movement.canMove = true;
-            anim.SetBool("Walk", true);
+            anim.enabled = true;
             line.SetPosition(0, Vector3.zero);
             line.SetPosition(1, Vector3.zero);
             attack.SetPosition(0, Vector3.zero);
@@ -94,7 +85,7 @@ public class EnemyDamage : MonoBehaviour {
 
             casted = false;
 
-            
+
         }
         if (time2 > Cooldown)
         {
@@ -108,16 +99,7 @@ public class EnemyDamage : MonoBehaviour {
             time2 = 0;
             attacking = false;
         }
-        if (canAttack == false)
-        {
-            if (time1 > Cooldown)
-            {
-                canAttack = true;
-            }
-        }
     }
-
-    
 
     public void LookAt()
     {
@@ -129,48 +111,58 @@ public class EnemyDamage : MonoBehaviour {
     {
         time1++;
         time2++;
-        
+        hitPoint += (player.position - hitPoint) * speed * Time.deltaTime;
+
         movement.canMove = true;
-        anim.SetBool("Walk", false);
+
+        anim.enabled = false;
+
+
         if (!attacking)
         {
+       
             if (!casted)
             {
-                hitPoint += (player.position - hitPoint) * speed * Time.deltaTime;
                 line.SetPosition(0, firePoint.position);
-                line.SetPosition(1, hitPoint);  
-                
+                line.SetPosition(1, hitPoint);
+
             }
             distanceToHit = Vector3.Distance(line.GetPosition(1), player.position);
-           
+         
             if (distanceToHit < .5f)
             {
-              
+               
                 attacking = true;
                 CastRay();
-                
             }
+
         }
     }
 
-    
-
     public void CastRay()
     {
-       
+
+        
         attack.SetPosition(0, firePoint.position);
         attack.SetPosition(1, hitPoint);
-        Instantiate(effect, attack.GetPosition(1), Quaternion.identity);
-        
+        Instantiate(effect, hitPoint, Quaternion.identity);
         line.SetPosition(0, Vector3.zero);
         line.SetPosition(1, Vector3.zero);
         casted = true;
         time1 = 0;
         attacking = false;
-        canAttack = false;
 
 
-     }
+        if (attack.GetPosition(1) == lastPos.position)
+        {
 
-    
+            Debug.Log("Damaging");
+            playerHealth.TakeDamage(enemyDamage);
+
+        }
+        else
+        {
+
+        }
+    }
 }

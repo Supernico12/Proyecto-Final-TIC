@@ -163,7 +163,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BulletSpeed: 10
-  timebeforedestroy: 100
+  Plaayer: {fileID: 0}
+  explosion: {fileID: 198000012942003240, guid: ecdd96beb7f93494880c052dfccf9dc1,
+    type: 2}
 --- !u!198 &198514853240038892
 ParticleSystem:
   m_ObjectHideFlags: 1

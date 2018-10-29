@@ -16,10 +16,14 @@ public class SettingsMenu : MonoBehaviour
     public float globalSens;
     Slider sens;
 
+    public float volumeMartin;
+
     int currentResolutionIndex = 0;
     void Start()
     {
+        sens.value = globalSens;
         instance = PlayerManager.instance.player;
+        pause = GetComponentInParent<PauseMenu>();
         motor = instance.GetComponent<PlayerMotor>();
         resolutions = Screen.resolutions;
         resolutionsDropdwon.ClearOptions();
@@ -46,7 +50,8 @@ public class SettingsMenu : MonoBehaviour
     }
     public void SetVolume(float volume)
     {
-        Debug.Log(volume);
+        volumeMartin = volume;
+        //AudioKinetic.SetRTPC("volumen", volume);
         //LoHaceMartin
     }
 
@@ -58,21 +63,19 @@ public class SettingsMenu : MonoBehaviour
     public void Fullscreen(bool isFullscreen)
     {
         Screen.fullScreen = isFullscreen;
-        Debug.Log(isFullscreen);
+        
     }
+
     public void SetSensibility(float newSensibility)
     {
-        Sensibility = newSensibility * 10;
+        Sensibility = newSensibility;
         if (motor != null)
         {
-
+            
             motor.SetSensibility(Sensibility);
         }
-        
+        pause.getSensibility(Sensibility);
 
     }
-    void Awake()
-    {
-        sens.value = globalSens;
-    }
+    
 }
