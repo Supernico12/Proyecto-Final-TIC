@@ -10,7 +10,7 @@ public class CharacterStats : MonoBehaviour
 	float health;
 
 
-	float currenthealth;
+	public float currenthealth;
 	[SerializeField] GameObject ammoDrop;
 
 
