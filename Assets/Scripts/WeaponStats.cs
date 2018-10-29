@@ -22,13 +22,8 @@ public class WeaponStats  : MonoBehaviour {
 	public WeaponType weaponMesh;
     [SerializeField]
     public AnimationClip[] animations;
+	
 	public WeaponType type;
-
-	[Header("Scope")]
-	public bool hasScope;
-	public float scopeFieldOfView; 
-	
-	
     // 1 Shoot  2 Reload 3 Enter 4 Leave 
 	// Use this for initialization
 	

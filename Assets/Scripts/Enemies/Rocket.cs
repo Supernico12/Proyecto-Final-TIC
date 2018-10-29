@@ -17,11 +17,11 @@ public class Rocket : MonoBehaviour
 
     public ParticleSystem explosion;
 
-    
     CharacterStats character;
 
     void Start()
     {
+<<<<<<< HEAD
         player = PlayerManager.instance.player;
 =======
 
@@ -56,16 +56,35 @@ public class Rocket : MonoBehaviour
         {
             Debug.Log("Destroying");
             //character.TakeDamage(damage);
-            GameObject restos = Instantiate(explosion, transform.position, Quaternion.identity).GetComponent<GameObject>();
-            Destroy(restos, 3);
+            Instantiate(explosion, transform.position, Quaternion.identity);
             Destroy(gameObject);
-            
         }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
 >>>>>>> fe6112479e7823e5a073fe96d65f34a52691b3f8
+=======
+=======
+        rb = gameObject.GetComponent<Rigidbody>();
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+        
+        targeteano = player.transform.position - transform.position;
+    }
+    void FixedUpdate()
+    {
+        
+        rb.velocity = targeteano.normalized * BulletSpeed * Time.deltaTime;
+        
+
+
+    }
+    void Update()
+    {
+        
+>>>>>>> 3432a3a2b291b935617229450ee0a44eeda93337
+>>>>>>> parent of 5eda9bd... SADASD
         time++;
         if (time > timebeforedestroy)
         {
