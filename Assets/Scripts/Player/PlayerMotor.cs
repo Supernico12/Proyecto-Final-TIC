@@ -4,26 +4,26 @@ using UnityEngine;
 
 public class PlayerMotor : MonoBehaviour {
 
-	CharacterController characterController;
-	[SerializeField]Camera cam;
-	Rigidbody rb;
-	[SerializeField] float speed = 1;
-	[SerializeField] float gravity = -1;
-	[SerializeField] float jumpSpeed = 8;
-	[SerializeField] Vector2 maxRotations;
-	[SerializeField] float sensibility;
+    CharacterController characterController;
+    [SerializeField] Camera cam;
+    Rigidbody rb;
+    [SerializeField] float speed = 1;
+    [SerializeField] float gravity = -1;
+    [SerializeField] float jumpSpeed = 8;
+    [SerializeField] Vector2 maxRotations;
+    public float sensibility;
 
-	Vector3 cameraRotation; 
-	Vector3 movement;
-	
-	void Start () {
-		if (cam != null)cam = Camera.main;	
-		rb = GetComponent<Rigidbody>();
-		characterController = GetComponent<CharacterController>();
-		 Cursor.lockState = CursorLockMode.Locked;
-		
+    Vector3 cameraRotation;
+    Vector3 movement;
 
-	}
+    void Start() {
+        if (cam != null) cam = Camera.main;
+        rb = GetComponent<Rigidbody>();
+        characterController = GetComponent<CharacterController>();
+        Cursor.lockState = CursorLockMode.Locked;
+
+
+    }
 
     void Move()
     {
@@ -42,44 +42,49 @@ public class PlayerMotor : MonoBehaviour {
             characterController.Move(new Vector3(finalMov.x, movement.y, finalMov.z));
         }
     }
-	// Update is called once per frame
-	void Jump(){
-		if(Input.GetButton("Jump")){
-			movement.y = jumpSpeed ;
-			//Debug.Log("Jumping");
-		}
-	}
-	void RotateCamera(){
+    // Update is called once per frame
+    void Jump() {
+        if (Input.GetButton("Jump")) {
+            movement.y = jumpSpeed;
+            //Debug.Log("Jumping");
+        }
+    }
+    void RotateCamera() {
 
-        Vector2 rot = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y")  );
-		
-	
-		 cameraRotation += new Vector3 (-rot.y ,rot.x  ,0)* sensibility;
-		cameraRotation.x = Mathf.Clamp(cameraRotation.x,maxRotations.x,maxRotations.y);
+        Vector2 rot = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
 
-		cam.transform.eulerAngles = cameraRotation; 
-		
 
-		 
-		
-			//Debug.Log(cam.transform.rotation.eulerAngles.y);
+        cameraRotation += new Vector3(-rot.y, rot.x, 0) * sensibility;
+        cameraRotation.x = Mathf.Clamp(cameraRotation.x, maxRotations.x, maxRotations.y);
 
-	}
-	void LateUpdate(){
-		RotateCamera();
-	}
-	void FixedUpdate () {
-		Move();
+        cam.transform.eulerAngles = cameraRotation;
 
-		if(characterController.isGrounded){
-			
-			
-			movement.y = 0;
-			Jump();
-		}else{
-			movement.y += gravity * Time.deltaTime; 
-			 movement.y = Mathf.Clamp(movement.y, -10 , 10);
-			
-		}
-	}
+
+
+
+        //Debug.Log(cam.transform.rotation.eulerAngles.y);
+
+    }
+    void LateUpdate() {
+        RotateCamera();
+    }
+    void FixedUpdate() {
+        Move();
+
+        if (characterController.isGrounded) {
+
+
+            movement.y = 0;
+            Jump();
+        } else {
+            movement.y += gravity * Time.deltaTime;
+            movement.y = Mathf.Clamp(movement.y, -10, 10);
+
+        }
+    }
+
+    public void SetSensibility(float newSens)
+    {
+        sensibility = newSens;
+    }
 }
