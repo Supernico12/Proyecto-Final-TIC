@@ -8,12 +8,36 @@ public class CharacterStats : MonoBehaviour
 
 	[SerializeField]
 	float health;
+<<<<<<< HEAD
+=======
+    
+<<<<<<< HEAD
+>>>>>>> parent of fd76056... Merge branch 'master' of https://github.com/Supernico12/Proyecto-Final-TIC
+=======
+>>>>>>> parent of fd76056... Merge branch 'master' of https://github.com/Supernico12/Proyecto-Final-TIC
 
 
 	float currenthealth;
 	[SerializeField] GameObject ammoDrop;
 
-public void TakeDamage(float damage)
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+	
+
+
+
+
+=======
+=======
+>>>>>>> parent of fd76056... Merge branch 'master' of https://github.com/Supernico12/Proyecto-Final-TIC
+    
+
+
+
+    
+>>>>>>> parent of fd76056... Merge branch 'master' of https://github.com/Supernico12/Proyecto-Final-TIC
+	public void TakeDamage(float damage)
 	{
 		currenthealth -= damage;
 		if (currenthealth <= 0)
