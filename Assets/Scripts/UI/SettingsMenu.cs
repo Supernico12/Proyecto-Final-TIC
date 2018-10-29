@@ -8,9 +8,18 @@ public class SettingsMenu : MonoBehaviour {
 
     public Dropdown resolutionsDropdwon;
     Resolution[] resolutions;
+    PlayerMotor motor;
+    GameObject instance;
+    public PauseMenu pause;
+    float Sensibility;
+
+    Slider sens;
+
     int currentResolutionIndex = 0;
     void Start()
     {
+        instance = PlayerManager.instance.player;
+        motor = instance.GetComponent<PlayerMotor>();
         resolutions = Screen.resolutions;
         resolutionsDropdwon.ClearOptions();
 
@@ -48,5 +57,20 @@ public class SettingsMenu : MonoBehaviour {
     {
         Screen.fullScreen = isFullscreen;
         Debug.Log(isFullscreen);
+    }
+    public void SetSensibility(float newSensibility)
+    {
+        if (motor != null)
+        {
+            
+          //  motor.SetSensibility(newSensibility * 10);
+        }
+        Sensibility = newSensibility * 10;
+        pause.Sensitivity(Sensibility);
+        Debug.Log("Sensibility" + Sensibility);
+    }
+    void Awake()
+    {
+        sens.value = Sensibility;
     }
 }
