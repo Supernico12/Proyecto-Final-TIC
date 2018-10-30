@@ -7,6 +7,7 @@ public class MusicController : AudioMaster
     public LevelManager level;
     public EnemyDamage spiderShoot;
     CharacterStats character;
+    
 
     // Use this for initialization
     void Start()
@@ -17,17 +18,20 @@ public class MusicController : AudioMaster
 
         LoadBank(); //Carga el bank asignado en el script de Audio Master
         PlayEvent("Play_Corazon"); //Comienzan a sonar los latidos del corazon (en realidad no, porque comienzan a sonar cuando la vida es menor que 50
-       
+        PlayEvent("Play_Ciudad");
+
         /*Music of Current Level
        if (level.index == 0){
            PlayEvent("Play_Menu");
        } 
        else if (level.index == 1){
-           PlayEvent("Play_Ciudad");
+         //PlayEvent("Play_Ciudad");
        }
        else if (level.index == 2){
            PlayEvent("Play_Lab");
        }*/
+
+        spiderShoot.OnAttack += Onspidershoot;
        
     }
 
@@ -44,10 +48,15 @@ public class MusicController : AudioMaster
         }
 
         //Disparo de la araña
-        if (spiderShoot.casted)
+        /*if (spiderShoot.casted)
         {
             PlayEvent("Play_Laser");
             Debug.Log("l rñ est disprndo");
-        }
+        }*/
+    }
+    void Onspidershoot()
+    {
+        PlayEvent("Play_Laser");
     }
 }
+

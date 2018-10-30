@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{A6CE25B7-55EA-45F1-AF11-ABD22C77DF7B}" SchemaVersion="89">
+	<AudioObjects>
+		<WorkUnit Name="Default Work Unit" ID="{A6CE25B7-55EA-45F1-AF11-ABD22C77DF7B}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="Portal" ID="{E8B8D250-BEE4-43D3-9EE3-85C741DB5D25}" ShortID="781549111">
+					<PropertyList>
+						<Property Name="OverridePositioning" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<Custom>
+								<Attenuation Name="Attenuation (Custom)" ID="{29018FAA-4B3A-470C-A7F5-6AFCDF6EB541}" ShortID="394543626">
+									<PropertyList>
+										<Property Name="ConeInnerAngle" Type="int32" Value="45"/>
+										<Property Name="ConeOuterAngle" Type="int32" Value="230"/>
+										<Property Name="ConeUse" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
+										<Property Name="RadiusMax" Type="Real64" Value="50"/>
+									</PropertyList>
+									<CurveUsageInfoList>
+										<VolumeDryUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+												<Curve Name="VolumeDry" ID="{769D3005-A8F7-4A6A-AD52-1E6801F2CE61}">
+													<PropertyList>
+														<Property Name="Flags" Type="int32" Value="3"/>
+													</PropertyList>
+													<PointList>
+														<Point>
+															<XPos>0</XPos>
+															<YPos>0</YPos>
+															<Flags>5</Flags>
+															<SegmentShape>Log3</SegmentShape>
+														</Point>
+														<Point>
+															<XPos>14.02821</XPos>
+															<YPos>-200</YPos>
+															<Flags>0</Flags>
+														</Point>
+														<Point>
+															<XPos>50</XPos>
+															<YPos>-200</YPos>
+															<Flags>37</Flags>
+														</Point>
+													</PointList>
+												</Curve>
+											</CurveUsageInfo>
+										</VolumeDryUsage>
+										<VolumeWetGameUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+										</VolumeWetGameUsage>
+										<VolumeWetUserUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+										</VolumeWetUserUsage>
+										<LowPassFilterUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+												<Curve Name="LowPassFilter" ID="{DE7A8444-EE45-4327-868C-F55CF8419C2A}">
+													<PropertyList>
+														<Property Name="Flags" Type="int32" Value="65537"/>
+													</PropertyList>
+													<PointList>
+														<Point>
+															<XPos>0</XPos>
+															<YPos>0</YPos>
+															<Flags>5</Flags>
+														</Point>
+														<Point>
+															<XPos>50</XPos>
+															<YPos>100</YPos>
+															<Flags>37</Flags>
+														</Point>
+													</PointList>
+												</Curve>
+											</CurveUsageInfo>
+										</LowPassFilterUsage>
+										<HighPassFilterUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+										</HighPassFilterUsage>
+										<SpreadUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+										</SpreadUsage>
+										<FocusUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+										</FocusUsage>
+									</CurveUsageInfoList>
+								</Attenuation>
+							</Custom>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4E09BE92-1BD7-4871-9A17-CCABDBF764E8}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{93BB3793-8EEF-4F71-B753-EBAD22B4CEC3}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Portal" ID="{9C2C4326-0B70-4970-8FC0-54B84E9037E4}" ShortID="764800883">
+							<Language>SFX</Language>
+							<AudioFile>Portal.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Portal" ID="{9C2C4326-0B70-4970-8FC0-54B84E9037E4}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Folder Name="Disparos" ID="{473FCA47-C514-42CC-A4E1-0032087ACB43}" ShortID="811658464">
+					<ChildrenList>
+						<Sound Name="Bang" ID="{1002EF82-467D-48BD-AAE4-46EA2154D632}" ShortID="366419312">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-15</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4E09BE92-1BD7-4871-9A17-CCABDBF764E8}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{93BB3793-8EEF-4F71-B753-EBAD22B4CEC3}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Loud_Bang" ID="{656B01F2-E3BE-4687-A030-3652F87F6809}" ShortID="829184230">
+									<Language>SFX</Language>
+									<AudioFile>Loud_Bang.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Loud_Bang" ID="{656B01F2-E3BE-4687-A030-3652F87F6809}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Laser" ID="{773C177D-4353-4F50-86EA-02F73E9F4050}" ShortID="993202967">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-15</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4E09BE92-1BD7-4871-9A17-CCABDBF764E8}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{93BB3793-8EEF-4F71-B753-EBAD22B4CEC3}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Laser" ID="{E0329FA2-5D59-4AC0-8B58-F84896939AF6}" ShortID="500851668">
+									<Language>SFX</Language>
+									<AudioFile>Laser.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Laser" ID="{E0329FA2-5D59-4AC0-8B58-F84896939AF6}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Smith" ID="{4F75728A-5109-4DC4-B976-16848C424F75}" ShortID="63910717">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-15</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4E09BE92-1BD7-4871-9A17-CCABDBF764E8}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{93BB3793-8EEF-4F71-B753-EBAD22B4CEC3}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Smith" ID="{F584028F-FA95-4090-9971-983CEF3D8DEE}" ShortID="116566743">
+									<Language>SFX</Language>
+									<AudioFile>Smith.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Smith" ID="{F584028F-FA95-4090-9971-983CEF3D8DEE}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
+				<Sound Name="Poca Vida 1" ID="{F47085A9-B17B-4628-9834-745F6F15797F}" ShortID="225126209">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="Pitch" Type="int32">
+							<RTPCList>
+								<RTPC Name="" ID="{AB7C8430-95D9-4CF2-9830-72DF3F3E543F}" ShortID="765998475">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="PlayerHealth" ID="{58CDBC90-2A26-4DEC-837F-18D5479B91D5}" WorkUnitID="{87883F47-72C0-4FE0-AE0D-40A091BFB7E5}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{17B92306-6826-4457-A501-13DE6DD27C49}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="65537"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>584</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>15.7352941176471</XPos>
+												<YPos>171</YPos>
+												<Flags>0</Flags>
+											</Point>
+											<Point>
+												<XPos>50</XPos>
+												<YPos>0</YPos>
+												<Flags>0</Flags>
+											</Point>
+											<Point>
+												<XPos>100</XPos>
+												<YPos>0</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+							<RTPCList>
+								<RTPC Name="" ID="{064CF348-0518-4952-B80A-65EA70CB2E30}" ShortID="726966076">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="PlayerHealth" ID="{58CDBC90-2A26-4DEC-837F-18D5479B91D5}" WorkUnitID="{87883F47-72C0-4FE0-AE0D-40A091BFB7E5}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{0676EC1E-CAC0-4E74-A75B-C6EB8987BA15}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="3"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-200</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>1.47059</XPos>
+												<YPos>0.02626</YPos>
+												<Flags>0</Flags>
+												<SegmentShape>Exp3</SegmentShape>
+											</Point>
+											<Point>
+												<XPos>49.5588235294118</XPos>
+												<YPos>-200</YPos>
+												<Flags>0</Flags>
+											</Point>
+											<Point>
+												<XPos>100</XPos>
+												<YPos>-200</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4E09BE92-1BD7-4871-9A17-CCABDBF764E8}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{93BB3793-8EEF-4F71-B753-EBAD22B4CEC3}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Poca Vida 1" ID="{833F9B01-98DD-472C-AFE7-8C8C332DA8F9}" ShortID="109880627">
+							<Language>SFX</Language>
+							<AudioFile>Poca Vida 1.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Poca Vida 1" ID="{833F9B01-98DD-472C-AFE7-8C8C332DA8F9}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Car" ID="{F1788B3A-CC71-46CE-9006-E621A77D1EB7}" ShortID="795352600">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-25</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4E09BE92-1BD7-4871-9A17-CCABDBF764E8}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{93BB3793-8EEF-4F71-B753-EBAD22B4CEC3}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Car+Alarm" ID="{4EEF5F8D-92F7-4571-8AD2-7F4471A55209}" ShortID="830365363">
+							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="1.11051915503043"/>
+								<Property Name="FadeOutDuration" Type="Real64" Value="0.972717508055854"/>
+								<Property Name="TrimEnd" Type="Real64" Value="3.16943788041532"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>Car+Alarm.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Car+Alarm" ID="{4EEF5F8D-92F7-4571-8AD2-7F4471A55209}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Folder Name="Movimiento" ID="{1E12AA65-BE1E-4D7C-98BC-AE5BDECCEEC8}" ShortID="954951407">
+					<ChildrenList>
+						<Folder Name="Caminar" ID="{A36143FB-F1EC-42BD-A9B3-76ADF0C0F9FA}" ShortID="1005096026">
+							<ChildrenList>
+								<Sound Name="Play_caminar_ceramica" ID="{9918DBEB-1253-46CA-8404-D1774C18D26D}" ShortID="949076788">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4E09BE92-1BD7-4871-9A17-CCABDBF764E8}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{93BB3793-8EEF-4F71-B753-EBAD22B4CEC3}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="caminar_ceramica" ID="{70785160-6A3A-4177-AAAA-787EE39B6313}" ShortID="682673394">
+											<Language>SFX</Language>
+											<AudioFile>caminar_ceramica.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="caminar_ceramica" ID="{70785160-6A3A-4177-AAAA-787EE39B6313}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Play_caminar_metal" ID="{A185832F-06E7-4BBE-9E69-A4ACDE3136A2}" ShortID="749716703">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>30</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4E09BE92-1BD7-4871-9A17-CCABDBF764E8}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{93BB3793-8EEF-4F71-B753-EBAD22B4CEC3}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="caminar_metal" ID="{31E590B1-DFA9-47CF-82DE-B936408B464D}" ShortID="779647713">
+											<Language>SFX</Language>
+											<AudioFile>caminar_metal.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="caminar_metal" ID="{31E590B1-DFA9-47CF-82DE-B936408B464D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Play_caminar_pasto" ID="{27A10310-7AC9-40AF-8630-942527F0FD6F}" ShortID="874760263">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4E09BE92-1BD7-4871-9A17-CCABDBF764E8}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{93BB3793-8EEF-4F71-B753-EBAD22B4CEC3}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="caminar_pasto" ID="{DC5E240D-1A31-4020-B962-EB9C06A843AC}" ShortID="676190536">
+											<Language>SFX</Language>
+											<AudioFile>caminar_pasto.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="caminar_pasto" ID="{DC5E240D-1A31-4020-B962-EB9C06A843AC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Correr" ID="{A690BF82-9C8F-4BA0-8922-2F67EF0062AD}" ShortID="828307930">
+							<ChildrenList>
+								<Sound Name="correr_ceramica" ID="{682D8B1B-2614-4219-8151-3D5B15C508B4}" ShortID="216559821">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4E09BE92-1BD7-4871-9A17-CCABDBF764E8}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{93BB3793-8EEF-4F71-B753-EBAD22B4CEC3}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="correr_ceramica" ID="{EA73F404-73CD-4935-9542-E28E03B7E431}" ShortID="275724862">
+											<Language>SFX</Language>
+											<AudioFile>correr_ceramica.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="correr_ceramica" ID="{EA73F404-73CD-4935-9542-E28E03B7E431}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="correr_metal" ID="{2104DD6D-C060-46FD-AB86-7AD68420145C}" ShortID="1048551013">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>12</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4E09BE92-1BD7-4871-9A17-CCABDBF764E8}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{93BB3793-8EEF-4F71-B753-EBAD22B4CEC3}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="correr_metal" ID="{5A6399CD-7BE9-4874-B97B-19C9C99FCD0F}" ShortID="770997545">
+											<Language>SFX</Language>
+											<AudioFile>correr_metal.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="correr_metal" ID="{5A6399CD-7BE9-4874-B97B-19C9C99FCD0F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="correr_pasto" ID="{7B59DF04-E9F9-4E43-B16E-E7ED1216D42B}" ShortID="744223861">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4E09BE92-1BD7-4871-9A17-CCABDBF764E8}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{93BB3793-8EEF-4F71-B753-EBAD22B4CEC3}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="correr_pasto" ID="{893498CC-FDE2-49BB-825E-7819F2D680CE}" ShortID="396295202">
+											<Language>SFX</Language>
+											<AudioFile>correr_pasto.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="correr_pasto" ID="{893498CC-FDE2-49BB-825E-7819F2D680CE}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Saltar" ID="{618CCDEF-F1C6-42D1-9281-2B095483443B}" ShortID="279973567">
+							<ChildrenList>
+								<Sound Name="saltar_normal" ID="{0D6F4962-B4CF-4AB3-AE00-423EBE19A296}" ShortID="309953583">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4E09BE92-1BD7-4871-9A17-CCABDBF764E8}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{93BB3793-8EEF-4F71-B753-EBAD22B4CEC3}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="saltar_normal" ID="{91368BC5-1D2D-4B72-9C9E-9FCC65CB4319}" ShortID="529926027">
+											<PropertyList>
+												<Property Name="TrimEnd" Type="Real64" Value="1.2029820583204"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>saltar_normal.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="saltar_normal" ID="{91368BC5-1D2D-4B72-9C9E-9FCC65CB4319}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="saltar_metal" ID="{497417FE-8335-4132-A8F9-5F16D7BCA3F9}" ShortID="101848772">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4E09BE92-1BD7-4871-9A17-CCABDBF764E8}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{93BB3793-8EEF-4F71-B753-EBAD22B4CEC3}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="saltar_metal" ID="{7C1BCABB-62B2-4113-88CA-3A43EEB38A04}" ShortID="50891814">
+											<Language>SFX</Language>
+											<AudioFile>saltar_metal.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="saltar_metal" ID="{7C1BCABB-62B2-4113-88CA-3A43EEB38A04}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
+				<Sound Name="libelula" ID="{C3A3067B-3F84-4005-A140-37A74ADBD150}" ShortID="228708028">
+					<PropertyList>
+						<Property Name="OverridePositioning" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<Custom>
+								<Attenuation Name="Attenuation (Custom)" ID="{6EF6755E-5FC9-449A-A2AF-4A92983F9202}" ShortID="114740218">
+									<CurveUsageInfoList>
+										<VolumeDryUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+												<Curve Name="VolumeDry" ID="{49DE8119-F3C2-4440-85BA-E50B3E738A43}">
+													<PropertyList>
+														<Property Name="Flags" Type="int32" Value="3"/>
+													</PropertyList>
+													<PointList>
+														<Point>
+															<XPos>0</XPos>
+															<YPos>0</YPos>
+															<Flags>5</Flags>
+														</Point>
+														<Point>
+															<XPos>100</XPos>
+															<YPos>-200</YPos>
+															<Flags>37</Flags>
+														</Point>
+													</PointList>
+												</Curve>
+											</CurveUsageInfo>
+										</VolumeDryUsage>
+										<VolumeWetGameUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+										</VolumeWetGameUsage>
+										<VolumeWetUserUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+										</VolumeWetUserUsage>
+										<LowPassFilterUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+										</LowPassFilterUsage>
+										<HighPassFilterUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+										</HighPassFilterUsage>
+										<SpreadUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+										</SpreadUsage>
+										<FocusUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+										</FocusUsage>
+									</CurveUsageInfoList>
+								</Attenuation>
+							</Custom>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4E09BE92-1BD7-4871-9A17-CCABDBF764E8}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{93BB3793-8EEF-4F71-B753-EBAD22B4CEC3}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="libelula" ID="{08F94D81-DB59-4C54-800A-94B17A96D40F}" ShortID="647129861">
+							<Language>SFX</Language>
+							<AudioFile>libelula.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="libelula" ID="{08F94D81-DB59-4C54-800A-94B17A96D40F}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

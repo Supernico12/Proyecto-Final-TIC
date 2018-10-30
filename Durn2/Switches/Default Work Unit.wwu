@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{91A5624D-1561-47FB-A6A9-866128038E23}" SchemaVersion="89">
+	<Switches>
+		<WorkUnit Name="Default Work Unit" ID="{91A5624D-1561-47FB-A6A9-866128038E23}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="Disparos" ID="{D96E188A-EDD6-4359-87A2-C497F0381153}">
+					<ChildrenList>
+						<Switch Name="Disparo_A" ID="{E006C907-EF5E-4A3F-8A32-086AE07F0DDE}"/>
+						<Switch Name="Disparo_B" ID="{952521C8-323C-4D2E-BE46-C30F74A07983}"/>
+						<Switch Name="Disparo_C" ID="{C0062897-4C1A-4AB0-A60C-D60818EA7D9A}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="Caminata" ID="{0EDD8930-1848-4562-B27C-27DC5A82ACBF}">
+					<ChildrenList>
+						<Switch Name="Ceramica" ID="{3281B2FA-D051-41C3-8928-9331A26CAE76}"/>
+						<Switch Name="Pasto" ID="{AE1B1539-A116-49BF-981A-6CC7D35121D1}"/>
+						<Switch Name="Metal" ID="{4B27A821-00B4-4CFF-A52C-38F7BDEE0D9E}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="Etapa" ID="{04A46D82-02FC-458C-8A6A-18E64F8C66E1}">
+					<ChildrenList>
+						<Switch Name="Victoria" ID="{4D621379-15A3-4F22-96E9-D39707889FAD}"/>
+						<Switch Name="Batalla" ID="{9D24F44E-2704-4314-972A-4704BAF7BFE6}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</Switches>
+</WwiseDocument>

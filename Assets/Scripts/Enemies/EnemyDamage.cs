@@ -26,6 +26,8 @@ public class EnemyDamage : MonoBehaviour {
 
     EnemyMovement movement;
 
+    public event System.Action OnAttack;
+
     #region Line
     public LineRenderer line;
     public LineRenderer attack;
@@ -127,6 +129,7 @@ public class EnemyDamage : MonoBehaviour {
             {
                 Debug.Log(time2);
                 attacking = true;
+                
                 Debug.Log("brunoooo");
                 CastRay();
             }
@@ -144,6 +147,11 @@ public class EnemyDamage : MonoBehaviour {
         line.SetPosition(0, Vector3.zero);
         line.SetPosition(1, Vector3.zero);
         casted = true;
+        if (OnAttack != null)
+        {
+            OnAttack.Invoke();
+        }
+       
         time1 = 0;
         attacking = false;
 

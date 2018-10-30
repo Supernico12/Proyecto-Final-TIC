@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{C61B4A8A-B990-4CA5-A179-D566EE502800}" SchemaVersion="89">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{C61B4A8A-B990-4CA5-A179-D566EE502800}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Disparar" ID="{72A79860-57A0-4A61-B71B-22A1B320481C}">
+					<ChildrenList>
+						<Action Name="" ID="{30BD4E69-111C-4373-B98A-E5CB67FE063D}" ShortID="580592485">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Disparos" ID="{723CDEF3-039A-4AC7-871E-96BAD64610C8}" WorkUnitID="{A6CE25B7-55EA-45F1-AF11-ABD22C77DF7B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Bang" ID="{D443A460-1012-4A5C-9017-20210BA85C76}">
+					<ChildrenList>
+						<Action Name="" ID="{830AFEFC-3663-4445-820F-B3D1C6BEB528}" ShortID="578966161">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Bang" ID="{1002EF82-467D-48BD-AAE4-46EA2154D632}" WorkUnitID="{A6CE25B7-55EA-45F1-AF11-ABD22C77DF7B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Laser" ID="{8B61AAD9-5002-4D65-9E6D-19A492F31875}">
+					<ChildrenList>
+						<Action Name="" ID="{B8CD41C6-DFCE-4BFD-BC6B-54B747DB5138}" ShortID="860820930">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Laser" ID="{773C177D-4353-4F50-86EA-02F73E9F4050}" WorkUnitID="{A6CE25B7-55EA-45F1-AF11-ABD22C77DF7B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Smith" ID="{D635D211-6AB8-41FD-8450-CCFEE7B21E29}">
+					<ChildrenList>
+						<Action Name="" ID="{63395D97-A679-4B7F-B5A2-8DAD1C584666}" ShortID="155856001">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Smith" ID="{4F75728A-5109-4DC4-B976-16848C424F75}" WorkUnitID="{A6CE25B7-55EA-45F1-AF11-ABD22C77DF7B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Menu" ID="{C93CF6D1-0E1D-430F-9FD8-A3FAE1F46C3D}">
+					<ChildrenList>
+						<Action Name="" ID="{D55AAE3E-0FCA-47AE-898E-2B3B090B381B}" ShortID="402894784">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Menu" ID="{21C5C28D-F3D4-462E-95E5-10489AF9EFDA}" WorkUnitID="{E6AE4FED-3C35-4F6A-B633-7EE243E0A360}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Poca_Vida_1" ID="{D6F2F02A-6DA0-47C4-874E-05C136904546}">
+					<ChildrenList>
+						<Action Name="" ID="{F98C91E4-D172-4898-BFCD-3EB455D390BA}" ShortID="846631833">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Poca Vida 1" ID="{F47085A9-B17B-4628-9834-745F6F15797F}" WorkUnitID="{A6CE25B7-55EA-45F1-AF11-ABD22C77DF7B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Corazon" ID="{C375FEEE-A2F8-4E8B-89DC-082B9B704849}">
+					<ChildrenList>
+						<Action Name="" ID="{C27EA7C8-AA66-47F1-8AD3-6EBD10BD9BC1}" ShortID="584344363">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Poca Vida 1" ID="{F47085A9-B17B-4628-9834-745F6F15797F}" WorkUnitID="{A6CE25B7-55EA-45F1-AF11-ABD22C77DF7B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Car" ID="{96434832-9433-4EB7-9B7A-5D91BAE294AE}">
+					<ChildrenList>
+						<Action Name="" ID="{31B920F5-AFDB-4B77-A8DC-054522DA10FE}" ShortID="593460336">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Car" ID="{F1788B3A-CC71-46CE-9006-E621A77D1EB7}" WorkUnitID="{A6CE25B7-55EA-45F1-AF11-ABD22C77DF7B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Folder Name="Movimiento" ID="{9EA42DE0-D088-4A26-A72F-4F16A8570BEC}" ShortID="318402829">
+					<ChildrenList>
+						<Event Name="Play_correr_ceramica" ID="{60837351-AB42-48E1-BEB4-DAF752B16A9A}">
+							<ChildrenList>
+								<Action Name="" ID="{11CBD607-218E-42BF-8998-26036596F17D}" ShortID="73248198">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="correr_ceramica" ID="{682D8B1B-2614-4219-8151-3D5B15C508B4}" WorkUnitID="{A6CE25B7-55EA-45F1-AF11-ABD22C77DF7B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_saltar_metal" ID="{E772D683-3869-45F7-B965-39A0F69126BC}">
+							<ChildrenList>
+								<Action Name="" ID="{E585AF34-057A-46EB-99B6-473DD495342A}" ShortID="567825129">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="saltar_metal" ID="{497417FE-8335-4132-A8F9-5F16D7BCA3F9}" WorkUnitID="{A6CE25B7-55EA-45F1-AF11-ABD22C77DF7B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_caminar_metal" ID="{3A757F6A-8562-4124-967C-79CCEDA63931}">
+							<ChildrenList>
+								<Action Name="" ID="{3D08B3E0-0469-4567-8128-4DCDBD6D89A8}" ShortID="133354576">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Play_caminar_metal" ID="{A185832F-06E7-4BBE-9E69-A4ACDE3136A2}" WorkUnitID="{A6CE25B7-55EA-45F1-AF11-ABD22C77DF7B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_correr_metal" ID="{1AC54060-371C-4F71-9FA8-B8F96D644B56}">
+							<ChildrenList>
+								<Action Name="" ID="{6348A08C-E299-4C2D-95DB-062FA37EEE59}" ShortID="960872339">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="correr_metal" ID="{2104DD6D-C060-46FD-AB86-7AD68420145C}" WorkUnitID="{A6CE25B7-55EA-45F1-AF11-ABD22C77DF7B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_caminar_ceramica" ID="{914CD944-869A-4628-81E8-B5ED2C5A52A4}">
+							<ChildrenList>
+								<Action Name="" ID="{8158AA93-3CBB-42D4-BC9A-908ADDC14484}" ShortID="274416033">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Play_caminar_ceramica" ID="{9918DBEB-1253-46CA-8404-D1774C18D26D}" WorkUnitID="{A6CE25B7-55EA-45F1-AF11-ABD22C77DF7B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_correr_pasto" ID="{FEB7B58D-23F0-4AF2-991A-85BFABD196E5}">
+							<ChildrenList>
+								<Action Name="" ID="{09295520-1CA9-4CB7-A08F-22BE63EFE22D}" ShortID="806654469">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="correr_pasto" ID="{7B59DF04-E9F9-4E43-B16E-E7ED1216D42B}" WorkUnitID="{A6CE25B7-55EA-45F1-AF11-ABD22C77DF7B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_saltar_normal" ID="{2E64D0BF-0ECA-4C4C-BF99-1908D6079D15}">
+							<ChildrenList>
+								<Action Name="" ID="{8D8D841D-CA41-4DCB-B62B-FDC0FA625CBE}" ShortID="440331611">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="saltar_normal" ID="{0D6F4962-B4CF-4AB3-AE00-423EBE19A296}" WorkUnitID="{A6CE25B7-55EA-45F1-AF11-ABD22C77DF7B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_caminar_pasto" ID="{FB2EFC52-637D-4CBF-848B-8F06C010EE87}">
+							<ChildrenList>
+								<Action Name="" ID="{6E0C319B-7E87-4488-BFF5-C5C6212B3BEA}" ShortID="1001449113">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Play_caminar_pasto" ID="{27A10310-7AC9-40AF-8630-942527F0FD6F}" WorkUnitID="{A6CE25B7-55EA-45F1-AF11-ABD22C77DF7B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Event Name="Play_Ciudad" ID="{8956F463-524E-4787-A03D-971DA027784F}">
+					<ChildrenList>
+						<Action Name="" ID="{308FFA76-FBB1-4766-857A-72CA1CA07DA7}" ShortID="694444371">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ciudad" ID="{C9361A50-D66B-4A63-A610-8E7982994F29}" WorkUnitID="{E6AE4FED-3C35-4F6A-B633-7EE243E0A360}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Lab" ID="{3CB0CC2F-A7B1-4E8B-865A-9A6E1285DD80}">
+					<ChildrenList>
+						<Action Name="" ID="{6257023D-E267-40BC-90EA-20836A702692}" ShortID="609562161">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Lab" ID="{7B9FB98A-43BD-41C8-8992-4F57680E4A70}" WorkUnitID="{E6AE4FED-3C35-4F6A-B633-7EE243E0A360}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Patio" ID="{9FCBD2B9-E779-47B4-985C-7D570BBD7D90}">
+					<ChildrenList>
+						<Action Name="" ID="{80AF1178-4D0D-4BA7-B7E5-D39EC9E42FD4}" ShortID="866476251">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Patio" ID="{2EF87A21-00ED-4245-B840-ADAF8377C65D}" WorkUnitID="{E6AE4FED-3C35-4F6A-B633-7EE243E0A360}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_victory" ID="{E605C4C4-F023-4182-9A37-6770F1B56350}">
+					<ChildrenList>
+						<Action Name="" ID="{D092E6D8-1287-4D24-872A-976120A56EAE}" ShortID="133171990">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="victory" ID="{087C29AD-04F2-4300-801D-DDE3570CA371}" WorkUnitID="{E6AE4FED-3C35-4F6A-B633-7EE243E0A360}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{A62FAE6F-D3FA-4819-B1A5-33D3C97C0981}" SchemaVersion="89">
+	<States>
+		<WorkUnit Name="Default Work Unit" ID="{A62FAE6F-D3FA-4819-B1A5-33D3C97C0981}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="PlayerLife" ID="{91CD561C-6889-4538-82BB-B7D41795B085}">
+					<ChildrenList>
+						<State Name="None" ID="{70F319FD-70F3-41E4-ADD8-2DD250892A37}"/>
+						<State Name="Alive" ID="{E6287590-7990-4673-AB82-1519DF95EF6C}"/>
+						<State Name="Dead" ID="{FDB72372-62B8-4950-B964-A48A0C416FE9}"/>
+					</ChildrenList>
+					<TransitionList>
+						<Transition>
+							<StartState Name="Alive" ID="{E6287590-7990-4673-AB82-1519DF95EF6C}"/>
+							<EndState Name="Dead" ID="{FDB72372-62B8-4950-B964-A48A0C416FE9}"/>
+							<Time>5</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+						<Transition>
+							<StartState Name="Dead" ID="{FDB72372-62B8-4950-B964-A48A0C416FE9}"/>
+							<EndState Name="Alive" ID="{E6287590-7990-4673-AB82-1519DF95EF6C}"/>
+							<Time>1</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+					</TransitionList>
+				</StateGroup>
+				<StateGroup Name="Desarrollo" ID="{7E0842B4-EE6C-46A8-80C4-344B746B24A4}">
+					<ChildrenList>
+						<State Name="None" ID="{1DB01336-256B-4DAF-97E0-D8100695F5EA}"/>
+						<State Name="Batalla" ID="{10B771B2-F9D6-4CCE-B652-C1FCE2C6D070}"/>
+						<State Name="Victoria" ID="{3A83B498-9960-4D8E-81C3-7741E0BA6A9C}"/>
+					</ChildrenList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</States>
+</WwiseDocument>
