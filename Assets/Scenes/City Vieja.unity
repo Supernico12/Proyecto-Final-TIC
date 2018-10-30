@@ -3734,7 +3734,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1343518468407304, guid: 28450b84179b9c44eaf1ae2542ac4441,
     type: 2}
   m_PrefabInternal: {fileID: 262197129}
---- !u!114 &262197133
+--- !u!114 &262197131
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3742,20 +3742,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 262197130}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20c01b9f17fdbbe499d817a027896712, type: 3}
+  m_Script: {fileID: 11500000, guid: fdd710ac29b10ab438e81c9deeaf1fb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &262197134
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 262197130}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1bdddf088891bf4293cc68f70148452, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    valueGuid: 
+    WwiseObjectReference: {fileID: 0}
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  valueGuid: 
 --- !u!4 &265278376 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4497583139333226, guid: e7f38589653667b42ba1b30cf33d71f0,
@@ -7399,6 +7398,7 @@ MonoBehaviour:
   player: {fileID: 2071141115}
   enemyDamage: 10
   maxRange: 20
+  attacking: 0
   agent: {fileID: 537517214}
   line: {fileID: 1433453185}
   attack: {fileID: 2048540464}
@@ -7420,6 +7420,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  currenthealth: 0
   ammoDrop: {fileID: 1143177794371528, guid: b99b0bd6a390e4946a20aca76c08fdaf, type: 2}
 --- !u!65 &537517210
 BoxCollider:
@@ -19633,6 +19634,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  currenthealth: 0
   ammoDrop: {fileID: 0}
 --- !u!114 &1365712859
 MonoBehaviour:
@@ -19649,6 +19651,7 @@ MonoBehaviour:
   player: {fileID: 0}
   enemyDamage: 10
   maxRange: 20
+  attacking: 0
   agent: {fileID: 1365712860}
   line: {fileID: 0}
   attack: {fileID: 0}

@@ -16,7 +16,7 @@ public class EnemyDamage : MonoBehaviour {
     CharacterStats playerHealth;
 
     public float maxRange;
-    private bool attacking = false;
+    public bool attacking = false;
 
     public NavMeshAgent agent;
 
@@ -127,6 +127,7 @@ public class EnemyDamage : MonoBehaviour {
             {
                 Debug.Log(time2);
                 attacking = true;
+                Debug.Log("brunoooo");
                 CastRay();
             }
 
