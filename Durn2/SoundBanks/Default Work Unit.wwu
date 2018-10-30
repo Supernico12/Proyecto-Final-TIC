@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{C676832E-5C84-40A6-80E4-4666AF41AAD3}" SchemaVersion="89">
+	<SoundBanks>
+		<WorkUnit Name="Default Work Unit" ID="{C676832E-5C84-40A6-80E4-4666AF41AAD3}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="Test" ID="{55367A38-FB86-4F09-8C7E-DB9D5A79628E}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_Smith" ID="{D635D211-6AB8-41FD-8450-CCFEE7B21E29}" WorkUnitID="{C61B4A8A-B990-4CA5-A179-D566EE502800}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Play_Menu" ID="{C93CF6D1-0E1D-430F-9FD8-A3FAE1F46C3D}" WorkUnitID="{C61B4A8A-B990-4CA5-A179-D566EE502800}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Movimiento" ID="{9EA42DE0-D088-4A26-A72F-4F16A8570BEC}" WorkUnitID="{C61B4A8A-B990-4CA5-A179-D566EE502800}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Play_Bang" ID="{D443A460-1012-4A5C-9017-20210BA85C76}" WorkUnitID="{C61B4A8A-B990-4CA5-A179-D566EE502800}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Play_Laser" ID="{8B61AAD9-5002-4D65-9E6D-19A492F31875}" WorkUnitID="{C61B4A8A-B990-4CA5-A179-D566EE502800}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Play_Corazon" ID="{C375FEEE-A2F8-4E8B-89DC-082B9B704849}" WorkUnitID="{C61B4A8A-B990-4CA5-A179-D566EE502800}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Play_Car" ID="{96434832-9433-4EB7-9B7A-5D91BAE294AE}" WorkUnitID="{C61B4A8A-B990-4CA5-A179-D566EE502800}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

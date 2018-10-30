@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationCache Version="1" SchemaVersion="89">
+	<ValidationCacheItem File="C:\Users\44096365\Desktop\Durn2\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1539201560" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\44096365\Desktop\Durn2\Actor-Mixer Hierarchy\Factory Motion.wwu" DateLow="1538792136" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\44096365\Desktop\Durn2\Actor-Mixer Hierarchy\Factory SoundSeed Air Objects.wwu" DateLow="1538778292" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\44096365\Desktop\Durn2\Actor-Mixer Hierarchy\Factory Synth One.wwu" DateLow="1538778290" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\44096365\Desktop\Durn2\Attenuations\Default Work Unit.wwu" DateLow="1538779328" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\44096365\Desktop\Durn2\Audio Devices\Default Work Unit.wwu" DateLow="1538792136" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\44096365\Desktop\Durn2\Control Surface Sessions\Default Work Unit.wwu" DateLow="1538779328" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\44096365\Desktop\Durn2\Conversion Settings\Default Work Unit.wwu" DateLow="1538779328" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\44096365\Desktop\Durn2\Conversion Settings\Factory Conversion Settings.wwu" DateLow="1538778290" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\44096365\Desktop\Durn2\Durn2.44096365.wsettings" DateLow="1540321473" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\44096365\Desktop\Durn2\Durn2.wproj" DateLow="1540822002" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\44096365\Desktop\Durn2\Dynamic Dialogue\Default Work Unit.wwu" DateLow="1538779328" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\44096365\Desktop\Durn2\Effects\Default Work Unit.wwu" DateLow="1538779328" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\44096365\Desktop\Durn2\Effects\Factory Auro Headphone.wwu" DateLow="1538778322" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\44096365\Desktop\Durn2\Effects\Factory Convolution Reverb Effects Ambisonics.wwu" DateLow="1538778350" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\44096365\Desktop\Durn2\Effects\Factory Convolution Reverb Effects Stereo.wwu" DateLow="1538778352" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\44096365\Desktop\Durn2\Effects\Factory Effects.wwu" DateLow="1538778290" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\44096365\Desktop\Durn2\Effects\Factory iZotope Box Modeler.wwu" DateLow="1538778318" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\44096365\Desktop\Durn2\Effects\Factory iZotope Delay.wwu" DateLow="1538778318" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\44096365\Desktop\Durn2\Effects\Factory iZotope Dynamics.wwu" DateLow="1538778318" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\44096365\Desktop\Durn2\Effects\Factory iZotope Filters.wwu" DateLow="1538778318" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\44096365\Desktop\Durn2\Effects\Factory iZotope Hybrid Reverb Effects.wwu" DateLow="1538778318" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\44096365\Desktop\Durn2\Effects\Factory iZotope Multiband Distortion.wwu" DateLow="1538778318" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\44096365\Desktop\Durn2\Effects\Factory iZotope Singleband Distortion.wwu" DateLow="1538778318" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\44096365\Desktop\Durn2\Effects\Factory McDSP Effects.wwu" DateLow="1538778296" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\44096365\Desktop\Durn2\Events\Default Work Unit.wwu" DateLow="1540318646" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\44096365\Desktop\Durn2\Game Parameters\Default Work Unit.wwu" DateLow="1538795352" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\44096365\Desktop\Durn2\Game Parameters\Factory Motion.wwu" DateLow="1538778290" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\44096365\Desktop\Durn2\Game Parameters\Factory SoundSeed Air Game Syncs.wwu" DateLow="1538778292" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\44096365\Desktop\Durn2\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="1538779328" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\44096365\Desktop\Durn2\Interactive Music Hierarchy\Music.wwu" DateLow="1540318646" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\44096365\Desktop\Durn2\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1538792136" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\44096365\Desktop\Durn2\Mixing Sessions\Default Work Unit.wwu" DateLow="1538779328" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\44096365\Desktop\Durn2\Modulators\Default Work Unit.wwu" DateLow="1538779328" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\44096365\Desktop\Durn2\Presets\Default Work Unit.wwu" DateLow="1538779328" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\44096365\Desktop\Durn2\Queries\Default Work Unit.wwu" DateLow="1538779328" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\44096365\Desktop\Durn2\Queries\Factory Queries.wwu" DateLow="1538778290" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\44096365\Desktop\Durn2\SoundBanks\Default Work Unit.wwu" DateLow="1539201560" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\44096365\Desktop\Durn2\Soundcaster Sessions\Default Work Unit.wwu" DateLow="1538779328" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\44096365\Desktop\Durn2\States\Default Work Unit.wwu" DateLow="1538966266" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\44096365\Desktop\Durn2\Switches\Default Work Unit.wwu" DateLow="1538966266" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\44096365\Desktop\Durn2\Triggers\Default Work Unit.wwu" DateLow="1538779328" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\44096365\Desktop\Durn2\Virtual Acoustics\Default Work Unit.wwu" DateLow="1538779328" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\44096365\Desktop\Durn2\Virtual Acoustics\Factory Reflect Acoustic Textures.wwu" DateLow="1538778296" DateHigh="0"/>
+</ValidationCache>
