@@ -10,17 +10,33 @@ public class CharacterStats : MonoBehaviour
     float health;
 
 
-    float currenthealth;
+    public float currenthealth;
     [SerializeField] GameObject ammoDrop;
 
 
+<<<<<<< HEAD
+=======
+
+    public event System.Action OnTakeDamage;
+
+
+
+>>>>>>> dc4086b6c2289fb37e678232e265986168cf2a67
     public void TakeDamage(float damage)
     {
-        currenthealth -= damage;
-        
+        if (currenthealth - damage < health)
+        {
+            currenthealth -= damage;
+        }
+
         if (currenthealth <= 0)
         {
             Die();
+        }
+        if (damage > 0)
+        {
+            if (OnTakeDamage != null)
+                OnTakeDamage.Invoke();
         }
     }
 
@@ -36,21 +52,28 @@ public class CharacterStats : MonoBehaviour
     {
         level = LevelManager.instance;
         currenthealth = health;
-        level.AddEnemy(1);
+        if (level != null)
+            level.AddEnemy(1);
     }
 
     public float GetHealth
     {
-        get {
+        get
+        {
             return currenthealth;
-           
+
         }
     }
-public float GetMaxHealth
-{
-    get
+    public float GetMaxHealth
     {
+<<<<<<< HEAD
         return health;
+=======
+        get
+        {
+            return health;
+
+        }
+>>>>>>> dc4086b6c2289fb37e678232e265986168cf2a67
     }
-}
 }

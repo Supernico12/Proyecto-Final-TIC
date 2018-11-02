@@ -1,0 +1,230 @@
+fileFormatVersion: 2
+guid: bbbc3ec9eb7271748a8ad2756e052da9
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: ARMAsinANIM
+    100004: Box003
+    100006: Cartucho
+    100008: Cartucho 1
+    100010: Circle001
+    100012: Circle002
+    100014: Circle005
+    100016: Circle006
+    100018: Circle007
+    100020: Line003
+    100022: Line005
+    100024: Line006
+    100026: Line007
+    100028: Line009
+    100030: Line015
+    100032: Text001
+    400000: //RootNode
+    400002: ARMAsinANIM
+    400004: Box003
+    400006: Cartucho
+    400008: Cartucho 1
+    400010: Circle001
+    400012: Circle002
+    400014: Circle005
+    400016: Circle006
+    400018: Circle007
+    400020: Line003
+    400022: Line005
+    400024: Line006
+    400026: Line007
+    400028: Line009
+    400030: Line015
+    400032: Text001
+    2100000: 'Material #110'
+    2100002: 'Material #113'
+    2100004: 'Material #111'
+    2100006: 'Material #115'
+    2100008: 'Material #114'
+    2100010: 'Material #118'
+    2100012: 'Material #112'
+    2100014: 'Material #116'
+    2100016: 'Material #117'
+    2100018: 'Material #124'
+    2100020: 'Material #123'
+    2100022: 'Material #125'
+    2100024: 'Material #109'
+    2100026: 'Material #106'
+    2100028: 'Material #108'
+    2100030: 'Material #107'
+    2100032: 'Material #119'
+    2100034: 'Material #230'
+    2300000: ARMAsinANIM
+    2300002: Box003
+    2300004: Cartucho
+    2300006: Cartucho 1
+    2300008: Circle001
+    2300010: Circle002
+    2300012: Circle005
+    2300014: Circle006
+    2300016: Circle007
+    2300018: Line003
+    2300020: Line005
+    2300022: Line006
+    2300024: Line007
+    2300026: Line009
+    2300028: Line015
+    2300030: Text001
+    3300000: ARMAsinANIM
+    3300002: Box003
+    3300004: Cartucho
+    3300006: Cartucho 1
+    3300008: Circle001
+    3300010: Circle002
+    3300012: Circle005
+    3300014: Circle006
+    3300016: Circle007
+    3300018: Line003
+    3300020: Line005
+    3300022: Line006
+    3300024: Line007
+    3300026: Line009
+    3300028: Line015
+    3300030: Text001
+    4300000: ARMAsinANIM
+    4300002: Line003
+    4300004: Line005
+    4300006: Line006
+    4300008: Line007
+    4300010: Line009
+    4300012: Box003
+    4300014: Circle001
+    4300016: Circle002
+    4300018: Text001
+    4300020: Line015
+    4300022: Circle007
+    4300024: Circle006
+    4300026: Circle005
+    4300028: Cartucho
+    4300030: Cartucho
+    7400000: Take 001
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: OtraArmaGris
+    second: {fileID: 2800000, guid: 8c2d95d503434124b94acf0b7f332453, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: OtraArmaRojo
+    second: {fileID: 2800000, guid: ae7c0bbec9baf084d8eb1af966374c73, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: OtraArmaVerde
+    second: {fileID: 2800000, guid: 68ef8368cd71ff241a37c1bcb1c38908, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: OtraarmaRojoDisparo
+    second: {fileID: 2800000, guid: 7d768f257127ce54182e869aee16ef2e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: colorLetra
+    second: {fileID: 2800000, guid: 045cffe74a435314d8299e01f116e6c0, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: otraArmaNaranja
+    second: {fileID: 2800000, guid: 028321756a496bd4d88a0490cf9e6edb, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: otraarmaMarron
+    second: {fileID: 2800000, guid: 90dfeacbf468cda41b66f98158014ca1, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: otraarmaNegro
+    second: {fileID: 2800000, guid: f130600be0721f54fa5b47794c154d0d, type: 3}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.001
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
