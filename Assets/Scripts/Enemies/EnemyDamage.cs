@@ -15,6 +15,8 @@ public class EnemyDamage : MonoBehaviour
 
     Animator anim;
     CharacterStats playerHealth;
+    GameObject playerGo;
+
 
     public float maxRange;
     private bool attacking = false;
@@ -54,12 +56,14 @@ public class EnemyDamage : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        playerGo = PlayerManager.instance.player;
         anim = GetComponent<Animator>();
         firePoint = GameObject.Find("FirePoint").transform;
         player = PlayerManager.instance.playertransform;
         movement = GetComponent<EnemyMovement>();
         head = GameObject.Find("Craneo");
         agent.stoppingDistance = stoppingDistance;
+        playerHealth = playerGo.GetComponent<CharacterStats>();
     }
 
     // Update is called once per frame
@@ -153,16 +157,8 @@ public class EnemyDamage : MonoBehaviour
         attacking = false;
 
 
-        if (attack.GetPosition(1) == lastPos.position)
-        {
-
             Debug.Log("Damaging");
             playerHealth.TakeDamage(enemyDamage);
 
-        }
-        else
-        {
-
-        }
     }
 }
