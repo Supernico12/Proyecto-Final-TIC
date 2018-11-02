@@ -1,0 +1,162 @@
+fileFormatVersion: 2
+guid: 1af1605f6c713e242b24ecf693c0e7b6
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Cylinder024
+    100002: Cylinder025
+    100004: gatilloArriba
+    100006: Mango
+    100008: Mira
+    100010: Plane007
+    100012: //RootNode
+    100014: ruleta
+    100016: SeccionTrigger
+    100018: Sphere001
+    100020: Sphere002
+    100022: Trigger
+    400000: Cylinder024
+    400002: Cylinder025
+    400004: gatilloArriba
+    400006: Mango
+    400008: Mira
+    400010: Plane007
+    400012: //RootNode
+    400014: ruleta
+    400016: SeccionTrigger
+    400018: Sphere001
+    400020: Sphere002
+    400022: Trigger
+    2100000: 'Material #8'
+    2100002: 'Material #0'
+    2100004: 'Material #7'
+    2100006: 'Material #9'
+    2100008: 'Material #10'
+    2100010: 'Material #3'
+    2100012: 'Material #6'
+    2100014: 'Material #2'
+    2100016: 'Material #13'
+    2100018: 'Material #14'
+    2100020: 'Material #4'
+    2100022: 'Material #12'
+    2300000: Cylinder024
+    2300002: Cylinder025
+    2300004: gatilloArriba
+    2300006: Mango
+    2300008: Mira
+    2300010: Plane007
+    2300012: //RootNode
+    2300014: ruleta
+    2300016: SeccionTrigger
+    2300018: Sphere001
+    2300020: Sphere002
+    2300022: Trigger
+    3300000: Cylinder024
+    3300002: Cylinder025
+    3300004: gatilloArriba
+    3300006: Mango
+    3300008: Mira
+    3300010: Plane007
+    3300012: //RootNode
+    3300014: ruleta
+    3300016: SeccionTrigger
+    3300018: Sphere001
+    3300020: Sphere002
+    3300022: Trigger
+    4300000: "Ca\xF1on"
+    4300002: Cylinder024
+    4300004: Cylinder025
+    4300006: Mira
+    4300008: Plane007
+    4300010: gatilloArriba
+    4300012: ruleta
+    4300014: SeccionTrigger
+    4300016: Sphere002
+    4300018: Sphere001
+    4300020: Trigger
+    4300022: Mango
+    7400000: Take 001
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.001
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -10,22 +10,30 @@ public class CharacterStats : MonoBehaviour
     float health;
 
 
-    float currenthealth;
+    public float currenthealth;
     [SerializeField] GameObject ammoDrop;
 
 
 
-
+    public event System.Action OnTakeDamage;
 
 
 
     public void TakeDamage(float damage)
     {
-        currenthealth -= damage;
-        
+        if (currenthealth - damage < health)
+        {
+            currenthealth -= damage;
+        }
+
         if (currenthealth <= 0)
         {
             Die();
+        }
+        if (damage > 0)
+        {
+            if (OnTakeDamage != null)
+                OnTakeDamage.Invoke();
         }
     }
 
@@ -40,22 +48,24 @@ public class CharacterStats : MonoBehaviour
     void Start()
     {
         currenthealth = health;
-        level.AddEnemy(1);
+        if (level != null)
+            level.AddEnemy(1);
     }
 
     public float GetHealth
     {
-        get {
+        get
+        {
             return currenthealth;
-           
+
         }
     }
-public float GetMaxHealth
-{
-    get
+    public float GetMaxHealth
     {
-        return health;
+        get
+        {
+            return health;
 
+        }
     }
-}
 }

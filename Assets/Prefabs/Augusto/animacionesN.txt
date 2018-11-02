@@ -1,0 +1,9 @@
+ArmaNaranja
+
+0-21 sale cartucho	
+23-44 entra cartucho
+
+50-61 disparo
+
+65-79 saleArma
+85-102 VuelveArma
