@@ -25,6 +25,7 @@ public class PlayerHealth : MonoBehaviour
         if (lastDamage < 0 && playerStats.GetHealth != playerStats.GetMaxHealth)
         {
             playerStats.TakeDamage(-1);
+            OnChangeHealth();
         }
     }
     void OnChangeHealth()
