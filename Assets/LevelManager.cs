@@ -6,22 +6,6 @@ using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour {
 
-    #region Singleton
-    public static LevelManager instance;
-    private void Awake()
-    {
-        if (instance != null)
-        {
-            Debug.LogWarning("Trying To Instance 2 Player Managers");
-            return;
-        }
-        instance = this;
-
-
-    }
-    #endregion
-
-
     public int index;
     [SerializeField]bool started = false;
     public int enemyCount;
@@ -35,7 +19,6 @@ public class LevelManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-       
 		if (started)
         {
             if(enemyCount <= 1)

@@ -10,8 +10,6 @@ public class Attack : MonoBehaviour {
     public GameObject firePoint3;
     int time;
 
-    
-
     public float cooldown;
     // Use this for initialization
     void Start () {
@@ -21,10 +19,9 @@ public class Attack : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if (Time.timeScale != 0)
-        {
-            time++;
-        }
+
+        time++;
+
         if (time > cooldown)
         {
             Instantiate(rocket, firePoint1.transform.position, Quaternion.identity);
@@ -33,5 +30,4 @@ public class Attack : MonoBehaviour {
             time = 0;
         }
     }
-    
 }

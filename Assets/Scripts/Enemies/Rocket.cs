@@ -6,9 +6,9 @@ public class Rocket : MonoBehaviour
 {
     public float BulletSpeed;
 
-    [SerializeField] GameObject player;
+    GameObject player;
     
-   
+    public GameObject Plaayer;
     CharacterStats character;
 
     public ParticleSystem explosion;
@@ -23,14 +23,14 @@ public class Rocket : MonoBehaviour
     }
     void Update()
     {
-        if (player != null)
+        if (Plaayer != null)
         {
-            transform.LookAt(player.transform.position);
-            transform.position += transform.forward * BulletSpeed * Time.deltaTime;
+              transform.LookAt(Plaayer.transform.position);
+             transform.position += transform.forward * BulletSpeed * Time.deltaTime;
             //transform.position = Vector3.MoveTowards(transform.position, Plaayer.transform.position, 10000f)*Time.deltaTime * BulletSpeed;
 
 
-            if (Vector3.Distance(transform.position, player.transform.position) <= 10f)
+            if (Vector3.Distance(transform.position, Plaayer.transform.position) <= 4f)
             {
                 Debug.Log("Destroying");
                 //character.TakeDamage(damage);
@@ -43,14 +43,6 @@ public class Rocket : MonoBehaviour
         else
         {
             Destroy(gameObject);
-        } }
-
-        void OnTriggerEnter(Collider col)
-        {
-        if(col.tag == "Player")
-        {
-            Destroy(gameObject);
         }
-        }
-    
+    }
 }
