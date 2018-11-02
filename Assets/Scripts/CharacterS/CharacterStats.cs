@@ -14,14 +14,13 @@ public class CharacterStats : MonoBehaviour
     [SerializeField] GameObject ammoDrop;
 
 
-<<<<<<< HEAD
-=======
+
 
     public event System.Action OnTakeDamage;
 
 
 
->>>>>>> dc4086b6c2289fb37e678232e265986168cf2a67
+
     public void TakeDamage(float damage)
     {
         if (currenthealth - damage < health)
@@ -64,16 +63,14 @@ public class CharacterStats : MonoBehaviour
 
         }
     }
-    public float GetMaxHealth
-    {
-<<<<<<< HEAD
-        return health;
-=======
+    public float GetMaxHealth { 
+   
+
         get
         {
             return health;
 
         }
->>>>>>> dc4086b6c2289fb37e678232e265986168cf2a67
+
     }
 }

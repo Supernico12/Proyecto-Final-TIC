@@ -22,7 +22,7 @@ public class PlayerHealth : MonoBehaviour
     {
         lastDamage -= Time.deltaTime;
 
-        if (lastDamage < 0 || playerStats.GetHealth != playerStats.GetMaxHealth)
+        if (lastDamage < 0 && playerStats.GetHealth != playerStats.GetMaxHealth)
         {
             playerStats.TakeDamage(-1);
         }
