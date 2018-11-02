@@ -22,6 +22,7 @@ public class EnemyMovement : MonoBehaviour {
     public NavMeshAgent agent;
     public Transform destination;
     public bool canMove = true;
+
     
 
     
@@ -31,8 +32,10 @@ public class EnemyMovement : MonoBehaviour {
         
         Debug.Log(player);
        player = PlayerManager.instance.playertransform;
+       
        agent = GetComponent<NavMeshAgent>();
-        
+
+
 
     }
        

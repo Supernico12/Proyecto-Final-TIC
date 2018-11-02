@@ -38,6 +38,7 @@ GameObject:
   - component: {fileID: 4226356261579174}
   - component: {fileID: 198877560205303778}
   - component: {fileID: 199809318073594864}
+  - component: {fileID: 65642788157153206}
   m_Layer: 0
   m_Name: RocketWarhead
   m_TagString: Untagged
@@ -57,6 +58,7 @@ GameObject:
   - component: {fileID: 199069912069660808}
   - component: {fileID: 114477549660845650}
   - component: {fileID: 54925596640304850}
+  - component: {fileID: 65906948739962934}
   m_Layer: 0
   m_Name: Rocket
   m_TagString: Untagged
@@ -89,7 +91,7 @@ Transform:
   m_GameObject: {fileID: 1278568042825274}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children: []
   m_Father: {fileID: 4658850837603136}
   m_RootOrder: 2
@@ -102,7 +104,7 @@ Transform:
   m_GameObject: {fileID: 1856868319178790}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: -1742.6298, y: 505.1552, z: 902.63}
-  m_LocalScale: {x: 90.00002, y: 90, z: 90.00002}
+  m_LocalScale: {x: 180, y: 180, z: 180}
   m_Children:
   - {fileID: 4966302326709722}
   - {fileID: 4776493446234276}
@@ -151,6 +153,30 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &65642788157153206
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1278568042825274}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.000020000001, y: 0.000019999998, z: 0.000020000001}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &65906948739962934
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1856868319178790}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.000020000001, y: 0.000019999998, z: 0.000020000001}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114477549660845650
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -162,8 +188,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52ae9bc027f22e845871d0a4e8389815, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BulletSpeed: 10
-  Plaayer: {fileID: 0}
+  BulletSpeed: 1
+  player: {fileID: 0}
   explosion: {fileID: 198000012942003240, guid: ecdd96beb7f93494880c052dfccf9dc1,
     type: 2}
 --- !u!198 &198514853240038892
@@ -280,7 +306,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.1
+      scalar: 10
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -4633,7 +4659,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 40
+      scalar: 25
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -9200,7 +9226,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 10
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -13616,7 +13642,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 40
+      scalar: 25
       minScalar: 5
       maxCurve:
         serializedVersion: 2
