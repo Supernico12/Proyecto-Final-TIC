@@ -1,35 +1,31 @@
 Event	ID	Name			Wwise Object Path	Notes
-	1108677255	Play_caminar_metal			\Default Work Unit\Movimiento\Play_caminar_metal	
 	1278378707	Play_Menu			\Default Work Unit\Play_Menu	
 	1375974412	Play_Bang			\Default Work Unit\Play_Bang	
-	1935631137	Play_caminar_pasto			\Default Work Unit\Movimiento\Play_caminar_pasto	
 	2270376495	Play_Laser			\Default Work Unit\Play_Laser	
+	2276262738	Play_Ciudad			\Default Work Unit\Play_Ciudad	
+	2453267296	Play_victory			\Default Work Unit\Play_victory	
 	2472434067	Play_Smith			\Default Work Unit\Play_Smith	
-	2683036163	Play_saltar_normal			\Default Work Unit\Movimiento\Play_saltar_normal	
 	2690797144	Play_Car			\Default Work Unit\Play_Car	
-	2718223499	Play_caminar_ceramica			\Default Work Unit\Movimiento\Play_caminar_ceramica	
-	2885416777	Play_correr_ceramica			\Default Work Unit\Movimiento\Play_correr_ceramica	
-	3461804527	Play_correr_pasto			\Default Work Unit\Movimiento\Play_correr_pasto	
-	3977660619	Play_saltar_metal			\Default Work Unit\Movimiento\Play_saltar_metal	
-	4125973013	Play_correr_metal			\Default Work Unit\Movimiento\Play_correr_metal	
+	2691532671	Play_Lab			\Default Work Unit\Play_Lab	
+	4133041573	Play_Patio			\Default Work Unit\Play_Patio	
 	4169467576	Play_Corazon			\Default Work Unit\Play_Corazon	
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	151362964	PlayerHealth			\Default Work Unit\PlayerHealth	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	50891814	saltar_metal	C:\Users\44096365\Desktop\Durn2\.cache\Windows\SFX\saltar_metal_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Movimiento\Saltar\saltar_metal		41536
-	109880627	Poca Vida 1	C:\Users\44096365\Desktop\Durn2\.cache\Windows\SFX\Poca Vida 1_8956FC97.wem		\Actor-Mixer Hierarchy\Default Work Unit\Poca Vida 1		769600
-	116566743	Smith	C:\Users\44096365\Desktop\Durn2\.cache\Windows\SFX\Smith_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Disparos\Smith		812764
-	135112413	Menu	C:\Users\44096365\Desktop\Durn2\.cache\Windows\SFX\Menú_8956FC97.wem		\Interactive Music Hierarchy\Music\Menu\Menu		9467452
-	275724862	correr_ceramica	C:\Users\44096365\Desktop\Durn2\.cache\Windows\SFX\correr_ceramica_8956FC97.wem		\Actor-Mixer Hierarchy\Default Work Unit\Movimiento\Correr\correr_ceramica		2715712
-	396295202	correr_pasto	C:\Users\44096365\Desktop\Durn2\.cache\Windows\SFX\correr_pasto_8956FC97.wem		\Actor-Mixer Hierarchy\Default Work Unit\Movimiento\Correr\correr_pasto		3874880
-	500851668	Laser	C:\Users\44096365\Desktop\Durn2\.cache\Windows\SFX\Laser_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Disparos\Laser		344720
-	529926027	saltar_normal	C:\Users\44096365\Desktop\Durn2\.cache\Windows\SFX\saltar_normal_DD28D53A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Movimiento\Saltar\saltar_normal		212268
-	676190536	Play_caminar_pasto	C:\Users\44096365\Desktop\Durn2\.cache\Windows\SFX\caminar_pasto_8956FC97.wem		\Actor-Mixer Hierarchy\Default Work Unit\Movimiento\Caminar\Play_caminar_pasto		1777728
-	682673394	Play_caminar_ceramica	C:\Users\44096365\Desktop\Durn2\.cache\Windows\SFX\caminar_ceramica_8956FC97.wem		\Actor-Mixer Hierarchy\Default Work Unit\Movimiento\Caminar\Play_caminar_ceramica		2662464
-	770997545	correr_metal	C:\Users\44096365\Desktop\Durn2\.cache\Windows\SFX\correr_metal_8956FC97.wem		\Actor-Mixer Hierarchy\Default Work Unit\Movimiento\Correr\correr_metal		744256
-	779647713	Play_caminar_metal	C:\Users\44096365\Desktop\Durn2\.cache\Windows\SFX\caminar_metal_8956FC97.wem		\Actor-Mixer Hierarchy\Default Work Unit\Movimiento\Caminar\Play_caminar_metal		1276480
-	829184230	Bang	C:\Users\44096365\Desktop\Durn2\.cache\Windows\SFX\Loud_Bang_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Disparos\Bang		389628
-	830365363	Car	C:\Users\44096365\Desktop\Durn2\.cache\Windows\SFX\Car+Alarm_A55D8F56.wem		\Actor-Mixer Hierarchy\Default Work Unit\Car		279608
+	82479085	theme_b	C:\Users\marti\Desktop\Proyecto-Final-TIC\Durn2\.cache\Windows\SFX\theme_b_8956FC97.wem		\Interactive Music Hierarchy\Music\Niveles\Ciudad\theme_b\theme_b		6652860
+	109880627	Poca Vida 1	C:\Users\marti\Desktop\Proyecto-Final-TIC\Durn2\.cache\Windows\SFX\Poca Vida 1_8956FC97.wem		\Actor-Mixer Hierarchy\Default Work Unit\Poca Vida 1		769600
+	116566743	Smith	C:\Users\marti\Desktop\Proyecto-Final-TIC\Durn2\.cache\Windows\SFX\Smith_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Disparos\Smith		812764
+	135112413	Menu	C:\Users\marti\Desktop\Proyecto-Final-TIC\Durn2\.cache\Windows\SFX\Menú_8956FC97.wem		\Interactive Music Hierarchy\Music\Menu\Menu		9467452
+	181237201	lab_2	C:\Users\marti\Desktop\Proyecto-Final-TIC\Durn2\.cache\Windows\SFX\lab_2_8956FC97.wem		\Interactive Music Hierarchy\Music\Niveles\Lab\lab_b\lab_2		11571860
+	356221471	lab_1	C:\Users\marti\Desktop\Proyecto-Final-TIC\Durn2\.cache\Windows\SFX\lab_1_8956FC97.wem		\Interactive Music Hierarchy\Music\Niveles\Lab\lab_1\lab_1		564540
+	500851668	Laser	C:\Users\marti\Desktop\Proyecto-Final-TIC\Durn2\.cache\Windows\SFX\Laser_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Disparos\Laser		344720
+	597585505	theme_c	C:\Users\marti\Desktop\Proyecto-Final-TIC\Durn2\.cache\Windows\SFX\theme_c_8956FC97.wem		\Interactive Music Hierarchy\Music\Niveles\Ciudad\theme_c\theme_c		13910464
+	619668449	theme_a	C:\Users\marti\Desktop\Proyecto-Final-TIC\Durn2\.cache\Windows\SFX\theme_a_8956FC97.wem		\Interactive Music Hierarchy\Music\Niveles\Ciudad\theme_a\theme_a		604860
+	829184230	Bang	C:\Users\marti\Desktop\Proyecto-Final-TIC\Durn2\.cache\Windows\SFX\Loud_Bang_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Disparos\Bang		389628
+	830365363	Car	C:\Users\marti\Desktop\Proyecto-Final-TIC\Durn2\.cache\Windows\SFX\Car+Alarm_A55D8F56.wem		\Actor-Mixer Hierarchy\Default Work Unit\Car		279608
+	899460912	victory	C:\Users\marti\Desktop\Proyecto-Final-TIC\Durn2\.cache\Windows\SFX\victory_8956FC97.wem		\Interactive Music Hierarchy\Music\victory\victory		4365964
+	991784449	lab_c	C:\Users\marti\Desktop\Proyecto-Final-TIC\Durn2\.cache\Windows\SFX\lab_c_8956FC97.wem		\Interactive Music Hierarchy\Music\Niveles\Patio\patio_c\lab_c		5027464
+	1043352417	lab_b	C:\Users\marti\Desktop\Proyecto-Final-TIC\Durn2\.cache\Windows\SFX\lab_b_8956FC97.wem		\Interactive Music Hierarchy\Music\Niveles\Patio\patio_b\lab_b		3704464
 

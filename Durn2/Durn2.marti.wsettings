@@ -4,16 +4,20 @@
 		<UserProjectSettings Name="" ID="{859809BB-A22B-403B-8C3D-E651760167CD}">
 			<PropertyList>
 				<Property Name="AudioFilesImporter\Path" Type="string" Value="C:\Users\marti\Desktop\PROYECTO DURN 2\Musica\WWISE\Música\Combate Ciudad"/>
+				<Property Name="Event Action List\{2BC5E156-BADA-4802-A055-5EB1E2BA884F}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{4C03C56A-90D2-4A0A-B6B4-F4FAAEF68D35}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{72A79860-57A0-4A61-B71B-22A1B320481C}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{782E72B8-EED6-4A2D-A4E2-5657F4FA6806}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{7BF1B960-8D55-444F-9EAE-4DE6DB9132D0}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{8956F463-524E-4787-A03D-971DA027784F}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{8B61AAD9-5002-4D65-9E6D-19A492F31875}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{AB78B052-C240-46F6-B769-BF3BD4DD6700}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{C375FEEE-A2F8-4E8B-89DC-082B9B704849}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{C93CF6D1-0E1D-430F-9FD8-A3FAE1F46C3D}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{CAAD76FE-58C5-4C26-937E-03E93F5A3601}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{D443A460-1012-4A5C-9017-20210BA85C76}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{D635D211-6AB8-41FD-8450-CCFEE7B21E29}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{D6F2F02A-6DA0-47C4-874E-05C136904546}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{F3393228-2496-42B2-B099-14F95C0F7BA6}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="EventView\FilterMode1" Type="int32" Value="2"/>
 				<Property Name="ExternalSourcesInputPath" Type="string">
@@ -81,7 +85,7 @@
 				<Property Name="ProjectExplorer\FirstVisible_8_1" Type="string" Value="{41093F77-829F-4D88-8601-E8B25F3D4781}"/>
 				<Property Name="ProjectExplorer\x64_Expanded_10_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_11_1" Type="string" Value=""/>
-				<Property Name="ProjectExplorer\x64_Expanded_12_1" Type="string" Value="irmfe71DyEGJkk9XaA5KcFAaNslr1mNKphCOeYKZTyntT67mNTxqT7YzfuJD4KNg"/>
+				<Property Name="ProjectExplorer\x64_Expanded_12_1" Type="string" Value="cSobr1/qhEK4iXNA/26ScO1PruY1PGpPtjN+4kPgo2A="/>
 				<Property Name="ProjectExplorer\x64_Expanded_13_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_14_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_15_1" Type="string" Value=""/>
@@ -92,7 +96,7 @@
 				<Property Name="ProjectExplorer\x64_Expanded_1_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_20_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_21_1" Type="string" Value=""/>
-				<Property Name="ProjectExplorer\x64_Expanded_2_1" Type="string" Value=""/>
+				<Property Name="ProjectExplorer\x64_Expanded_2_1" Type="string" Value="tyXOpupV8UWvEavSLHffew=="/>
 				<Property Name="ProjectExplorer\x64_Expanded_3_1" Type="string" Value="ikobxpC5pUyhedVm7lAoAA=="/>
 				<Property Name="ProjectExplorer\x64_Expanded_4_1" Type="string" Value="MIndDkgYYkWyfCfcWoKsv01ipZFhFftHpqmGYSgDjiM="/>
 				<Property Name="ProjectExplorer\x64_Expanded_5_1" Type="string" Value="b64vpvrTGUixpTPTyXwJgQ=="/>

@@ -73,7 +73,7 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Play_Poca_Vida_1" ID="{D6F2F02A-6DA0-47C4-874E-05C136904546}">
+				<Event Name="Play_Poca_Vida" ID="{D6F2F02A-6DA0-47C4-874E-05C136904546}">
 					<ChildrenList>
 						<Action Name="" ID="{F98C91E4-D172-4898-BFCD-3EB455D390BA}" ShortID="846631833">
 							<PropertyList>

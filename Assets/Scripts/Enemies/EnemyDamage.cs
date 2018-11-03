@@ -53,6 +53,8 @@ public class EnemyDamage : MonoBehaviour
     public float stoppingDistance;
     GameObject head;
 
+	public event System.Action OnAttack;
+
     // Use this for initialization
     void Start()
     {
@@ -153,6 +155,7 @@ public class EnemyDamage : MonoBehaviour
         line.SetPosition(0, Vector3.zero);
         line.SetPosition(1, Vector3.zero);
         casted = true;
+		OnAttack.Invoke();
         time1 = 0;
         attacking = false;
 
