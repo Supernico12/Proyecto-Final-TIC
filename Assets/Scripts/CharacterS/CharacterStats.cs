@@ -23,7 +23,7 @@ public class CharacterStats : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        if (currenthealth - damage < health)
+        if (currenthealth - damage <= health)
         {
             currenthealth -= damage;
         }

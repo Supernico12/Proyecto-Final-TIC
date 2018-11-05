@@ -10,12 +10,12 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField]
     Image healthUI;
 
-    [SerializeField] float recoveryTime;
+    [SerializeField] float recoveryTime = 3;
     float lastDamage;
     void Start()
     {
         playerStats = PlayerManager.instance.player.GetComponent<CharacterStats>();
-        playerStats.OnTakeDamage += OnChangeHealth;
+        playerStats.OnTakeDamage += OnAttacked;
 
     }
     void Update()
@@ -25,17 +25,22 @@ public class PlayerHealth : MonoBehaviour
         if (lastDamage < 0 && playerStats.GetHealth != playerStats.GetMaxHealth)
         {
             playerStats.TakeDamage(-1);
-            OnChangeHealth();
+            UpdateHealth();
         }
     }
-    void OnChangeHealth()
+    void OnAttacked()
+    {
+        lastDamage = recoveryTime;
+        UpdateHealth();
+    }
+    void UpdateHealth()
     {
 
         Color c = healthUI.color;
         c.a = -((playerStats.GetHealth / playerStats.GetMaxHealth) - 1);
 
         healthUI.color = c;
-        lastDamage = recoveryTime;
+
 
         // .8 / 1
     }
