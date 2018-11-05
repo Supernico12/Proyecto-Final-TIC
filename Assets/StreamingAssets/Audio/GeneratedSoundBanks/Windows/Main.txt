@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	422180424	Play_Disparo_3			\Default Work Unit\Play_Disparo_3	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	191060608	Disparo_3	C:\Users\marti\Desktop\PROYECTO DURN 2\Musica\WWISE\Durn2\.cache\Windows\SFX\Disparo_3_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Armas\Disparo_3		202816
+

@@ -22,7 +22,7 @@ public class EnemyMovement : MonoBehaviour {
     public NavMeshAgent agent;
     public Transform destination;
     public bool canMove = true;
-
+    CharacterStats playerStats;
     
 
     
@@ -34,7 +34,7 @@ public class EnemyMovement : MonoBehaviour {
        player = PlayerManager.instance.playertransform;
        
        agent = GetComponent<NavMeshAgent>();
-
+        playerStats = player.GetComponent<CharacterStats>();
 
 
     }
@@ -51,7 +51,11 @@ public class EnemyMovement : MonoBehaviour {
                 destination = player;
                 agent.SetDestination(destination.position);
             }
-        }
+            if (Vector3.Distance(transform.position, player.position) < 4f)
+            {
+                playerStats.TakeDamage(Time.deltaTime);
+            }
+            }
        
     }
 
