@@ -13,6 +13,7 @@ public class PlayerMelee : MonoBehaviour
     [SerializeField] GameObject mesh;
     [SerializeField] GameObject uiAmmo;
     [SerializeField] float fieldOfView;
+    [SerializeField] Animator animator;
     float currentAttack;
     bool isEquiped;
     PlayerFighting fighting;
@@ -62,6 +63,7 @@ public class PlayerMelee : MonoBehaviour
 
     void Attack()
     {
+        animator.SetTrigger("attack");
         Collider[] cols = Physics.OverlapSphere(transform.position + (offset * cam.transform.forward), attackRadious, hitMask);
         foreach (Collider obj in cols)
         {
