@@ -659,6 +659,10 @@ Prefab:
       propertyPath: m_LocalScale.x
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1209462046012640, guid: b21a86b3727db5449bb22082cb7146f7, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b21a86b3727db5449bb22082cb7146f7, type: 2}
   m_IsPrefabAsset: 0
@@ -3190,6 +3194,10 @@ Prefab:
     - target: {fileID: 4198109240676938, guid: b21a86b3727db5449bb22082cb7146f7, type: 2}
       propertyPath: m_LocalScale.x
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1209462046012640, guid: b21a86b3727db5449bb22082cb7146f7, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b21a86b3727db5449bb22082cb7146f7, type: 2}
@@ -6287,6 +6295,10 @@ Prefab:
     - target: {fileID: 4198109240676938, guid: b21a86b3727db5449bb22082cb7146f7, type: 2}
       propertyPath: m_LocalScale.x
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1209462046012640, guid: b21a86b3727db5449bb22082cb7146f7, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b21a86b3727db5449bb22082cb7146f7, type: 2}
@@ -17614,6 +17626,10 @@ Prefab:
       propertyPath: m_Name
       value: Libelula (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1209462046012640, guid: b21a86b3727db5449bb22082cb7146f7, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b21a86b3727db5449bb22082cb7146f7, type: 2}
   m_IsPrefabAsset: 0
@@ -22984,6 +23000,8 @@ MonoBehaviour:
   slider: {fileID: 0}
   levelFinished: 0
   screen: {fileID: 0}
+  time: 0
+  lvls: 0
 --- !u!4 &1389454920
 Transform:
   m_ObjectHideFlags: 0
@@ -37021,6 +37039,10 @@ Prefab:
     - target: {fileID: 4198109240676938, guid: b21a86b3727db5449bb22082cb7146f7, type: 2}
       propertyPath: m_LocalScale.x
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1209462046012640, guid: b21a86b3727db5449bb22082cb7146f7, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b21a86b3727db5449bb22082cb7146f7, type: 2}

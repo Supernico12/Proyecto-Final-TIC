@@ -28,25 +28,28 @@ public class LevelManager : MonoBehaviour {
     public Slider slider;
     public bool levelFinished = false;
     public GameObject screen;
+    public float time;
+    float waitTime = 9;
 
+    public bool lvls;
 	void Start () {
 		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-       
-		if (started)
+       // if(lvls)
+        //waitTime -= Time.deltaTime;
+
+        //if (waitTime == 0)
+        if(levelFinished)
         {
-            if(enemyCount <= 1)
-            {
-                levelFinished = true;
-                index = SceneManager.GetActiveScene().buildIndex;
-                //StartCoroutine(Victory());
-                LoadLevel(index + 1);
-                screen.SetActive(true);
-            }
+            Debug.Log("Siguiente nivel");
+            index = SceneManager.GetActiveScene().buildIndex;
+            LoadLevel(index + 1);
+            screen.SetActive(true);
         }
+		
 	}
 
     public void LoadLevel(int sceneIndex)
@@ -62,6 +65,16 @@ public class LevelManager : MonoBehaviour {
     public void RemoveEnemy(int cantEnemy)
     {
         enemyCount -= cantEnemy;
+
+        if (enemyCount <= 1)
+        {
+            Debug.Log("Hs mtdo  todos los enemigos");
+            //levelFinished = true;
+            lvls = true;
+            //levelFinished = false;
+
+           
+        }
     }
 
     IEnumerator LoadAsync(int sceneIndex)
@@ -74,9 +87,5 @@ public class LevelManager : MonoBehaviour {
             yield return null;
         }
     }
-   /* IEnumerator Victory()
-    {
-        yield return new WaitForSeconds(16);
-       
-    }*/
+
 }

@@ -53,11 +53,13 @@ public class MusicController : AudioMaster
         }
 
         //Control de finalización del nivel 
-        if (level.levelFinished)
+        if (level.lvls)
         {
-            PlayEvent("Play_victory");
             StopEvent("Play_Ciudad", 2);
             StopEvent("Play_Lab", 2);
+            PlayEvent("Play_victory");
+            level.lvls = false;
+            StartCoroutine(Paso());
             
         }
 			
@@ -71,6 +73,15 @@ public class MusicController : AudioMaster
     void Onspidershoot()
     {
         PlayEvent("Play_Laser");
+    }
+
+    IEnumerator Paso()
+    {
+        Debug.Log("Esperr 6 segundos");
+        yield return new WaitForSeconds(15);
+        StopEvent("Play_victory", 2);
+        level.levelFinished = true;
+
     }
 }
 
