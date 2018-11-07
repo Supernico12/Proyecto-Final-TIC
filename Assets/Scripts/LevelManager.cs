@@ -42,6 +42,7 @@ public class LevelManager : MonoBehaviour {
             {
                 levelFinished = true;
                 index = SceneManager.GetActiveScene().buildIndex;
+                //StartCoroutine(Victory());
                 LoadLevel(index + 1);
                 screen.SetActive(true);
             }
@@ -73,4 +74,9 @@ public class LevelManager : MonoBehaviour {
             yield return null;
         }
     }
+   /* IEnumerator Victory()
+    {
+        yield return new WaitForSeconds(16);
+       
+    }*/
 }

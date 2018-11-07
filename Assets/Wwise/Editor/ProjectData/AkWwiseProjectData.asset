@@ -15,12 +15,12 @@ MonoBehaviour:
   - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 0c3e0d4d6f9a8946aed3f9736d8f5ae0
-    m_lastTime: -8586604026860496731
+    m_lastTime: -8586601854495647397
     List: []
   - PhysicalPath: Virtual Acoustics\Factory Reflect Acoustic Textures.wwu
     ParentPhysicalPath: 
     guid: 6b663d46a83ca54f8b4a5fef12b883f6
-    m_lastTime: -8586604026860456779
+    m_lastTime: -8586601854495607332
     List:
     - name: Acoustic_Banner
       guid: f2532d2fccda8e408b8898b1b52a26d6
@@ -180,13 +180,13 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 9337bb93ef8e714fb753ebad22b4cec3
-    m_lastTime: -8586604026962114209
+    m_lastTime: -8586601854594807632
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 2e8376c6845ca64080e44666af41aad3
-    m_lastTime: -8586603869643652591
+    m_lastTime: -8586600055222342075
     List:
     - name: Test
       guid: 387a365586fb094f8c7edb9d5a79628e
@@ -201,7 +201,7 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 8a4a1bc690b9a54ca179d566ee502800
-    m_lastTime: -8586603869643842511
+    m_lastTime: -8586600055221911384
     List:
     - name: Disparar
       guid: 6098a772a057614ab71b22a1b320481c
@@ -212,18 +212,6 @@ MonoBehaviour:
       - ElementName: Disparar
         ObjectType: 3
       Path: Default Work Unit\Disparar
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - name: Play_Bang
-      guid: 60a443d412105c4a901720210ba85c76
-      id: 1375974412
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: Play_Bang
-        ObjectType: 3
-      Path: Default Work Unit\Play_Bang
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -347,6 +335,54 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Play_Disparo1
+      guid: 1f2a10f490549a41a7a8ba78deb56b28
+      id: 198502423
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Disparo1
+        ObjectType: 3
+      Path: Default Work Unit\Play_Disparo1
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Disparo2
+      guid: 60a443d412105c4a901720210ba85c76
+      id: 198502420
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Disparo2
+        ObjectType: 3
+      Path: Default Work Unit\Play_Disparo2
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Disparo3
+      guid: 11d235d6b86afd418450ccfee7b21e29
+      id: 198502421
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Disparo3
+        ObjectType: 3
+      Path: Default Work Unit\Play_Disparo3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Disparo4
+      guid: 6d31e2154ef46e47937ab11c9d0f15f7
+      id: 198502418
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Disparo4
+        ObjectType: 3
+      Path: Default Work Unit\Play_Disparo4
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Play_Lab
       guid: 2fccb03cb1a78b4e865a9a6e1285dd80
       id: 2691532671
@@ -435,18 +471,6 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
-    - name: Play_Smith
-      guid: 11d235d6b86afd418450ccfee7b21e29
-      id: 2472434067
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: Play_Smith
-        ObjectType: 3
-      Path: Default Work Unit\Play_Smith
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
     - name: Play_victory
       guid: c4c405e623f082419a376770f1b56350
       id: 2453267296
@@ -463,7 +487,7 @@ MonoBehaviour:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 473f8887c072e04fae0d40a091bfb7e5
-    m_lastTime: -8586604026972178049
+    m_lastTime: -8586601854607954052
     List:
     - name: PlayerHealth
       guid: 90bccd58262aec4d837f18d5479b91d5
@@ -477,7 +501,7 @@ MonoBehaviour:
   - PhysicalPath: Game Parameters\Factory Motion.wwu
     ParentPhysicalPath: 
     guid: 225213d7dbd1d042adc0930743567776
-    m_lastTime: -8586604026972158064
+    m_lastTime: -8586601854607954052
     List:
     - name: Playback_Rate
       guid: e37e38283ac11643b9c3db5c521624af
@@ -500,7 +524,7 @@ MonoBehaviour:
   - PhysicalPath: Game Parameters\Factory SoundSeed Air Game Syncs.wwu
     ParentPhysicalPath: 
     guid: 5577163b42fb8b4598bf96f557afb3b9
-    m_lastTime: -8586604026971588400
+    m_lastTime: -8586601854607954052
     List:
     - name: SS_Air_Fear
       guid: 59062ef746431c4ea1b1dab46a05101e
@@ -596,7 +620,7 @@ MonoBehaviour:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 6fae2fa6fad31948b1a533d3c97c0981
-    m_lastTime: -8586604026860876525
+    m_lastTime: -8586601854495742562
     List:
     - name: Desarrollo
       guid: b442087e6ceea84680c4344b746b24a4
@@ -658,7 +682,7 @@ MonoBehaviour:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 4d62a5916115fb47a6a9866128038e23
-    m_lastTime: -8586604026860716623
+    m_lastTime: -8586601854495707499
     List:
     - name: Caminata
       guid: 3089dd0e48186245b27c27dc5a82acbf
@@ -742,7 +766,7 @@ MonoBehaviour:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: beffc2025066e1479c3257828ceab73f
-    m_lastTime: -8586604026860586715
+    m_lastTime: -8586601854495677448
     List: []
   ExpandedItems:
   - /Durn2

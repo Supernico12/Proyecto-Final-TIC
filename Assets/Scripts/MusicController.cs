@@ -6,9 +6,10 @@ public class MusicController : AudioMaster
 {
     public LevelManager level;
     public EnemyDamage spiderShoot;
+    public PlayerFighting playershoot;
+
     CharacterStats character;
     
-
     // Use this for initialization
     void Start()
     {
@@ -18,22 +19,25 @@ public class MusicController : AudioMaster
 		LoadBank();
 
         PlayEvent("Play_Corazon"); //Comienzan a sonar los latidos del corazon (en realidad no, porque comienzan a sonar cuando la vida es menor que 50
+        StopEvent("Play_Menu", 2);
 
        //Music of Current Level
        if (level.index == 0){
            PlayEvent("Play_Menu");
        } 
        else if (level.index == 1){
-	 	 StopEvent ("Play_Menu", 2);
          PlayEvent("Play_Ciudad");
+         StopEvent("Play_Menu", 2);
+
        }
        else if (level.index == 2){
-			StopEvent ("Play_Ciudad", 2);
            PlayEvent("Play_Lab");
+           StopEvent("Play_Ciudad", 2);
+
        }
 
         spiderShoot.OnAttack += Onspidershoot;
-       
+        playershoot.OnShoot += Onplayershoot;
     }
 
     // Update is called once per frame
@@ -47,7 +51,22 @@ public class MusicController : AudioMaster
         {
             StopEvent("Play_Corazon", 3); //Cuando la vida del personaje llega a 0, se paran los latidos del corazon
         }
+
+        //Control de finalización del nivel 
+        if (level.levelFinished)
+        {
+            PlayEvent("Play_victory");
+            StopEvent("Play_Ciudad", 2);
+            StopEvent("Play_Lab", 2);
+            
+        }
 			
+    }
+
+    void Onplayershoot()
+    {
+        PlayEvent("Play_Disparo" + playershoot.arma);
+
     }
     void Onspidershoot()
     {

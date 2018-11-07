@@ -22,6 +22,8 @@ public class PlayerFighting : MonoBehaviour
     public event System.Action OnReload;
     public event System.Action OnShoot;
 
+    public int arma;
+
     bool isEquiped;
     bool isScoped;
     float camerDefaultFieldOfView;
@@ -77,8 +79,9 @@ public class PlayerFighting : MonoBehaviour
                         weapon.shootMuzzle.Play();
                     }
 
-                    // Shoot Sound place 
-                    //Debug.Log("Disparar" + (int)weapon.type);
+                    // Shoot Sound place PREGUNTR NICOOOOOOOOOOOOOOOOOOO
+                    arma = (int)weapon.type;
+                    Debug.Log("Play_Disparo" + (int)weapon.type);
 
                     //AkSoundEngine.PostEvent("Play_SMG_Shot", gameObject);
                     RaycastHit hit;

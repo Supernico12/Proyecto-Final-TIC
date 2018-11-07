@@ -9665,6 +9665,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weapon: {fileID: 1623585135}
   weaponsParent: {fileID: 1609337036}
+  arma: 0
 --- !u!4 &572167022
 Transform:
   m_ObjectHideFlags: 0
@@ -9695,6 +9696,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: {fileID: 1389454919}
   spiderShoot: {fileID: 1473499374}
+  playershoot: {fileID: 572167021}
 --- !u!1 &589382053
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,11 +6,13 @@
 				<SoundBank Name="Test" ID="{55367A38-FB86-4F09-8C7E-DB9D5A79628E}">
 					<ObjectInclusionList>
 						<ObjectRef Name="Play_victory" ID="{E605C4C4-F023-4182-9A37-6770F1B56350}" WorkUnitID="{C61B4A8A-B990-4CA5-A179-D566EE502800}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Play_Smith" ID="{D635D211-6AB8-41FD-8450-CCFEE7B21E29}" WorkUnitID="{C61B4A8A-B990-4CA5-A179-D566EE502800}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Play_Disparo1" ID="{F4102A1F-5490-419A-A7A8-BA78DEB56B28}" WorkUnitID="{C61B4A8A-B990-4CA5-A179-D566EE502800}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Play_Disparo3" ID="{D635D211-6AB8-41FD-8450-CCFEE7B21E29}" WorkUnitID="{C61B4A8A-B990-4CA5-A179-D566EE502800}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Play_Menu" ID="{C93CF6D1-0E1D-430F-9FD8-A3FAE1F46C3D}" WorkUnitID="{C61B4A8A-B990-4CA5-A179-D566EE502800}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Play_Disparo4" ID="{15E2316D-F44E-476E-937A-B11C9D0F15F7}" WorkUnitID="{C61B4A8A-B990-4CA5-A179-D566EE502800}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Play_Ciudad" ID="{8956F463-524E-4787-A03D-971DA027784F}" WorkUnitID="{C61B4A8A-B990-4CA5-A179-D566EE502800}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Play_Patio" ID="{9FCBD2B9-E779-47B4-985C-7D570BBD7D90}" WorkUnitID="{C61B4A8A-B990-4CA5-A179-D566EE502800}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Play_Bang" ID="{D443A460-1012-4A5C-9017-20210BA85C76}" WorkUnitID="{C61B4A8A-B990-4CA5-A179-D566EE502800}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Play_Disparo2" ID="{D443A460-1012-4A5C-9017-20210BA85C76}" WorkUnitID="{C61B4A8A-B990-4CA5-A179-D566EE502800}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Play_Laser" ID="{8B61AAD9-5002-4D65-9E6D-19A492F31875}" WorkUnitID="{C61B4A8A-B990-4CA5-A179-D566EE502800}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Play_Corazon" ID="{C375FEEE-A2F8-4E8B-89DC-082B9B704849}" WorkUnitID="{C61B4A8A-B990-4CA5-A179-D566EE502800}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Play_Lab" ID="{3CB0CC2F-A7B1-4E8B-865A-9A6E1285DD80}" WorkUnitID="{C61B4A8A-B990-4CA5-A179-D566EE502800}" Filter="7" Origin="Manual"/>
