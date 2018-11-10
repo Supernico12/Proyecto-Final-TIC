@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="132">
 	<RootPaths>
-		<ProjectRoot>C:\Users\44096365\Desktop\Proyecto-Final-TIC\Durn2\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\44096365\Desktop\Proyecto-Final-TIC\Durn2\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\44096365\Desktop\Proyecto-Final-TIC\Durn2\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>C:\Users\marti\Desktop\Proyecto-Final-TIC\Durn2\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\marti\Desktop\Proyecto-Final-TIC\Durn2\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\marti\Desktop\Proyecto-Final-TIC\Durn2\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\44096365\Desktop\Proyecto-Final-TIC\Durn2\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Users\marti\Desktop\Proyecto-Final-TIC\Durn2\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -21,6 +21,7 @@
 			<ShortName>Test</ShortName>
 			<Path>Test.bnk</Path>
 			<IncludedEvents>
+				<Event Id="1937681673" Name="Play_Bunker" ObjectPath="\Events\Default Work Unit\Play_Bunker"/>
 				<Event Id="2690797144" Name="Play_Car" ObjectPath="\Events\Default Work Unit\Play_Car"/>
 				<Event Id="2276262738" Name="Play_Ciudad" ObjectPath="\Events\Default Work Unit\Play_Ciudad"/>
 				<Event Id="4169467576" Name="Play_Corazon" ObjectPath="\Events\Default Work Unit\Play_Corazon"/>
@@ -49,7 +50,7 @@
 				</File>
 				<File Id="122275698" Language="SFX">
 					<ShortName>espada.wav</ShortName>
-					<Path>SFX\espada_71AAEB76.wem</Path>
+					<Path>SFX\espada_8C68A20F.wem</Path>
 				</File>
 				<File Id="135112413" Language="SFX">
 					<ShortName>Menú.wav</ShortName>
@@ -78,6 +79,10 @@
 				<File Id="626436722" Language="SFX">
 					<ShortName>Sniper.wav</ShortName>
 					<Path>SFX\Sniper_56D34C19.wem</Path>
+				</File>
+				<File Id="694193162" Language="SFX">
+					<ShortName>Astronave.wav</ShortName>
+					<Path>SFX\Astronave_8956FC97.wem</Path>
 				</File>
 				<File Id="829184230" Language="SFX">
 					<ShortName>Loud_Bang.wav</ShortName>

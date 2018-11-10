@@ -48,6 +48,7 @@ public class LevelManager : MonoBehaviour {
             index = SceneManager.GetActiveScene().buildIndex;
             LoadLevel(index + 1);
             screen.SetActive(true);
+			levelFinished = false;
         }
 		
 	}

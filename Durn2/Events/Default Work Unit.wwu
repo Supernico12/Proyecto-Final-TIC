@@ -59,20 +59,6 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Play_Menu" ID="{C93CF6D1-0E1D-430F-9FD8-A3FAE1F46C3D}">
-					<ChildrenList>
-						<Action Name="" ID="{D55AAE3E-0FCA-47AE-898E-2B3B090B381B}" ShortID="402894784">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Menu" ID="{21C5C28D-F3D4-462E-95E5-10489AF9EFDA}" WorkUnitID="{E6AE4FED-3C35-4F6A-B633-7EE243E0A360}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Event Name="Play_Poca_Vida" ID="{D6F2F02A-6DA0-47C4-874E-05C136904546}">
 					<ChildrenList>
 						<Action Name="" ID="{F98C91E4-D172-4898-BFCD-3EB455D390BA}" ShortID="846631833">
@@ -310,6 +296,34 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Sniper" ID="{997606A8-A322-4ABB-B4CB-42F1CD63D2D7}" WorkUnitID="{A6CE25B7-55EA-45F1-AF11-ABD22C77DF7B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Menu" ID="{4919DE71-9336-44EF-8C47-4B4F5BEFAE56}">
+					<ChildrenList>
+						<Action Name="" ID="{86D27B99-4C74-4B93-A270-0D3EAD0F980B}" ShortID="289186490">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Menu" ID="{94D5BD65-F2AF-413E-B14F-DF9B7CC68387}" WorkUnitID="{E6AE4FED-3C35-4F6A-B633-7EE243E0A360}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Bunker" ID="{84BB793A-E07F-41C3-90C3-AB4F844814EA}">
+					<ChildrenList>
+						<Action Name="" ID="{263D6684-CAF3-4E46-BCC2-394FCFABC62E}" ShortID="847580761">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Bunker" ID="{453FF5BC-9300-41C7-A7D6-CDA1AD901B7D}" WorkUnitID="{E6AE4FED-3C35-4F6A-B633-7EE243E0A360}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

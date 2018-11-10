@@ -19,15 +19,16 @@ public class MusicController : AudioMaster
 		LoadBank();
 
         PlayEvent("Play_Corazon"); //Comienzan a sonar los latidos del corazon (en realidad no, porque comienzan a sonar cuando la vida es menor que 50
-        StopEvent("Play_Menu", 2);
 
        //Music of Current Level
        if (level.index == 0){
-           PlayEvent("Play_Menu");
+			Debug.Log ("Comenzo el menu");
+           	//PlayEvent("Play_Menu");
        } 
        else if (level.index == 1){
-         PlayEvent("Play_Ciudad");
-         StopEvent("Play_Menu", 2);
+			Debug.Log ("Arranca el nivel 1");
+			//StopEvent("Play_Menu", 2);
+         PlayEvent("Play_Bunker");
 
        }
        else if (level.index == 2){
@@ -75,9 +76,17 @@ public class MusicController : AudioMaster
         PlayEvent("Play_Laser");
     }
 
+	void OnTriggerEnter(Collider col){
+		if (col.gameObject.tag == "Bunker") {
+			StopEvent ("Play_Bunker", 2);
+			PlayEvent ("Play_Ciudad");
+			Destroy (col);
+		}
+	}
+
     IEnumerator Paso()
     {
-        Debug.Log("Esperr 6 segundos");
+        Debug.Log("Esperr 15 segundos");
         yield return new WaitForSeconds(15);
         StopEvent("Play_victory", 2);
         level.levelFinished = true;
