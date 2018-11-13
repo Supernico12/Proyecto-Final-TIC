@@ -25,7 +25,6 @@ public class MusicController : AudioMaster
 			PlayEvent ("Play_Menu");
 		} 
 		else if (level.index == 1) {
-			StopEvent("Play_Menu", 2);
 			PlayEvent("Play_Patio");
 	   }
        else if (level.index == 2){
@@ -60,6 +59,7 @@ public class MusicController : AudioMaster
         {
             StopEvent("Play_Ciudad", 2);
             StopEvent("Play_Lab", 2);
+            StopEvent("Play_Patio", 2);
             PlayEvent("Play_victory");
             level.lvls = false;
             StartCoroutine(Paso());

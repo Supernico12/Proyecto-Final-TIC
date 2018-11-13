@@ -32,6 +32,10 @@ public class LevelManager : MonoBehaviour {
     float waitTime = 9;
 
     public bool lvls;
+    int finish = 2;
+    public bool lol;
+    public bool lol2;
+
 	void Start () {
 		
 	}
@@ -40,17 +44,19 @@ public class LevelManager : MonoBehaviour {
 	void Update () {
        // if(lvls)
         //waitTime -= Time.deltaTime;
-
-        //if (waitTime == 0)
-        if(levelFinished)
+        if (finish == 2)
         {
-            Debug.Log("Siguiente nivel");
-            index = SceneManager.GetActiveScene().buildIndex;
-            LoadLevel(index + 1);
-            screen.SetActive(true);
-			levelFinished = false;
+            //if (waitTime == 0)
+            if (levelFinished)
+            {
+                Debug.Log("Siguiente nivel");
+                levelFinished = false;
+                screen.SetActive(true);
+                index = SceneManager.GetActiveScene().buildIndex;
+                LoadLevel(index + 1);
+                finish = 0;
+            }
         }
-		
 	}
 
     public void LoadLevel(int sceneIndex)
@@ -67,11 +73,12 @@ public class LevelManager : MonoBehaviour {
     {
         enemyCount -= cantEnemy;
 
-        if (enemyCount <= 1)
+        if (enemyCount <= 1 && lol == false)
         {
             Debug.Log("Hs mtdo  todos los enemigos");
             //levelFinished = true;
             lvls = true;
+            lol = true;
             //levelFinished = false;
 
            
