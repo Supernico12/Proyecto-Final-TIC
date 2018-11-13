@@ -64,6 +64,10 @@ public class PlayerMelee : MonoBehaviour
     void Attack()
     {
         animator.SetTrigger("attack");
+        
+    }
+
+    public void FinishAttack(){
         Collider[] cols = Physics.OverlapSphere(transform.position + (offset * cam.transform.forward), attackRadious, hitMask);
         foreach (Collider obj in cols)
         {
