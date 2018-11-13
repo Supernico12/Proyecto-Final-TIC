@@ -29,7 +29,7 @@ public class PlayerAnimatorController : MonoBehaviour
     void OnAttack()
     {
         animator.SetTrigger("Shoot");
-        overrideanimator["Shoot"] = animationsClips[1];
+        overrideanimator["Shoot"] = animationsClips[0];
 
 
 
@@ -40,7 +40,7 @@ public class PlayerAnimatorController : MonoBehaviour
     { // need an Reload Finish to false
 
         animator.SetTrigger("Reload");
-        overrideanimator["Reload"] = animationsClips[2];
+        overrideanimator["Reload"] = animationsClips[1];
 
     }
 
@@ -49,6 +49,7 @@ public class PlayerAnimatorController : MonoBehaviour
     public void SetAnimations(AnimationClip[] newClips)
     {
         animationsClips = newClips;
+        overrideanimator["Idle"] = animationsClips[3];
     }
 
 

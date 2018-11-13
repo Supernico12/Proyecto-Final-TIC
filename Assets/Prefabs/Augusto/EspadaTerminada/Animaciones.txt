@@ -1,0 +1,3 @@
+0-42 ataque derecha a izquierda y despues pos original
+
+48- 115 ataque derecha a izquierda, levanta y seguido ataca de izq a derecha y vuelve a pos origin
