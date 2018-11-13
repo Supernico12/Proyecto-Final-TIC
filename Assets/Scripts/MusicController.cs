@@ -21,17 +21,19 @@ public class MusicController : AudioMaster
         PlayEvent("Play_Corazon"); //Comienzan a sonar los latidos del corazon (en realidad no, porque comienzan a sonar cuando la vida es menor que 50
 
        //Music of Current Level
-       if (level.index == 0){
-			Debug.Log ("Comenzo el menu");
-           	//PlayEvent("Play_Menu");
-       } 
-       else if (level.index == 1){
-			Debug.Log ("Arranca el nivel 1");
-			//StopEvent("Play_Menu", 2);
+		if (level.index == 0) {
+			PlayEvent ("Play_Menu");
+		} 
+		else if (level.index == 1) {
+			StopEvent("Play_Menu", 2);
+			PlayEvent("Play_Patio");
+	   }
+       else if (level.index == 2){
+	     StopEvent("Play_Patio", 2);
          PlayEvent("Play_Bunker");
 
        }
-       else if (level.index == 2){
+       else if (level.index == 3){
            PlayEvent("Play_Lab");
            StopEvent("Play_Ciudad", 2);
 
