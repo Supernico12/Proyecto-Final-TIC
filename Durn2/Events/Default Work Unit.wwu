@@ -17,7 +17,7 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Play_Bang" ID="{D443A460-1012-4A5C-9017-20210BA85C76}">
+				<Event Name="Play_Disparo2" ID="{D443A460-1012-4A5C-9017-20210BA85C76}">
 					<ChildrenList>
 						<Action Name="" ID="{830AFEFC-3663-4445-820F-B3D1C6BEB528}" ShortID="578966161">
 							<PropertyList>
@@ -45,7 +45,7 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Play_Smith" ID="{D635D211-6AB8-41FD-8450-CCFEE7B21E29}">
+				<Event Name="Play_Disparo3" ID="{D635D211-6AB8-41FD-8450-CCFEE7B21E29}">
 					<ChildrenList>
 						<Action Name="" ID="{63395D97-A679-4B7F-B5A2-8DAD1C584666}" ShortID="155856001">
 							<PropertyList>
@@ -54,20 +54,6 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Smith" ID="{4F75728A-5109-4DC4-B976-16848C424F75}" WorkUnitID="{A6CE25B7-55EA-45F1-AF11-ABD22C77DF7B}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_Menu" ID="{C93CF6D1-0E1D-430F-9FD8-A3FAE1F46C3D}">
-					<ChildrenList>
-						<Action Name="" ID="{D55AAE3E-0FCA-47AE-898E-2B3B090B381B}" ShortID="402894784">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Menu" ID="{21C5C28D-F3D4-462E-95E5-10489AF9EFDA}" WorkUnitID="{E6AE4FED-3C35-4F6A-B633-7EE243E0A360}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -282,6 +268,62 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="victory" ID="{087C29AD-04F2-4300-801D-DDE3570CA371}" WorkUnitID="{E6AE4FED-3C35-4F6A-B633-7EE243E0A360}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Disparo1" ID="{F4102A1F-5490-419A-A7A8-BA78DEB56B28}">
+					<ChildrenList>
+						<Action Name="" ID="{9027F3E0-2F4B-45A1-A2DC-8F698993DD3A}" ShortID="516143353">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="espada" ID="{2547CFF3-1763-40BE-A78C-412C60B3C1F0}" WorkUnitID="{A6CE25B7-55EA-45F1-AF11-ABD22C77DF7B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Disparo4" ID="{15E2316D-F44E-476E-937A-B11C9D0F15F7}">
+					<ChildrenList>
+						<Action Name="" ID="{013D9F38-0900-430F-A648-923D228B85A0}" ShortID="391460740">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Sniper" ID="{997606A8-A322-4ABB-B4CB-42F1CD63D2D7}" WorkUnitID="{A6CE25B7-55EA-45F1-AF11-ABD22C77DF7B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Menu" ID="{4919DE71-9336-44EF-8C47-4B4F5BEFAE56}">
+					<ChildrenList>
+						<Action Name="" ID="{86D27B99-4C74-4B93-A270-0D3EAD0F980B}" ShortID="289186490">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Menu" ID="{94D5BD65-F2AF-413E-B14F-DF9B7CC68387}" WorkUnitID="{E6AE4FED-3C35-4F6A-B633-7EE243E0A360}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Bunker" ID="{84BB793A-E07F-41C3-90C3-AB4F844814EA}">
+					<ChildrenList>
+						<Action Name="" ID="{263D6684-CAF3-4E46-BCC2-394FCFABC62E}" ShortID="847580761">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Bunker" ID="{453FF5BC-9300-41C7-A7D6-CDA1AD901B7D}" WorkUnitID="{E6AE4FED-3C35-4F6A-B633-7EE243E0A360}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

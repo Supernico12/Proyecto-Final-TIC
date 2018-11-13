@@ -6,9 +6,10 @@ public class MusicController : AudioMaster
 {
     public LevelManager level;
     public EnemyDamage spiderShoot;
+    public PlayerFighting playershoot;
+
     CharacterStats character;
     
-
     // Use this for initialization
     void Start()
     {
@@ -20,20 +21,26 @@ public class MusicController : AudioMaster
         PlayEvent("Play_Corazon"); //Comienzan a sonar los latidos del corazon (en realidad no, porque comienzan a sonar cuando la vida es menor que 50
 
        //Music of Current Level
-       if (level.index == 0){
-           PlayEvent("Play_Menu");
-       } 
-       else if (level.index == 1){
-	 	 StopEvent ("Play_Menu", 2);
-         PlayEvent("Play_Ciudad");
-       }
+		if (level.index == 0) {
+			PlayEvent ("Play_Menu");
+		} 
+		else if (level.index == 1) {
+			StopEvent("Play_Menu", 2);
+			PlayEvent("Play_Patio");
+	   }
        else if (level.index == 2){
-			StopEvent ("Play_Ciudad", 2);
+	     StopEvent("Play_Patio", 2);
+         PlayEvent("Play_Bunker");
+
+       }
+       else if (level.index == 3){
            PlayEvent("Play_Lab");
+           StopEvent("Play_Ciudad", 2);
+
        }
 
         spiderShoot.OnAttack += Onspidershoot;
-       
+        playershoot.OnShoot += Onplayershoot;
     }
 
     // Update is called once per frame
@@ -47,11 +54,45 @@ public class MusicController : AudioMaster
         {
             StopEvent("Play_Corazon", 3); //Cuando la vida del personaje llega a 0, se paran los latidos del corazon
         }
+
+        //Control de finalización del nivel 
+        if (level.lvls)
+        {
+            StopEvent("Play_Ciudad", 2);
+            StopEvent("Play_Lab", 2);
+            PlayEvent("Play_victory");
+            level.lvls = false;
+            StartCoroutine(Paso());
+            
+        }
 			
+    }
+
+    void Onplayershoot()
+    {
+        PlayEvent("Play_Disparo" + playershoot.arma);
+
     }
     void Onspidershoot()
     {
         PlayEvent("Play_Laser");
+    }
+
+	void OnTriggerEnter(Collider col){
+		if (col.gameObject.tag == "Bunker") {
+			StopEvent ("Play_Bunker", 2);
+			PlayEvent ("Play_Ciudad");
+			Destroy (col);
+		}
+	}
+
+    IEnumerator Paso()
+    {
+        Debug.Log("Esperr 15 segundos");
+        yield return new WaitForSeconds(15);
+        StopEvent("Play_victory", 2);
+        level.levelFinished = true;
+
     }
 }
 

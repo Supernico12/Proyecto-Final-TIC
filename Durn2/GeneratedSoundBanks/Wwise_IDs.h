@@ -13,15 +13,18 @@ namespace AK
 {
     namespace EVENTS
     {
-        static const AkUniqueID PLAY_BANG = 1375974412U;
+        static const AkUniqueID PLAY_BUNKER = 1937681673U;
         static const AkUniqueID PLAY_CAR = 2690797144U;
         static const AkUniqueID PLAY_CIUDAD = 2276262738U;
         static const AkUniqueID PLAY_CORAZON = 4169467576U;
+        static const AkUniqueID PLAY_DISPARO1 = 198502423U;
+        static const AkUniqueID PLAY_DISPARO2 = 198502420U;
+        static const AkUniqueID PLAY_DISPARO3 = 198502421U;
+        static const AkUniqueID PLAY_DISPARO4 = 198502418U;
         static const AkUniqueID PLAY_LAB = 2691532671U;
         static const AkUniqueID PLAY_LASER = 2270376495U;
         static const AkUniqueID PLAY_MENU = 1278378707U;
         static const AkUniqueID PLAY_PATIO = 4133041573U;
-        static const AkUniqueID PLAY_SMITH = 2472434067U;
         static const AkUniqueID PLAY_VICTORY = 2453267296U;
     } // namespace EVENTS
 

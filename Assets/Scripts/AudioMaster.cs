@@ -24,7 +24,6 @@ public class AudioMaster : MonoBehaviour {
 		uint eventID;
 		eventID = AkSoundEngine.GetIDFromString (eventName);
 		AkSoundEngine.ExecuteActionOnEvent (eventID, AkActionOnEventType.AkActionOnEventType_Stop, gameObject, fadeout * 1000, AkCurveInterpolation.AkCurveInterpolation_Sine);
-		AkSoundEngine.ExecuteActionOnEvent (eventID, AkActionOnEventType.AkActionOnEventType_Stop, gameObject, fadeout * 1000, AkCurveInterpolation.AkCurveInterpolation_Sine);
 	}
 
 	public void PauseEvent(string eventName, int fadeout){
