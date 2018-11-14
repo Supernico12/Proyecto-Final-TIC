@@ -17,6 +17,7 @@ public class PlayerMelee : MonoBehaviour
     float currentAttack;
     bool isEquiped;
     PlayerFighting fighting;
+    MusicController musicController;
 
     int attackIndex;
     Camera cam;
@@ -29,6 +30,7 @@ public class PlayerMelee : MonoBehaviour
         //OnEquip();
         cam.fieldOfView = fieldOfView;
         isEquiped = true;
+        musicController = MusicController.instnce;
     }
     public void DisEquip()
     {
@@ -68,6 +70,7 @@ public class PlayerMelee : MonoBehaviour
     }
 
     public void FinishAttack(){
+        musicController.Onplayershoot();
         Collider[] cols = Physics.OverlapSphere(transform.position + (offset * cam.transform.forward), attackRadious, hitMask);
         foreach (Collider obj in cols)
         {
@@ -86,6 +89,7 @@ public class PlayerMelee : MonoBehaviour
         uiAmmo.SetActive(false);
         cam.fieldOfView = fieldOfView;
         fighting.DisEquip();
+        fighting.arma = 0;
     }
     void OnDrawGizmosSelected()
     {

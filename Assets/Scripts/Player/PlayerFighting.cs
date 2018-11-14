@@ -81,7 +81,6 @@ public class PlayerFighting : MonoBehaviour
 
                     // Shoot Sound place PREGUNTR NICOOOOOOOOOOOOOOOOOOO
                     arma = (int)weapon.type;
-                    Debug.Log("Play_Disparo" + (int)weapon.type);
 
                     //AkSoundEngine.PostEvent("Play_SMG_Shot", gameObject);
                     RaycastHit hit;

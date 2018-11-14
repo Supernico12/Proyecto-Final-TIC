@@ -9,7 +9,16 @@ public class MusicController : AudioMaster
     public PlayerFighting playershoot;
 
     CharacterStats character;
-    
+
+    #region Singleton
+
+    public static  MusicController instnce;
+    void Awake()
+    {
+        instnce = this;
+    }
+#endregion
+
     // Use this for initialization
     void Start()
     {
@@ -22,9 +31,12 @@ public class MusicController : AudioMaster
 
        //Music of Current Level
 		if (level.index == 0) {
-			PlayEvent ("Play_Menu");
+			//PlayEvent ("Play_Menu");
 		} 
 		else if (level.index == 1) {
+            //StopEvent("Play_Menu", 2);
+            StopEvent("Play_Menu", 2);
+
 			PlayEvent("Play_Patio");
 	   }
        else if (level.index == 2){
@@ -38,8 +50,11 @@ public class MusicController : AudioMaster
 
        }
 
-        spiderShoot.OnAttack += Onspidershoot;
+        if (spiderShoot != null){
+            spiderShoot.OnAttack += Onspidershoot;
         playershoot.OnShoot += Onplayershoot;
+        }
+        
     }
 
     // Update is called once per frame
@@ -68,9 +83,9 @@ public class MusicController : AudioMaster
 			
     }
 
-    void Onplayershoot()
+    public void Onplayershoot()
     {
-        PlayEvent("Play_Disparo" + playershoot.arma);
+        PlayEvent("Play_Disparo" + (playershoot.arma + 1));
 
     }
     void Onspidershoot()
