@@ -29,7 +29,7 @@ public class EnemyMovement : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        
+        agent.stoppingDistance = 3f;
         Debug.Log(player);
        player = PlayerManager.instance.playertransform;
        

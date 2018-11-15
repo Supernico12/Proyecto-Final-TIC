@@ -77,7 +77,8 @@ public class MusicController : AudioMaster
             StopEvent("Play_Patio", 2);
             PlayEvent("Play_victory");
             level.lvls = false;
-            StartCoroutine(Paso());
+            level.levelFinished = true;
+            //StartCoroutine(Paso());
             
         }
 			
@@ -100,14 +101,13 @@ public class MusicController : AudioMaster
 			Destroy (col);
 		}
 	}
-
+    /*
     IEnumerator Paso()
     {
         Debug.Log("Esperr 15 segundos");
-        yield return new WaitForSeconds(15);
         StopEvent("Play_victory", 2);
         level.levelFinished = true;
 
-    }
+    }*/
 }
 

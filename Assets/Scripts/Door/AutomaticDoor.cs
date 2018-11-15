@@ -11,10 +11,12 @@ public class AutomaticDoor : MonoBehaviour {
     bool isOpen;
 
     Animator animator;
-    Transform player; 
-    
+    Transform player;
+
+    public LevelManager Level;
 	// Use this for initialization
 	void Start () {
+        
         animator = GetComponent<Animator>();
         player = PlayerManager.instance.playertransform;
 	}
@@ -23,16 +25,20 @@ public class AutomaticDoor : MonoBehaviour {
     void Update()
     {
         float distance = Vector3.Distance(player.position, transform.position);
-       
-        if( distance < interactRadious && !isOpen)
+
+        if (Level.levelFinished)
         {
-            Open();
+            if (distance < interactRadious && !isOpen)
+            {
+                Open();
+            }
+
+            if (distance > interactRadious && isOpen)
+            {
+                Close();
+            }
         }
         
-        if(distance > interactRadious &&  isOpen)
-        {
-            Close();
-        }
 
     }
     void OnDrawGizmos()
@@ -50,5 +56,12 @@ public class AutomaticDoor : MonoBehaviour {
     {
         animator.SetBool("isOpen", false);
         isOpen = false;
+    }
+    void OnTriggerEnter(Collider col)
+    {
+        if (col.gameObject.name == "Player")
+        {
+            Level.LoadLevel();
+        }
     }
 }

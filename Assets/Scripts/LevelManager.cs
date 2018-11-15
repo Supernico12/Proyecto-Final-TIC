@@ -44,24 +44,16 @@ public class LevelManager : MonoBehaviour {
 	void Update () {
        // if(lvls)
         //waitTime -= Time.deltaTime;
-        if (finish == 2)
-        {
-            //if (waitTime == 0)
-            if (levelFinished)
-            {
-                Debug.Log("Siguiente nivel");
-                levelFinished = false;
-                screen.SetActive(true);
-                index = SceneManager.GetActiveScene().buildIndex;
-                LoadLevel(index + 1);
-                finish = 0;
-            }
-        }
+
+        
 	}
 
-    public void LoadLevel(int sceneIndex)
+    public void LoadLevel()
     {
-        StartCoroutine(LoadAsync(sceneIndex));
+        //levelFinished = false;
+        screen.SetActive(true);
+        index = SceneManager.GetActiveScene().buildIndex;
+        StartCoroutine(LoadAsync(index + 1));
 
     }
     public void AddEnemy(int cantEnemy)
