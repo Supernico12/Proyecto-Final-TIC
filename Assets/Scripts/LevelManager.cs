@@ -50,7 +50,7 @@ public class LevelManager : MonoBehaviour {
 
     public void LoadLevel()
     {
-        //levelFinished = false;
+        
         screen.SetActive(true);
         index = SceneManager.GetActiveScene().buildIndex;
         StartCoroutine(LoadAsync(index + 1));
