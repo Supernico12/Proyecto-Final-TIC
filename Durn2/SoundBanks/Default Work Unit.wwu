@@ -5,6 +5,7 @@
 			<ChildrenList>
 				<SoundBank Name="Test" ID="{55367A38-FB86-4F09-8C7E-DB9D5A79628E}">
 					<ObjectInclusionList>
+						<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{93BB3793-8EEF-4F71-B753-EBAD22B4CEC3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Play_victory" ID="{E605C4C4-F023-4182-9A37-6770F1B56350}" WorkUnitID="{C61B4A8A-B990-4CA5-A179-D566EE502800}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Play_Disparo1" ID="{F4102A1F-5490-419A-A7A8-BA78DEB56B28}" WorkUnitID="{C61B4A8A-B990-4CA5-A179-D566EE502800}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Play_Bunker" ID="{84BB793A-E07F-41C3-90C3-AB4F844814EA}" WorkUnitID="{C61B4A8A-B990-4CA5-A179-D566EE502800}" Filter="7" Origin="Manual"/>

@@ -23,18 +23,14 @@ public class SettingsMenu : MonoBehaviour
     int currentResolutionIndex = 0;
     void Start()
     {
-        sens.value = globalSens;
+
         instance = PlayerManager.instance.player;
         pause = GetComponentInParent<PauseMenu>();
         motor = instance.GetComponent<PlayerMotor>();
-
-
-
-
-
         resolutions = Screen.resolutions;
         resolutionsDropdwon.ClearOptions();
         globalSens = motor.sensibility;
+        sens.value = 3f;
         List<string> options = new List<string>();
         for (int i = 0; i < resolutions.Length; i++)
         {
@@ -68,6 +64,7 @@ public class SettingsMenu : MonoBehaviour
     }
 
 
+
     public void SetQuality(int quality)
     {
         QualitySettings.SetQualityLevel(quality);
@@ -75,7 +72,7 @@ public class SettingsMenu : MonoBehaviour
     public void Fullscreen(bool isFullscreen)
     {
         Screen.fullScreen = isFullscreen;
-        
+
     }
 
     public void SetSensibility(float newSensibility)
@@ -83,11 +80,11 @@ public class SettingsMenu : MonoBehaviour
         Sensibility = newSensibility;
         if (motor != null)
         {
-            
-            motor.SetSensibility(Sensibility);
+            pause.getSensibility(Sensibility);
+         
         }
-        pause.getSensibility(Sensibility);
+
 
     }
-    
+
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 public class LevelManager : MonoBehaviour {
 
@@ -36,16 +37,21 @@ public class LevelManager : MonoBehaviour {
     public bool lol;
     public bool lol2;
 
+
+    public TMP_Text text;
 	void Start () {
 		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-       // if(lvls)
-        //waitTime -= Time.deltaTime;
+        index = SceneManager.GetActiveScene().buildIndex;
+        if (index == 3 && enemyCount == 1)
+        {
 
-        
+        }
+
+        text.text = "Enemies Left: " + enemyCount;
 	}
 
     public void LoadLevel()

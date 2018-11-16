@@ -7,6 +7,7 @@ public class MusicController : AudioMaster
     public LevelManager level;
     public EnemyDamage spiderShoot;
     public PlayerFighting playershoot;
+    public SettingsMenu volumen;
 
     CharacterStats character;
 
@@ -62,6 +63,7 @@ public class MusicController : AudioMaster
     {
 
         AkSoundEngine.SetRTPCValue("PlayerHealth", character.currenthealth); // Cuanto menos vida tenga el personaje, mas alto sonaran los latidos del corazon
+        AkSoundEngine.SetRTPCValue("GameVolume", volumen.volumeMartin);
 
         //Control del Latido de Corazon
         if (character.currenthealth == 0)

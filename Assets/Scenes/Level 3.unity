@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4465788, g: 0.49641114, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657856, g: 0.49641085, b: 0.57481706, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -11358,6 +11358,7 @@ MonoBehaviour:
   lvls: 0
   lol: 0
   lol2: 0
+  text: {fileID: 0}
 --- !u!4 &1709715909
 Transform:
   m_ObjectHideFlags: 0
@@ -12455,6 +12456,16 @@ Prefab:
       propertyPath: deathUI
       value: 
       objectReference: {fileID: 486097660}
+    - target: {fileID: 114721025954812464, guid: 28450b84179b9c44eaf1ae2542ac4441,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114721025954812464, guid: 28450b84179b9c44eaf1ae2542ac4441,
+        type: 2}
+      propertyPath: volumen
+      value: 
+      objectReference: {fileID: 1644273016}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28450b84179b9c44eaf1ae2542ac4441, type: 2}
   m_IsPrefabAsset: 0

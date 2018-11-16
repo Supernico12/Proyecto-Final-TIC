@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class PauseMenu : MonoBehaviour {
+public class PauseMenu : MonoBehaviour
+{
 
     public static bool isPaused;
     public GameObject pauseMenuUI;
@@ -12,31 +13,35 @@ public class PauseMenu : MonoBehaviour {
     PlayerMotor motor;
     public float sensibility;
     public GameObject BossHealth;
-	// Use this for initialization
-	void Start () {
+    public GameObject settingsUI;
+
+    // Use this for initialization
+    void Start()
+    {
         motor = PlayerManager.instance.player.GetComponent<PlayerMotor>();
         sensibility = motor.sensibility;
         settings = GetComponentInChildren<SettingsMenu>();
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update()
+    {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (isPaused)
             {
                 Resume();
-                
+
             }
             else
             {
                 Pause();
-                Cursor.lockState = CursorLockMode.None;
+
 
             }
 
         }
-	}
+    }
     public void Resume()
     {
         pauseMenuUI.SetActive(false);
@@ -44,6 +49,7 @@ public class PauseMenu : MonoBehaviour {
         Time.timeScale = 1f;
         isPaused = false;
         motor.SetSensibility(sensibility);
+        settingsUI.SetActive(false);
         if (BossHealth != null)
         {
             BossHealth.SetActive(true);
@@ -55,12 +61,14 @@ public class PauseMenu : MonoBehaviour {
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
-        
+        Cursor.lockState = CursorLockMode.None;
         motor.SetSensibility(0);
-        if(BossHealth != null)
+
+        if (BossHealth != null)
         {
             BossHealth.SetActive(false);
         }
+
     }
     public void MainMenu()
     {
@@ -79,5 +87,6 @@ public class PauseMenu : MonoBehaviour {
     {
         sensibility = sens;
     }
-    
+
 }
+

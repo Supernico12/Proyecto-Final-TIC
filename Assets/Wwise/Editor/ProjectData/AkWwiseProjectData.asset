@@ -180,13 +180,13 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 9337bb93ef8e714fb753ebad22b4cec3
-    m_lastTime: -8586601854594807632
+    m_lastTime: -8586592386181007083
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 2e8376c6845ca64080e44666af41aad3
-    m_lastTime: -8586600055222342075
+    m_lastTime: -8586592386180656525
     List:
     - name: Test
       guid: 387a365586fb094f8c7edb9d5a79628e
@@ -201,7 +201,7 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 8a4a1bc690b9a54ca179d566ee502800
-    m_lastTime: -8586600055221911384
+    m_lastTime: -8586595581751821486
     List:
     - name: Disparar
       guid: 6098a772a057614ab71b22a1b320481c
@@ -212,6 +212,18 @@ MonoBehaviour:
       - ElementName: Disparar
         ObjectType: 3
       Path: Default Work Unit\Disparar
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Bunker
+      guid: 3a79bb847fe0c34190c3ab4f844814ea
+      id: 1937681673
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Bunker
+        ObjectType: 3
+      Path: Default Work Unit\Play_Bunker
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -408,7 +420,7 @@ MonoBehaviour:
       maxDuration: 0
       minDuration: 0
     - name: Play_Menu
-      guid: d1f63cc91d0e0f439fd8a3fae1f46c3d
+      guid: 71de19493693ef448c474b4f5befae56
       id: 1278378707
       PathAndIcons:
       - ElementName: Default Work Unit
@@ -487,8 +499,17 @@ MonoBehaviour:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 473f8887c072e04fae0d40a091bfb7e5
-    m_lastTime: -8586601854607954052
+    m_lastTime: -8586592386180245865
     List:
+    - name: GameVolume
+      guid: 49e8fc162e137b4ca181f620c097bf44
+      id: 366326629
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: GameVolume
+        ObjectType: 13
+      Path: Default Work Unit\GameVolume
     - name: PlayerHealth
       guid: 90bccd58262aec4d837f18d5479b91d5
       id: 151362964
@@ -770,7 +791,5 @@ MonoBehaviour:
     List: []
   ExpandedItems:
   - /Durn2
-  - /Durn2/Events
-  - /Durn2/Events/Default Work Unit
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
