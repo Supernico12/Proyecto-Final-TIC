@@ -28,6 +28,10 @@ public class SettingsMenu : MonoBehaviour
         pause = GetComponentInParent<PauseMenu>();
         motor = instance.GetComponent<PlayerMotor>();
 
+
+
+
+
         resolutions = Screen.resolutions;
         resolutionsDropdwon.ClearOptions();
         globalSens = motor.sensibility;
