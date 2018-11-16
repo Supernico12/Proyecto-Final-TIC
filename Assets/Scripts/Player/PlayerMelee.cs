@@ -66,15 +66,20 @@ public class PlayerMelee : MonoBehaviour
     void Attack()
     {
         animator.SetTrigger("attack");
-        
+
     }
 
-    public void FinishAttack(){
+    public void FinishAttack()
+    {
         musicController.Onplayershoot();
         Collider[] cols = Physics.OverlapSphere(transform.position + (offset * cam.transform.forward), attackRadious, hitMask);
         foreach (Collider obj in cols)
         {
             CharacterStats stat = obj.GetComponent<CharacterStats>();
+            if (stat == null)
+            {
+                stat = obj.GetComponentInParent<CharacterStats>();
+            }
             if (stat != null)
             {
                 stat.TakeDamage(damage);

@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[RequireComponent(typeof ( Animator))]
-public class AutomaticDoor : MonoBehaviour {
+[RequireComponent(typeof(Animator))]
+public class AutomaticDoor : MonoBehaviour
+{
     [SerializeField]
     float interactRadious;
 
@@ -14,12 +15,13 @@ public class AutomaticDoor : MonoBehaviour {
     Transform player;
 
     public LevelManager Level;
-	// Use this for initialization
-	void Start () {
-        
+    // Use this for initialization
+    void Start()
+    {
+
         animator = GetComponent<Animator>();
         player = PlayerManager.instance.playertransform;
-	}
+    }
 
     // Update is called once per frame
     void Update()
@@ -38,14 +40,14 @@ public class AutomaticDoor : MonoBehaviour {
                 Close();
             }
         }
-        
+
 
     }
     void OnDrawGizmos()
-       {
+    {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, interactRadious);
-        }
+    }
 
     void Open()
     {
@@ -59,9 +61,12 @@ public class AutomaticDoor : MonoBehaviour {
     }
     void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.name == "Player")
+        if (col.gameObject.tag != null)
         {
-            Level.LoadLevel();
+            if (col.gameObject.tag == "Player")
+            {
+                Level.LoadLevel();
+            }
         }
     }
 }

@@ -53,7 +53,7 @@ public class EnemyDamage : MonoBehaviour
     public float stoppingDistance;
     GameObject head;
 
-	public event System.Action OnAttack;
+    public event System.Action OnAttack;
 
     // Use this for initialization
     void Start()
@@ -74,7 +74,7 @@ public class EnemyDamage : MonoBehaviour
 
 
         distance = Vector3.Distance(firePoint.position, player.position);
-        
+
         if (distance <= agent.stoppingDistance)
         {
             Attack();
@@ -126,7 +126,7 @@ public class EnemyDamage : MonoBehaviour
 
         if (!attacking)
         {
-       
+
             if (!casted)
             {
                 line.SetPosition(0, firePoint.position);
@@ -134,10 +134,10 @@ public class EnemyDamage : MonoBehaviour
 
             }
             distanceToHit = Vector3.Distance(line.GetPosition(1), player.position);
-         
+
             if (distanceToHit < .5f)
             {
-               
+
                 attacking = true;
                 CastRay();
             }
@@ -148,20 +148,21 @@ public class EnemyDamage : MonoBehaviour
     public void CastRay()
     {
 
-        
+
         attack.SetPosition(0, firePoint.position);
         attack.SetPosition(1, hitPoint);
         Instantiate(effect, hitPoint, Quaternion.identity);
         line.SetPosition(0, Vector3.zero);
         line.SetPosition(1, Vector3.zero);
         casted = true;
-		OnAttack.Invoke();
+        if (OnAttack != null)
+            OnAttack.Invoke();
         time1 = 0;
         attacking = false;
 
 
-            Debug.Log("Damaging");
-            playerHealth.TakeDamage(enemyDamage);
+        Debug.Log("Damaging");
+        playerHealth.TakeDamage(enemyDamage);
 
     }
 }

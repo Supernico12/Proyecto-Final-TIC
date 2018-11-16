@@ -7,7 +7,8 @@ using UnityEngine;
 using UnityEngine.AI;
 //
 
-public class EnemyMovement : MonoBehaviour {
+public class EnemyMovement : MonoBehaviour
+{
 
 
 
@@ -23,50 +24,51 @@ public class EnemyMovement : MonoBehaviour {
     public Transform destination;
     public bool canMove = true;
     CharacterStats playerStats;
-    
+    [SerializeField] float damage = 4;
 
-    
+
+
     // Use this for initialization
     void Start()
     {
-        
+
         Debug.Log(player);
-       player = PlayerManager.instance.playertransform;
-       
-       agent = GetComponent<NavMeshAgent>();
+        player = PlayerManager.instance.playertransform;
+
+        agent = GetComponent<NavMeshAgent>();
         playerStats = player.GetComponent<CharacterStats>();
 
 
     }
-       
+
 
     // Update is called once per frame
     void Update()
     {
-        
+
         if (Vector3.Distance(transform.position, player.position) < range)
         {
             if (canMove)
-        {
+            {
                 destination = player;
                 agent.SetDestination(destination.position);
             }
             if (Vector3.Distance(transform.position, player.position) < 4f)
             {
-                playerStats.TakeDamage(Time.deltaTime);
+                playerStats.TakeDamage(Time.deltaTime * damage);
             }
-            }
-       
+        }
+
     }
 
-    
+
     public void Suicide()
     {
         GetComponent<EnemyDamage>().enabled = false;
         GetComponent<EnemyMovement>().enabled = false;
     }
 
-  
+
     void OnDrawGizmos()
     {
         Gizmos.color = Color.red;

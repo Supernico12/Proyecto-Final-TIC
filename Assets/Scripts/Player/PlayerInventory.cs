@@ -144,12 +144,16 @@ public class PlayerInventory : MonoBehaviour
             }
         }
         float mouseScroll = (Input.GetAxis("Mouse ScrollWheel"));
+
         if (mouseScroll != 0)
         {
-            index += (int)Mathf.Clamp(mouseScroll, -1, 1);
+
+            index += (int)Mathf.Clamp(mouseScroll * 10, -1, 1);
+            Debug.Log(index);
             if (index < 0)
             {
                 melee.OnEquip();
+                index = 0;
             }
             else
             {
