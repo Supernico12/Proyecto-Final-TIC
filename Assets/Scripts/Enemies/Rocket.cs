@@ -29,7 +29,7 @@ public class Rocket : MonoBehaviour
             transform.position += transform.forward * BulletSpeed * Time.deltaTime;
             
 
-            if (Vector3.Distance(transform.position, player.transform.position) <= 4f)
+            if (Vector3.Distance(transform.position, player.transform.position) <= 8f)
             {
               
                 Instantiate(explosion, transform.position, Quaternion.identity);
@@ -37,8 +37,6 @@ public class Rocket : MonoBehaviour
                 Destroy(gameObject);
 
             }
-
-
         }
         else
         {
@@ -48,10 +46,9 @@ public class Rocket : MonoBehaviour
 
         void OnTriggerEnter(Collider col)
         {
-        if(col.tag == "Player")
-        {
-            Destroy(gameObject);
-        }
-        }
-    
+            if(col.tag == "Player")
+            {
+                Destroy(gameObject);
+            }
+        }  
 }

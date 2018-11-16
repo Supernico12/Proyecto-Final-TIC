@@ -18,6 +18,8 @@ public class SettingsMenu : MonoBehaviour
 
     public float volumeMartin;
 
+
+    bool res = false;
     int currentResolutionIndex = 0;
     void Start()
     {
@@ -25,6 +27,7 @@ public class SettingsMenu : MonoBehaviour
         instance = PlayerManager.instance.player;
         pause = GetComponentInParent<PauseMenu>();
         motor = instance.GetComponent<PlayerMotor>();
+
         resolutions = Screen.resolutions;
         resolutionsDropdwon.ClearOptions();
         globalSens = motor.sensibility;
@@ -42,7 +45,12 @@ public class SettingsMenu : MonoBehaviour
         resolutionsDropdwon.AddOptions(options);
         resolutionsDropdwon.value = currentResolutionIndex;
         resolutionsDropdwon.RefreshShownValue();
+        
+
     }
+    
+
+    
     public void setResolution(int screenResolutionIndex)
     {
         Resolution resolution = resolutions[screenResolutionIndex];

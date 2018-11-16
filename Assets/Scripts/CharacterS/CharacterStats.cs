@@ -14,7 +14,7 @@ public class CharacterStats : MonoBehaviour
     [SerializeField] GameObject ammoDrop;
 
 
-
+    public GameObject deathUI;
 
     public event System.Action OnTakeDamage;
 
@@ -30,7 +30,11 @@ public class CharacterStats : MonoBehaviour
 
         if (currenthealth <= 0)
         {
+            if (deathUI == null) { 
             Die();
+            }
+            else
+            { deathUI.SetActive(true); }
         }
         if (damage > 0)
         {
@@ -50,6 +54,7 @@ public class CharacterStats : MonoBehaviour
     void Start()
     {
         level = LevelManager.instance;
+        
         currenthealth = health;
         if (level != null)
             level.AddEnemy(1);
