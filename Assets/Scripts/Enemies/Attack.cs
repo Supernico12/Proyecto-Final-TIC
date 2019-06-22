@@ -6,8 +6,7 @@ public class Attack : MonoBehaviour {
 
     public GameObject rocket;
     public GameObject firePoint1;
-    public GameObject firePoint2;
-    public GameObject firePoint3;
+    
     int time;
 
     
@@ -28,8 +27,7 @@ public class Attack : MonoBehaviour {
         if (time > cooldown)
         {
             Instantiate(rocket, firePoint1.transform.position, Quaternion.identity);
-            Instantiate(rocket, firePoint2.transform.position, Quaternion.identity);
-            Instantiate(rocket, firePoint3.transform.position, Quaternion.identity);
+            
             time = 0;
         }
     }

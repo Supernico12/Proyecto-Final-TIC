@@ -46,13 +46,12 @@ public class LevelManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         index = SceneManager.GetActiveScene().buildIndex;
-        if (index == 3 && enemyCount == 1)
-        {
-
+        
+        
+        if(index != 3&&index != 0 ) { 
+        text.text = "Enemies Left: " + (enemyCount - 1);
         }
-
-        text.text = "Enemies Left: " + enemyCount;
-	}
+    }
 
     public void LoadLevel()
     {
@@ -60,26 +59,25 @@ public class LevelManager : MonoBehaviour {
         screen.SetActive(true);
         index = SceneManager.GetActiveScene().buildIndex;
         StartCoroutine(LoadAsync(index + 1));
+        Debug.Log("Level Finished " + (index + 1) );
 
     }
     public void AddEnemy(int cantEnemy)
     {
+        if(!started){
         enemyCount += cantEnemy;
         started = true;
+        }
     }
     public void RemoveEnemy(int cantEnemy)
     {
         enemyCount -= cantEnemy;
 
         if (enemyCount <= 1 && lol == false)
-        {
-            Debug.Log("Hs mtdo  todos los enemigos");
-            //levelFinished = true;
+        {         
             lvls = true;
-            lol = true;
-            //levelFinished = false;
-
-           
+            lol = true; 
+            LoadLevel();
         }
     }
 

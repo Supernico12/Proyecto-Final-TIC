@@ -1,8 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class CharacterStats : MonoBehaviour
+using UnityEngine.SceneManagement;
+public class GusanoDie : MonoBehaviour
 {
 
     LevelManager level;
@@ -23,9 +23,6 @@ public class CharacterStats : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-
-        
-
         if (currenthealth - damage <= health)
         {
             currenthealth -= damage;
@@ -52,7 +49,7 @@ public class CharacterStats : MonoBehaviour
         level.RemoveEnemy(1);
         Instantiate(ammoDrop, transform.position, Quaternion.identity);
         Destroy(gameObject);
-        
+		SceneManager.LoadScene("EndGame");
     }
 
     void Start()
@@ -83,4 +80,5 @@ public class CharacterStats : MonoBehaviour
         }
 
     }
+
 }

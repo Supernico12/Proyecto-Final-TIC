@@ -23,6 +23,13 @@ public class Rocket : MonoBehaviour
     }
     void Update()
     {
+        int time = 0;
+        int time2 = 1000;
+
+        if(time >= time2){
+            Destroy(gameObject);
+        }
+        time++;
         if (player != null)
         {
             transform.LookAt(player.transform.position);

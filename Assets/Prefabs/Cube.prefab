@@ -23,7 +23,6 @@ GameObject:
   - component: {fileID: 23578015384310154}
   - component: {fileID: 65755416255112838}
   - component: {fileID: 114196292363255264}
-  - component: {fileID: 114460085958342620}
   m_Layer: 14
   m_Name: Cube
   m_TagString: Untagged
@@ -111,21 +110,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BulletSpeed: 20
   player: {fileID: 0}
-  damage: 5
+  damage: 20
   explosion: {fileID: 198000012942003240, guid: ecdd96beb7f93494880c052dfccf9dc1,
     type: 2}
---- !u!114 &114460085958342620
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1143315999591122}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93d9788f8f26ae346b577a3fbf667522, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 30
-  currenthealth: 0
-  ammoDrop: {fileID: 1143177794371528, guid: b99b0bd6a390e4946a20aca76c08fdaf, type: 2}
-  deathUI: {fileID: 0}
