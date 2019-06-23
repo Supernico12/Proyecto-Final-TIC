@@ -59,15 +59,14 @@ public class LevelManager : MonoBehaviour {
         screen.SetActive(true);
         index = SceneManager.GetActiveScene().buildIndex;
         StartCoroutine(LoadAsync(index + 1));
-        Debug.Log("Level Finished " + (index + 1) );
+        
 
     }
     public void AddEnemy(int cantEnemy)
     {
-        if(!started){
+        
         enemyCount += cantEnemy;
-        started = true;
-        }
+        
     }
     public void RemoveEnemy(int cantEnemy)
     {
@@ -77,7 +76,7 @@ public class LevelManager : MonoBehaviour {
         {         
             lvls = true;
             lol = true; 
-            LoadLevel();
+           
         }
     }
 
