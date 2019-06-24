@@ -7,7 +7,7 @@ public class Attack : MonoBehaviour {
     public GameObject rocket;
     public GameObject firePoint1;
     
-    int time;
+    float time;
 
     
 
@@ -22,7 +22,7 @@ public class Attack : MonoBehaviour {
     {
         if (Time.timeScale != 0)
         {
-            time++;
+            time += Time.deltaTime;
         }
         if (time > cooldown)
         {

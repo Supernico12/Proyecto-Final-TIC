@@ -18,18 +18,14 @@ public class Rocket : MonoBehaviour
         player = PlayerManager.instance.player;
         
         character = player.GetComponent<CharacterStats>();
+        Destroy(gameObject, 10f);
         
         
     }
     void Update()
     {
-        int time = 0;
-        int time2 = 1000;
-
-        if(time >= time2){
-            Destroy(gameObject);
-        }
-        time++;
+        
+     
         if (player != null)
         {
             transform.LookAt(player.transform.position);

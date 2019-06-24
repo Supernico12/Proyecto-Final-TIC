@@ -23,6 +23,7 @@ public class MusicController : AudioMaster
     // Use this for initialization
     void Start()
     {
+        if(PlayerManager.instance != null)
         character = PlayerManager.instance.player.GetComponent<CharacterStats>();
 
 		//Cargar el soundbank
@@ -32,36 +33,62 @@ public class MusicController : AudioMaster
 
        //Music of Current Level
 		if (level.index == 0) {
-			//PlayEvent ("Play_Menu");
+            StopEvent("Play_Lab", 2);
+            StopEvent("Play_Ciudad", 2);
+            StopEvent("Play_Patio", 2);
+            StopEvent("Play_victory", 2);
 		} 
 		else if (level.index == 1) {
-            //StopEvent("Play_Menu", 2);
             StopEvent("Play_Menu", 2);
+            StopEvent("Play_Menu", 2);
+            StopEvent("Play_victory", 2);
 
-			PlayEvent("Play_Patio");
+            PlayEvent("Play_Patio");
 	   }
        else if (level.index == 2){
-	     StopEvent("Play_Patio", 2);
-         PlayEvent("Play_Bunker");
+            StopEvent("Play_Lab", 6);
+            StopEvent("Play_Ciudad", 6);
+            StopEvent("Play_Patio", 6);
+            StopEvent("Play_victory", 2);
+            StopEvent("Play_Menu", 2);
+
+
+            PlayEvent("Play_Bunker");
 
        }
        else if (level.index == 3){
-           PlayEvent("Play_Lab");
-           StopEvent("Play_Ciudad", 2);
+         
+            StopEvent("Play_Lab", 2);
+            StopEvent("Play_Ciudad", 2);
+            StopEvent("Play_Patio", 2);
+            StopEvent("Play_victory", 2);
+            StopEvent("Play_Menu", 2);
+            PlayEvent("Play_Lab");
 
-       }
+
+        }
+        else if (level.index == 4)
+        {
+            StopEvent("Play_Lab", 2);
+            StopEvent("Play_Ciudad", 2);
+            StopEvent("Play_Patio", 2);
+            StopEvent("Play_victory", 2);
+            StopEvent("Play_Menu", 2);
+        }
 
         if (spiderShoot != null){
             spiderShoot.OnAttack += Onspidershoot;
         playershoot.OnShoot += Onplayershoot;
         }
+
         
+
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if(character != null) {
         AkSoundEngine.SetRTPCValue("PlayerHealth", character.currenthealth); // Cuanto menos vida tenga el personaje, mas alto sonaran los latidos del corazon
         AkSoundEngine.SetRTPCValue("GameVolume", volumen.volumeMartin);
 
@@ -71,6 +98,7 @@ public class MusicController : AudioMaster
             StopEvent("Play_Corazon", 3); //Cuando la vida del personaje llega a 0, se paran los latidos del corazon
         }
 
+        }
         //Control de finalización del nivel 
         if (level.lvls)
         {
@@ -83,7 +111,17 @@ public class MusicController : AudioMaster
             //StartCoroutine(Paso());
             
         }
-			
+
+        if (Input.GetKeyDown(KeyCode.Keypad5))
+        {
+            Debug.Log("lol");
+            StopEvent("Play_Lab", 2);
+            StopEvent("Play_Ciudad", 2);
+            StopEvent("Play_Patio", 2);
+            StopEvent("Play_victory", 2);
+
+        }
+
     }
 
     public void Onplayershoot()

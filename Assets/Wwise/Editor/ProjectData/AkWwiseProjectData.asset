@@ -15,12 +15,12 @@ MonoBehaviour:
   - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 0c3e0d4d6f9a8946aed3f9736d8f5ae0
-    m_lastTime: -8586601854495647397
+    m_lastTime: -8586411802032234126
     List: []
   - PhysicalPath: Virtual Acoustics\Factory Reflect Acoustic Textures.wwu
     ParentPhysicalPath: 
     guid: 6b663d46a83ca54f8b4a5fef12b883f6
-    m_lastTime: -8586601854495607332
+    m_lastTime: -8586411802032234126
     List:
     - name: Acoustic_Banner
       guid: f2532d2fccda8e408b8898b1b52a26d6
@@ -180,13 +180,13 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 9337bb93ef8e714fb753ebad22b4cec3
-    m_lastTime: -8586592386181007083
+    m_lastTime: -8586411802046097072
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 2e8376c6845ca64080e44666af41aad3
-    m_lastTime: -8586592386180656525
+    m_lastTime: -8586411802032264053
     List:
     - name: Test
       guid: 387a365586fb094f8c7edb9d5a79628e
@@ -201,7 +201,7 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 8a4a1bc690b9a54ca179d566ee502800
-    m_lastTime: -8586595581751821486
+    m_lastTime: -8586411802050405579
     List:
     - name: Disparar
       guid: 6098a772a057614ab71b22a1b320481c
@@ -499,7 +499,7 @@ MonoBehaviour:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 473f8887c072e04fae0d40a091bfb7e5
-    m_lastTime: -8586592386180245865
+    m_lastTime: -8586411802050405579
     List:
     - name: GameVolume
       guid: 49e8fc162e137b4ca181f620c097bf44
@@ -522,7 +522,7 @@ MonoBehaviour:
   - PhysicalPath: Game Parameters\Factory Motion.wwu
     ParentPhysicalPath: 
     guid: 225213d7dbd1d042adc0930743567776
-    m_lastTime: -8586601854607954052
+    m_lastTime: -8586411802050405579
     List:
     - name: Playback_Rate
       guid: e37e38283ac11643b9c3db5c521624af
@@ -545,7 +545,7 @@ MonoBehaviour:
   - PhysicalPath: Game Parameters\Factory SoundSeed Air Game Syncs.wwu
     ParentPhysicalPath: 
     guid: 5577163b42fb8b4598bf96f557afb3b9
-    m_lastTime: -8586601854607954052
+    m_lastTime: -8586411802050395605
     List:
     - name: SS_Air_Fear
       guid: 59062ef746431c4ea1b1dab46a05101e
@@ -641,7 +641,7 @@ MonoBehaviour:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 6fae2fa6fad31948b1a533d3c97c0981
-    m_lastTime: -8586601854495742562
+    m_lastTime: -8586411802032254082
     List:
     - name: Desarrollo
       guid: b442087e6ceea84680c4344b746b24a4
@@ -703,7 +703,7 @@ MonoBehaviour:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 4d62a5916115fb47a6a9866128038e23
-    m_lastTime: -8586601854495707499
+    m_lastTime: -8586411802032244108
     List:
     - name: Caminata
       guid: 3089dd0e48186245b27c27dc5a82acbf
@@ -787,9 +787,11 @@ MonoBehaviour:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: beffc2025066e1479c3257828ceab73f
-    m_lastTime: -8586601854495677448
+    m_lastTime: -8586411802032244108
     List: []
   ExpandedItems:
   - /Durn2
+  - /Durn2/Events
+  - /Durn2/Events/Default Work Unit
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

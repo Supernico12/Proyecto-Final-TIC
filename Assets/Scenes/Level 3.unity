@@ -3983,7 +3983,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rocket: {fileID: 1143315999591122, guid: 993242c97fb55e14abe7379f3c34818e, type: 2}
   firePoint1: {fileID: 1282140522}
-  cooldown: 40
+  cooldown: 5
 --- !u!65 &564376204
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11709,6 +11709,7 @@ MonoBehaviour:
   lol: 0
   lol2: 0
   text: {fileID: 0}
+  changeLvlKeyCodes: 01010000020100000301000004010000
 --- !u!4 &1709715909
 Transform:
   m_ObjectHideFlags: 0

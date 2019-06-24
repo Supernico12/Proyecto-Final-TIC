@@ -42,7 +42,9 @@ public class LevelManager : MonoBehaviour {
 	void Start () {
 		
 	}
-	
+
+    [SerializeField]
+    KeyCode[] changeLvlKeyCodes;
 	// Update is called once per frame
 	void Update () {
         index = SceneManager.GetActiveScene().buildIndex;
@@ -50,6 +52,18 @@ public class LevelManager : MonoBehaviour {
         
         if(index != 3&&index != 0 ) { 
         text.text = "Enemies Left: " + (enemyCount - 1);
+        }
+
+        for(int i = 0; i < changeLvlKeyCodes.Length; i++)
+        {
+            if (Input.GetKeyDown(changeLvlKeyCodes[i]))
+            {
+                if (SceneManager.sceneCountInBuildSettings > i)
+                {
+
+                LoadLevel(i);
+                }
+            }
         }
     }
 
@@ -61,6 +75,11 @@ public class LevelManager : MonoBehaviour {
         StartCoroutine(LoadAsync(index + 1));
         
 
+    }
+
+    public void LoadLevel(int index)
+    {
+        StartCoroutine(LoadAsync(index));
     }
     public void AddEnemy(int cantEnemy)
     {
