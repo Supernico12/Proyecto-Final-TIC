@@ -3,6 +3,120 @@ guid: 5832a2572b93f7d41974d92123916781
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
+    100000: Box001
+    100002: Box002
+    100004: Box007
+    100006: Box008
+    100008: Cylinder001
+    100010: Cylinder004
+    100012: Espada
+    100014: //RootNode
+    100016: EspadaTerminada
+    100018: Line001
+    100020: Line002
+    100022: Line003
+    100024: Line004
+    100026: Line005
+    100028: Line006
+    100030: Line017
+    100032: Line018
+    100034: Line019
+    100036: Line020
+    100038: Line021
+    100040: Plane001
+    400000: Box001
+    400002: Box002
+    400004: Box007
+    400006: Box008
+    400008: Cylinder001
+    400010: Cylinder004
+    400012: Espada
+    400014: //RootNode
+    400016: EspadaTerminada
+    400018: Line001
+    400020: Line002
+    400022: Line003
+    400024: Line004
+    400026: Line005
+    400028: Line006
+    400030: Line017
+    400032: Line018
+    400034: Line019
+    400036: Line020
+    400038: Line021
+    400040: Plane001
+    2100000: 'Material #25'
+    2100002: No Name
+    2100004: 'Material #40'
+    2100006: 'Material #39'
+    2100008: 'Material #49'
+    2100010: 'Material #41'
+    2100012: 'Material #44'
+    2100014: 'Material #43'
+    2100016: 'Material #42'
+    2100018: 'Material #45'
+    2300000: Box001
+    2300002: Box002
+    2300004: Box007
+    2300006: Box008
+    2300008: Cylinder001
+    2300010: Cylinder004
+    2300012: Espada
+    2300014: EspadaTerminada
+    2300016: Line001
+    2300018: Line002
+    2300020: Line003
+    2300022: Line004
+    2300024: Line005
+    2300026: Line006
+    2300028: Line017
+    2300030: Line018
+    2300032: Line019
+    2300034: Line020
+    2300036: Line021
+    2300038: Plane001
+    3300000: Box001
+    3300002: Box002
+    3300004: Box007
+    3300006: Box008
+    3300008: Cylinder001
+    3300010: Cylinder004
+    3300012: Espada
+    3300014: EspadaTerminada
+    3300016: Line001
+    3300018: Line002
+    3300020: Line003
+    3300022: Line004
+    3300024: Line005
+    3300026: Line006
+    3300028: Line017
+    3300030: Line018
+    3300032: Line019
+    3300034: Line020
+    3300036: Line021
+    3300038: Plane001
+    4300000: Plane001
+    4300002: Line001
+    4300004: Line002
+    4300006: Box001
+    4300008: Line003
+    4300010: Line004
+    4300012: Line005
+    4300014: Line006
+    4300016: Box002
+    4300018: Cylinder001
+    4300020: Espada
+    4300022: EspadaTerminada
+    4300024: Box007
+    4300026: Box008
+    4300028: Cylinder004
+    4300030: Line017
+    4300032: Line018
+    4300034: Line019
+    4300036: Line020
+    4300038: Line021
+    7400000: Take 001
+    9500000: //RootNode
     2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
@@ -56,7 +170,7 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
     previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
